@@ -74,22 +74,22 @@ Children:
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:MethodId"
-    - Name: DestinationNode
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/11:DestinationNode"
     - Name: LocalTime
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:LocalTime"
-    - Name: SourceName
+    - Name: ConditionClassName
       Type: EventFieldPath
       DataType: NodePath
-      Value: "/0:SourceName"
-    - Name: ResourceUri
+      Value: "/0:ConditionClassName"
+    - Name: ConditionSubClassName
       Type: EventFieldPath
       DataType: NodePath
-      Value: "/0:ResourceUri"
+      Value: "/0:ConditionSubClassName"
+    - Name: ActionTimeStamp
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/0:ActionTimeStamp"
   - Name: EventArguments
     Type: BaseObjectType
     Children:
@@ -114,18 +114,20 @@ Children:
     - Name: MethodId
       Type: BaseDataVariableType
       DataType: NodeId
-    - Name: DestinationNode
-      Type: BaseDataVariableType
-      DataType: NodeId
     - Name: LocalTime
       Type: BaseDataVariableType
       DataType: TimeZoneDataType
-    - Name: SourceName
+    - Name: ConditionClassName
       Type: BaseDataVariableType
-      DataType: String
-    - Name: ResourceUri
+      DataType: LocalizedText
+    - Name: ConditionSubClassName
       Type: BaseDataVariableType
-      DataType: String
+      DataType: LocalizedText
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+    - Name: ActionTimeStamp
+      Type: BaseDataVariableType
+      DataType: UtcTime
   - Name: EventFieldsToLog
     Type: BaseObjectType
     Children:
@@ -177,14 +179,6 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/MethodId@Pointer"
-    - Name: DestinationNode
-      Type: EventFieldToLog
-      DataType: NodeId
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/DestinationNode@Pointer"
     - Name: LocalTime
       Type: EventFieldToLog
       DataType: TimeZoneDataType
@@ -193,19 +187,19 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/LocalTime"
-    - Name: SourceName
+    - Name: ActionTimeStamp
+      Type: EventFieldToLog
+      DataType: UtcTime
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/ActionTimeStamp"
+    - Name: SourceNodeName
       Type: EventFieldToLog
       DataType: String
       Children:
       - Name: DynamicLink
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../EventArguments/SourceName"
-    - Name: ResourceUri
-      Type: EventFieldToLog
-      DataType: String
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/ResourceUri"
+        Value: "../../EventArguments/SourceNode@BrowseName"

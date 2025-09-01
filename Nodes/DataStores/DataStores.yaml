@@ -44,16 +44,13 @@ Children:
         - Name: MethodId
           Type: StoreColumn
           DataType: NodeId
-        - Name: DestinationNode
-          Type: StoreColumn
-          DataType: NodeId
         - Name: LocalTime
           Type: StoreColumn
           DataType: TimeZoneDataType
-        - Name: SourceName
+        - Name: ActionTimeStamp
           Type: StoreColumn
-          DataType: String
-        - Name: ResourceUri
+          DataType: UtcTime
+        - Name: SourceNodeName
           Type: StoreColumn
           DataType: String
   - Class: Reference

@@ -162,6 +162,28 @@ Children:
     Children:
     - Name: Default
       Type: LabelStyle
+    - Name: title
+      Type: LabelStyle
+      Children:
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 22.0
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#515151"
+    - Name: subtitle
+      Type: LabelStyle
+      Children:
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 18.0
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#7f7d7d"
   - Name: RadioButtonStyles
     Type: BaseObjectType
     Children:
@@ -245,45 +267,9 @@ Children:
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/webinar_audit@BrowseName"
-  - Name: NavigationPanel1
-    Type: NavigationPanel
+  - Name: GridLayout1
+    Type: GridLayout
     Children:
-    - Name: Panels
-      Type: BaseObjectType
-      Children:
-      - Name: Panel1
-        Type: NavigationPanelItem
-        Children:
-        - Name: Title
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-        - Name: Panel
-          Type: NodePointer
-          DataType: NodeId
-          Value: "/Objects/webinar_audit/UI/Screens/Methods"
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
-    - Name: CurrentPanel
-      Type: NodePointer
-      DataType: NodeId
-      AccessLevel: Read
-      Children:
-      - Name: Kind
-        Type: PropertyType
-        DataType: NodeId
-        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
-    - Name: CurrentTabIndex
-      Type: BaseDataVariableType
-      DataType: Int32
-    - Class: Reference
-      Target: ns=3;i=1181
-      Direction: Forward
-    - Class: Reference
-      Target: ns=3;i=1183
-      Direction: Forward
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -294,6 +280,18 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 300.0
+    - Name: Rows
+      Type: BaseDataVariableType
+      DataType: String
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: ["15fr","85fr"]
+    - Name: Columns
+      Type: BaseDataVariableType
+      DataType: String
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: ["100fr"]
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -304,5 +302,161 @@ Children:
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 3
+    - Name: Image1
+      Type: Image
+      Children:
+      - Name: Path
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=7;%PROJECTDIR%/FTOptixLogo_cyan.svg"
+      - Name: ns=3;GridLayoutProperties
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":3,"TextId":"GridLayoutPropertiesDisplayName"}
+        Children:
+        - Name: RowStart
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: FillMode
+        Type: BaseDataVariableType
+        DataType: FillModeEnum
+        ModellingRule: Optional
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: BottomMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+    - Name: NavigationPanel1
+      Type: NavigationPanel
+      Children:
+      - Name: Panels
+        Type: BaseObjectType
+        Children:
+        - Name: Panel2
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/webinar_audit/UI/Screens/Variables"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+        - Name: Panel3
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/webinar_audit/UI/Screens/Sessions"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+        - Name: Panel1
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/webinar_audit/UI/Screens/Methods"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+        - Name: Panel4
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/webinar_audit/UI/Screens/Recipes"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: CurrentPanel
+        Type: NodePointer
+        DataType: NodeId
+        AccessLevel: Read
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+      - Name: CurrentTabIndex
+        Type: BaseDataVariableType
+        DataType: Int32
+      - Class: Reference
+        Target: ns=3;i=1181
+        Direction: Forward
+      - Class: Reference
+        Target: ns=3;i=1183
+        Direction: Forward
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 300.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 300.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: ns=3;GridLayoutProperties
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":3,"TextId":"GridLayoutPropertiesDisplayName"}
+        Children:
+        - Name: RowStart
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+          Value: 1
 - File: Screens/Screens.yaml
 - File: Keyboards/Keyboards.yaml
