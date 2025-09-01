@@ -1,0 +1,61 @@
+Name: Audit Methods
+Id: g=8361ca407f30c08ebe8d0eb5c55825b9
+Type: FolderType
+Children:
+- Name: VariableIN
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: VariableOUT
+  Id: g=27b8e34f26af57c4910b6cde99517f04
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: MethodInvocation1
+  Id: g=76dcc53ad4380cbe1180cac5a82ef480
+  Type: MethodInvocation
+  Children:
+  - Name: ObjectPointer
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType"
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../Commands/VariableCommands@NodeId"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Method
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Set"
+  - Class: Reference
+    Target: ns=2;i=98
+    Direction: Forward
+  - Name: InputArguments
+    Type: BaseObjectType
+    Children:
+    - Name: VariableToModify
+      Type: BaseDataVariableType
+      DataType: VariablePointer
+      Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
+      Value: "/Objects/webinar_audit/Model/Audit Methods/VariableOUT"
+    - Name: Value
+      Type: BaseDataVariableType
+      DataType: Int32
+      Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../VariableIN"
+    - Name: ArrayIndex
+      Type: BaseDataVariableType
+      DataType: UInt32
+      Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
+      ValueRank: ScalarOrOneDimension

@@ -29,16 +29,32 @@ Project:
    Uri: 'urn:FTOptix:Retentivity'
    Module: FTOptix.Retentivity
    Version: 1.0
+  8:
+   Uri: 'urn:FTOptix:EventLogger'
+   Module: FTOptix.EventLogger
+   Version: 2.0
+  9:
+   Uri: 'urn:FTOptix:Store'
+   Module: FTOptix.Store
+   Version: 1.0
+  10:
+   Uri: 'urn:FTOptix:SQLiteStore'
+   Module: FTOptix.SQLiteStore
+   Version: 1.0
+  11:
+   Uri: 'urn:FTOptix:Recipe'
+   Module: FTOptix.Recipe
+   Version: 1.0
  Statistics:
-  TotalNodeCount: 124
-  Objects: 72
-  ObjectTypes: 1
-  Variables: 51
+  TotalNodeCount: 440
+  Objects: 132
+  ObjectTypes: 2
+  Variables: 306
   VariableTypes: 0
   DataTypes: 0
   Methods: 0
-  References: 0
+  References: 21
   ReferenceTypes: 0
-  Files: 22
+  Files: 24
  Nodes:
  - File: Nodes/webinar_audit.yaml
