@@ -53,6 +53,10 @@ Children:
         - Name: MethodName
           Type: StoreColumn
           DataType: String
+      - Name: RecordLimit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100000
   - Class: Reference
     Target: ns=10;i=30
     Direction: Forward
