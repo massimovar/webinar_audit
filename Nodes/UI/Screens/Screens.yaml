@@ -755,7 +755,7 @@ Children:
       - Name: Columns
         Type: BaseObjectType
         Children:
-        - Name: ActionTimeStamp
+        - Name: DataGridColumn1
           Type: DataGridColumn
           Children:
           - Name: Title
@@ -787,33 +787,10 @@ Children:
               Type: BaseDataVariableType
               DataType: LocalizedText
               Children:
-              - Name: ExpressionEvaluator1
-                Type: ExpressionEvaluator
-                Children:
-                - Name: Expression
-                  Type: BaseDataVariableType
-                  DataType: String
-                  ReferenceType: HasParameter
-                  ModellingRule: Optional
-                  Value: "{0} + {1}"
-                - Name: ns=2;Source0
-                  Type: BaseDataVariableType
-                  DataType: BaseDataType
-                  ReferenceType: HasSource
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "{Item}/Time"
-                - Name: ns=2;Source1
-                  Type: BaseDataVariableType
-                  DataType: BaseDataType
-                  ReferenceType: HasSource
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "{Item}/LocalTime"
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Item}/LocalTimeStamp"
         - Name: ClientUserId
           Type: DataGridColumn
           Children:

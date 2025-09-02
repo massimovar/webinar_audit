@@ -53,6 +53,9 @@ Children:
         - Name: MethodName
           Type: StoreColumn
           DataType: String
+        - Name: LocalTimeStamp
+          Type: StoreColumn
+          DataType: UtcTime
       - Name: RecordLimit
         Type: BaseDataVariableType
         DataType: UInt32
