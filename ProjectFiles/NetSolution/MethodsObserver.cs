@@ -5,6 +5,9 @@ using FTOptix.NetLogic;
 using OpcUa = UAManagedCore.OpcUa;
 using UAManagedCore;
 using FTOptix.Alarm;
+using FTOptix.Recipe;
+using FTOptix.CommunicationDriver;
+using FTOptix.Modbus;
 #endregion
 
 public class MethodsObserver : BaseNetLogic

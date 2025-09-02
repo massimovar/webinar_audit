@@ -81,16 +81,40 @@ Project:
    Uri: 'urn:FTOptix:NetLogic'
    Module: FTOptix.NetLogic
    Version: 4.0
+  23:
+   Uri: 'urn:FTOptix:Recipe'
+   Module: FTOptix.Recipe
+   Version: 1.0
+  24:
+   Uri: 'urn:FTOptix:Recipe:Net'
+   Module: FTOptix.Recipe.Net
+   Version: 1.0
+  25:
+   Uri: 'urn:FTOptix:CommunicationDriver'
+   Module: FTOptix.CommunicationDriver
+   Version: 3.0
+  26:
+   Uri: 'urn:FTOptix:CommunicationDriver:Net'
+   Module: FTOptix.CommunicationDriver.Net
+   Version: 3.0
+  27:
+   Uri: 'urn:FTOptix:Modbus'
+   Module: FTOptix.Modbus
+   Version: 1.0
+  28:
+   Uri: 'urn:FTOptix:Modbus:Net'
+   Module: FTOptix.Modbus.Net
+   Version: 1.0
  Statistics:
-  TotalNodeCount: 589
-  Objects: 165
-  ObjectTypes: 5
-  Variables: 418
+  TotalNodeCount: 1973
+  Objects: 431
+  ObjectTypes: 12
+  Variables: 1515
   VariableTypes: 0
   DataTypes: 0
-  Methods: 1
-  References: 21
+  Methods: 15
+  References: 63
   ReferenceTypes: 0
-  Files: 25
+  Files: 34
  Nodes:
  - File: Nodes/webinar_audit.yaml

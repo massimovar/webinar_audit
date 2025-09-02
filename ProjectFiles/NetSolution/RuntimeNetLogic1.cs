@@ -14,6 +14,8 @@ using FTOptix.Recipe;
 using FTOptix.Core;
 using FTOptix.NetLogic;
 using FTOptix.Alarm;
+using FTOptix.CommunicationDriver;
+using FTOptix.Modbus;
 #endregion
 
 public class RuntimeNetLogic1 : BaseNetLogic

@@ -28,6 +28,9 @@ Children:
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+  - Name: AuthenticationMode
+    Type: BaseDataVariableType
+    DataType: AuthenticationMode
 - Name: PasswordPolicy
   Type: PasswordPolicy
   Children:
@@ -44,7 +47,7 @@ Children:
   - Name: MinimumPasswordLength
     Type: BaseDataVariableType
     DataType: Byte
-    Value: 8
+    Value: 3
 - Name: AlarmConfiguration
   Type: PropertyGroup
 - File: UI/UI.yaml
@@ -63,3 +66,12 @@ Children:
 - File: System/System.yaml
 - File: Translations/Translations.yaml
 - File: Retentivity/Retentivity.yaml
+- Name: RicettaMacchina
+  Type: Alias
+  DataType: NodeId
+  Value: "/Objects/webinar_audit/Recipes/RicettaMacchina/EditModel"
+  Children:
+  - Name: Kind
+    Type: PropertyType
+    DataType: NodeId
+    Value: "/Objects/webinar_audit/Recipes/RicettaMacchina/EditModel"

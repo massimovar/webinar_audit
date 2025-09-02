@@ -2,3 +2,4 @@ Name: Loggers
 Type: LoggersCategoryFolder
 Children:
 - File: Audit_Methods/Audit_Methods.yaml
+- File: Audit_Recipes/Audit_Recipes.yaml

@@ -184,6 +184,13 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#7f7d7d"
+    - Name: RecipePage
+      Type: LabelStyle
+      Children:
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 16.0
   - Name: RadioButtonStyles
     Type: BaseObjectType
     Children:
@@ -458,5 +465,70 @@ Children:
           DataType: Int32
           ModellingRule: Optional
           Value: 1
+  - Name: DropdownButton1
+    Type: DropDownButton
+    Children:
+    - Name: Panel
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/webinar_audit/UI/LoginForm/Login_Background"
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Connected user: {0}"}
+        - Name: ns=2;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/User@BrowseName"
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 60.0
+    - Name: AnimationType
+      Type: BaseDataVariableType
+      DataType: DropDownButtonAnimationTypeEnum
+      ModellingRule: Optional
+      Value: 1
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
 - File: Screens/Screens.yaml
 - File: Keyboards/Keyboards.yaml
+- File: LoginForm/LoginForm.yaml
