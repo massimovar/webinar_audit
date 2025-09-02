@@ -13,6 +13,7 @@ using FTOptix.EventLogger;
 using FTOptix.Recipe;
 using FTOptix.Core;
 using FTOptix.NetLogic;
+using FTOptix.Alarm;
 #endregion
 
 public class RuntimeNetLogic1 : BaseNetLogic

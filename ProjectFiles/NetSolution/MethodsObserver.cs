@@ -4,6 +4,7 @@ using System.Text;
 using FTOptix.NetLogic;
 using OpcUa = UAManagedCore.OpcUa;
 using UAManagedCore;
+using FTOptix.Alarm;
 #endregion
 
 public class MethodsObserver : BaseNetLogic
