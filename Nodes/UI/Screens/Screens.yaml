@@ -2948,7 +2948,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Audit recipe all methods\n\n(Recipe application event)"}
+        Value: {"LocaleId":"en-US","Text":"Audit recipe all methods\n\n(AuditUpdateMethodEventType)"}
       - Name: Style
         Type: BaseDataVariableType
         DataType: String
