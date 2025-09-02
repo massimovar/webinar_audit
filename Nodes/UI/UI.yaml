@@ -168,7 +168,7 @@ Children:
       - Name: FontSize
         Type: BaseDataVariableType
         DataType: Size
-        Value: 22.0
+        Value: 25.0
       - Name: TextColor
         Type: BaseDataVariableType
         DataType: Color

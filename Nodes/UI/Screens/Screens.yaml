@@ -56,7 +56,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"AuditUpdateMethodEventType"}
+        Value: {"LocaleId":"en-US","Text":"Methods audit"}
       - Name: Style
         Type: BaseDataVariableType
         DataType: String
@@ -82,7 +82,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"(Native) Set value"}
+          Value: {"LocaleId":"en-US","Text":"Set value\nNative"}
         - Name: MouseClickEventHandler1
           Type: EventHandler
           Children:
@@ -162,7 +162,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 200.0
+          Value: 170.0
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -178,6 +178,11 @@ Children:
           DataType: String
           ModellingRule: Optional
           Value: "Accent"
+        - Name: WordWrap
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+          Value: true
       - Name: Button2
         Type: Button
         Children:
@@ -185,7 +190,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"(MethodInvocation) Set value"}
+          Value: {"LocaleId":"en-US","Text":"Set value\nMethodInvocation"}
         - Name: MouseClickEventHandler1
           Type: EventHandler
           Children:
@@ -243,7 +248,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 200.0
+          Value: 170.0
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -271,12 +276,12 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"(NetLogic) Set value"}
+          Value: {"LocaleId":"en-US","Text":"Set value\nNetLogic"}
         - Name: Width
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 200.0
+          Value: 170.0
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -368,6 +373,11 @@ Children:
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 2
+        - Name: FontItalic
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+          Value: true
       - Name: SpinBox1
         Type: SpinBox
         Children:
@@ -920,11 +930,6 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 45.0
-      - Name: HorizontalAlignment
-        Type: BaseVariableType
-        DataType: HorizontalAlignment
-        ModellingRule: Optional
-        Value: 3
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -950,6 +955,11 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 15.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 2
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
