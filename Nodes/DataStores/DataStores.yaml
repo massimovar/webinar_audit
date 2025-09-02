@@ -26,9 +26,6 @@ Children:
       - Name: Columns
         Type: BaseObjectType
         Children:
-        - Name: EventType
-          Type: StoreColumn
-          DataType: NodeId
         - Name: SourceNode
           Type: StoreColumn
           DataType: NodeId
@@ -38,9 +35,6 @@ Children:
         - Name: ClientUserId
           Type: StoreColumn
           DataType: String
-        - Name: Status
-          Type: StoreColumn
-          DataType: Boolean
         - Name: MethodId
           Type: StoreColumn
           DataType: NodeId
@@ -51,6 +45,12 @@ Children:
           Type: StoreColumn
           DataType: UtcTime
         - Name: SourceNodeName
+          Type: StoreColumn
+          DataType: String
+        - Name: EventTypeName
+          Type: StoreColumn
+          DataType: String
+        - Name: MethodName
           Type: StoreColumn
           DataType: String
   - Class: Reference

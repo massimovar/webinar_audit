@@ -37,23 +37,13 @@ Children:
         Type: PropertyType
         DataType: Boolean
         Value: true
-      - Name: EventSource
-        Type: NodePointer
-        DataType: NodeId
-        ReferenceType: HasProperty
-        Value: "/Objects/webinar_audit/Model/Audit Methods"
-        Children:
-        - Name: Kind
-          Type: PropertyType
-          DataType: NodeId
-          Value: "/Types/ObjectTypes/BaseObjectType"
+      - Name: ExcludeNonInteractiveSessions
+        Type: PropertyType
+        DataType: Boolean
+        Value: true
   - Name: EventFieldPaths
     Type: BaseObjectType
     Children:
-    - Name: EventType
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/0:EventType"
     - Name: SourceNode
       Type: EventFieldPath
       DataType: NodePath
@@ -66,10 +56,6 @@ Children:
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:ClientUserId"
-    - Name: Status
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/0:Status"
     - Name: MethodId
       Type: EventFieldPath
       DataType: NodePath
@@ -78,14 +64,6 @@ Children:
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:LocalTime"
-    - Name: ConditionClassName
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/0:ConditionClassName"
-    - Name: ConditionSubClassName
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/0:ConditionSubClassName"
     - Name: ActionTimeStamp
       Type: EventFieldPath
       DataType: NodePath
@@ -94,9 +72,6 @@ Children:
     Type: BaseObjectType
     Children:
     - Name: EventTypeId
-      Type: BaseDataVariableType
-      DataType: NodeId
-    - Name: EventType
       Type: BaseDataVariableType
       DataType: NodeId
     - Name: SourceNode
@@ -108,37 +83,18 @@ Children:
     - Name: ClientUserId
       Type: BaseDataVariableType
       DataType: String
-    - Name: Status
-      Type: BaseDataVariableType
-      DataType: Boolean
     - Name: MethodId
       Type: BaseDataVariableType
       DataType: NodeId
     - Name: LocalTime
       Type: BaseDataVariableType
       DataType: TimeZoneDataType
-    - Name: ConditionClassName
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-    - Name: ConditionSubClassName
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ValueRank: OneDimension
-      ArrayDimensions: [0]
     - Name: ActionTimeStamp
       Type: BaseDataVariableType
       DataType: UtcTime
   - Name: EventFieldsToLog
     Type: BaseObjectType
     Children:
-    - Name: EventType
-      Type: EventFieldToLog
-      DataType: NodeId
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/EventType@Pointer"
     - Name: SourceNode
       Type: EventFieldToLog
       DataType: NodeId
@@ -163,14 +119,6 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/ClientUserId"
-    - Name: Status
-      Type: EventFieldToLog
-      DataType: Boolean
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/Status"
     - Name: MethodId
       Type: EventFieldToLog
       DataType: NodeId
@@ -203,3 +151,11 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/SourceNode@BrowseName"
+    - Name: MethodName
+      Type: EventFieldToLog
+      DataType: String
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/MethodId@BrowseName"

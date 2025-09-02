@@ -7,3 +7,5 @@ Children:
   Children:
   - Class: Method
     Name: MyMethod
+- Name: MethodsObserver
+  Type: NetLogic

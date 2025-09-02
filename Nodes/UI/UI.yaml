@@ -168,11 +168,11 @@ Children:
       - Name: FontSize
         Type: BaseDataVariableType
         DataType: Size
-        Value: 25.0
+        Value: 30.0
       - Name: TextColor
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#515151"
+        Value: "#706f6f"
     - Name: subtitle
       Type: LabelStyle
       Children:
