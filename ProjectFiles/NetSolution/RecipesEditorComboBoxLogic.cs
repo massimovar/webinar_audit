@@ -14,6 +14,7 @@ using FTOptix.SQLiteStore;
 using FTOptix.Store;
 using FTOptix.CommunicationDriver;
 using FTOptix.Modbus;
+using FTOptix.AuditSigning;
 #endregion
 
 public class RecipesEditorComboBoxLogic : BaseNetLogic

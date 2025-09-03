@@ -16,6 +16,7 @@ using FTOptix.NetLogic;
 using FTOptix.Alarm;
 using FTOptix.CommunicationDriver;
 using FTOptix.Modbus;
+using FTOptix.AuditSigning;
 #endregion
 
 public class RuntimeNetLogic1 : BaseNetLogic
