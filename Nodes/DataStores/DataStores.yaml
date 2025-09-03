@@ -26,9 +26,6 @@ Children:
       - Name: Columns
         Type: BaseObjectType
         Children:
-        - Name: SourceNode
-          Type: StoreColumn
-          DataType: NodeId
         - Name: Time
           Type: StoreColumn
           DataType: UtcTime
@@ -56,6 +53,9 @@ Children:
         - Name: LocalTimeStamp
           Type: StoreColumn
           DataType: UtcTime
+        - Name: SourceNode
+          Type: StoreColumn
+          DataType: NodeId
       - Name: RecordLimit
         Type: BaseDataVariableType
         DataType: UInt32
@@ -173,6 +173,39 @@ Children:
         Type: BaseDataVariableType
         DataType: UInt32
         Value: 10000
+    - Name: EventLoggerVariables
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=9;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=20
+        Direction: Forward
+      - Name: Columns
+        Type: BaseObjectType
+        Children:
+        - Name: LocalTime
+          Type: StoreColumn
+          DataType: TimeZoneDataType
+        - Name: SourceNode
+          Type: StoreColumn
+          DataType: String
+        - Name: Time
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: NewValue
+          Type: StoreColumn
+          DataType: Int32
+        - Name: OldValue
+          Type: StoreColumn
+          DataType: Int32
   - Class: Reference
     Target: ns=10;i=30
     Direction: Forward

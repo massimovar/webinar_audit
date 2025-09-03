@@ -106,15 +106,15 @@ Project:
    Module: FTOptix.Modbus.Net
    Version: 1.0
  Statistics:
-  TotalNodeCount: 1973
-  Objects: 431
+  TotalNodeCount: 2099
+  Objects: 455
   ObjectTypes: 12
-  Variables: 1515
+  Variables: 1617
   VariableTypes: 0
   DataTypes: 0
   Methods: 15
-  References: 63
+  References: 68
   ReferenceTypes: 0
-  Files: 34
+  Files: 36
  Nodes:
  - File: Nodes/webinar_audit.yaml

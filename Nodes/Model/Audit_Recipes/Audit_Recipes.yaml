@@ -3,7 +3,6 @@ Id: g=631c399f5eaca1920a8abc4b16b34fe8
 Type: FolderType
 Children:
 - Name: VarRicetta1
-  Id: g=96d5106ea709440b9c1be1e973f51f28
   Type: BaseDataVariableType
   DataType: Int32
   Children:
@@ -17,11 +16,9 @@ Children:
       DataType: DynamicLinkMode
       Value: 2
 - Name: VarRicetta2
-  Id: g=3d6d638c76d20c707a5aee31578871cc
   Type: BaseDataVariableType
   DataType: String
   Value: "0"
 - Name: VarRicetta3
-  Id: g=5dfb8aa0c1ccd498cce976a58d24962c
   Type: BaseDataVariableType
   DataType: Boolean

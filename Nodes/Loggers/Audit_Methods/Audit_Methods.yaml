@@ -44,10 +44,6 @@ Children:
   - Name: EventFieldPaths
     Type: BaseObjectType
     Children:
-    - Name: SourceNode
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/0:SourceNode"
     - Name: Time
       Type: EventFieldPath
       DataType: NodePath
@@ -68,13 +64,14 @@ Children:
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:ActionTimeStamp"
+    - Name: SourceNode
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/0:SourceNode"
   - Name: EventArguments
     Type: BaseObjectType
     Children:
     - Name: EventTypeId
-      Type: BaseDataVariableType
-      DataType: NodeId
-    - Name: SourceNode
       Type: BaseDataVariableType
       DataType: NodeId
     - Name: Time
@@ -92,17 +89,12 @@ Children:
     - Name: ActionTimeStamp
       Type: BaseDataVariableType
       DataType: UtcTime
+    - Name: SourceNode
+      Type: BaseDataVariableType
+      DataType: NodeId
   - Name: EventFieldsToLog
     Type: BaseObjectType
     Children:
-    - Name: SourceNode
-      Type: EventFieldToLog
-      DataType: NodeId
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/SourceNode@Pointer"
     - Name: Time
       Type: EventFieldToLog
       DataType: UtcTime
@@ -190,3 +182,11 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../LocalTime"
+    - Name: SourceNode
+      Type: EventFieldToLog
+      DataType: NodeId
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/SourceNode@Pointer"
