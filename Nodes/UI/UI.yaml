@@ -427,7 +427,7 @@ Children:
           - Name: Panel
             Type: NodePointer
             DataType: NodeId
-            Value: "/Objects/webinar_audit/UI/Screens/UserManagement/UsersScreen"
+            Value: "/Objects/webinar_audit/UI/Screens/UserManagement/Users_Home"
             Children:
             - Name: Kind
               Type: PropertyType
@@ -547,3 +547,4 @@ Children:
 - File: Screens/Screens.yaml
 - File: Keyboards/Keyboards.yaml
 - File: LoginForm/LoginForm.yaml
+- File: UserEditor/UserEditor.yaml

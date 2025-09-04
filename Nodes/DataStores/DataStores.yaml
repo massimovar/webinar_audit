@@ -230,6 +230,27 @@ Children:
         - Name: Time
           Type: StoreColumn
           DataType: UtcTime
+        - Name: 'Message_en-US'
+          Type: StoreColumn
+          DataType: String
+        - Name: Severity
+          Type: StoreColumn
+          DataType: UInt16
+        - Name: SourceName
+          Type: StoreColumn
+          DataType: String
+        - Name: ClientUserId
+          Type: StoreColumn
+          DataType: String
+        - Name: Status
+          Type: StoreColumn
+          DataType: Boolean
+        - Name: SelectedItem
+          Type: StoreColumn
+          DataType: NodeId
+        - Name: SelectedValue
+          Type: StoreColumn
+          DataType: BaseDataType
   - Class: Reference
     Target: ns=10;i=30
     Direction: Forward

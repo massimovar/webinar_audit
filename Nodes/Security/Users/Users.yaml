@@ -43,6 +43,18 @@ Children:
       ValueRank: OneDimension
       ArrayDimensions: [0]
       Value: [{"TypeId":{"Id":252,"Namespace":1},"Body":{"Hash":[96,236,48,140,191,222,173,212,15,14,65,21,211,49,126,164,161,203,121,35,206,61,70,12,82,229,12,65,179,54,144,145],"Salt":[7,149,169,86,131,118,231,70,214,236,127,122,152,150,8,229,226,212,111,224,144,160,38,112,4,122,233,112,106,2,149,126]}}]
+  - Name: LocaleId
+    Id: g=dc09f09e7321d4cdaf5ea3977ee677a4
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
+  - Name: Language
+    Id: g=4ce4be5940775ff964e6a7e6afbbbdd7
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
 - Name: User2
   Id: g=df44f520bff3f1cc33df41a1416a01bd
   Type: UserType
@@ -84,3 +96,9 @@ Children:
       ValueRank: OneDimension
       ArrayDimensions: [0]
       Value: [{"TypeId":{"Id":252,"Namespace":1},"Body":{"Hash":[88,194,154,208,6,177,112,88,67,115,143,133,213,245,88,183,15,96,73,181,122,139,94,21,2,239,142,86,178,238,4,104],"Salt":[195,74,101,52,136,164,236,62,30,93,127,151,126,37,195,67,198,73,210,125,244,40,237,110,120,245,143,201,167,3,40,96]}}]
+  - Name: Language
+    Id: g=2602cdfa33455e7e73faa5f2b7272777
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
