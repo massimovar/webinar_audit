@@ -1381,7 +1381,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 170.0
+          Value: 140.0
         - Name: Height
           Id: g=769da19b38a8fd45c04cc09f2a9d1aee
           Type: BaseVariableType
@@ -1526,7 +1526,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 170.0
+          Value: 140.0
         - Name: Height
           Id: g=f63bf073f3d5605b4898c43e14cf0968
           Type: BaseVariableType
@@ -1566,7 +1566,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 170.0
+          Value: 140.0
         - Name: Height
           Id: g=6826fef18f1058525b84a69c808ebf30
           Type: BaseVariableType
@@ -1788,7 +1788,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 170.0
+          Value: 140.0
         - Name: Height
           Id: g=e7191fecda3d8584ccd4390684599896
           Type: BaseVariableType
@@ -2030,6 +2030,115 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 20.0
+      - Name: Button5
+        Id: g=de0fdc165a41d95ec7453c616b17099f
+        Type: Button
+        Children:
+        - Name: Text
+          Id: g=3ce4434713c56af98ced181b0aece34c
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"close runtime"}
+        - Name: Width
+          Id: g=af9c759cd2b0302dcae0dcd2997171c5
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 140.0
+        - Name: Height
+          Id: g=4281f922372736b157ac973bdc4e24a8
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 40.0
+        - Name: WordWrap
+          Id: g=11721c541386b50683e84ff600830f51
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+          Value: true
+        - Name: Style
+          Id: g=2ba2afc2704ad4cce9e11f5f97fa58b6
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "Accent"
+        - Name: MouseClickEventHandler1
+          Id: g=666fcbc97557c3a02ef4f3012ef99cdd
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=e3c0db6e4cea71f1003a44f054314e42
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=22fb42cccbc6620e20e8365a968b942f
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=c1bf1cf86dd6c53d8993e7e627e64304
+              Type: BaseObjectType
+              Children:
+              - Name: ns=2;ObjectPointer
+                Id: g=25a660a4b21de30ec24dbcf3a2723e44
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/CoreCommands"
+                Children:
+                - Name: Kind
+                  Id: g=ba09d22dd2cae5eb6d2b55f57a278738
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=2;Method
+                Id: g=9459e9f95ea95b50a3c26571d600451d
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Close"
+          - Name: EventArguments
+            Id: g=4f9454f2e42a3e573a2af7c2f78913e0
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=899441ca3d2e52cb5166804ac825f2e3
+              Type: PropertyType
+              DataType: ByteString
+            - Name: EventType
+              Id: g=9f557ae5a790c4e6d6834d8a66c7bd03
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceNode
+              Id: g=188000a507762ddee1100c2ca1538951
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceName
+              Id: g=f908946a5dbbfaa40c0960c289220a59
+              Type: PropertyType
+              DataType: String
+            - Name: Time
+              Id: g=9d153ca09ae4835954333acf22838c6a
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: ReceiveTime
+              Id: g=047825399d834b83369a6942ba79533f
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: Message
+              Id: g=3f433451d699cd1d5adcacbfdca961db
+              Type: PropertyType
+              DataType: LocalizedText
+            - Name: Severity
+              Id: g=f5acd815bab33a5f94db616b77f537db
+              Type: PropertyType
+              DataType: UInt16
+        - Name: VerticalAlignment
+          Id: g=ee0025fe8c24b498452e7f4e9167432e
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 2
     - Name: DataGrid1
       Id: g=54db6f3a453c65479b5615e7cff7d66e
       Type: DataGrid
@@ -4222,6 +4331,9 @@ Children:
           DataType: ScrollAxesEnabledEnum
           ModellingRule: Optional
           Value: 2
+        - Class: Reference
+          Target: ns=3;i=1394
+          Direction: Forward
       - Name: RecipeSchema
         Id: g=3c583687578683a815585a3f765d000d
         Type: NodePointer
