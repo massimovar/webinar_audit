@@ -15,6 +15,7 @@ using FTOptix.Store;
 using FTOptix.CommunicationDriver;
 using FTOptix.Modbus;
 using FTOptix.AuditSigning;
+using FTOptix.OPCUAServer;
 #endregion
 
 public class RecipesEditorComboBoxLogic : BaseNetLogic

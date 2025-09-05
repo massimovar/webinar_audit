@@ -1,4 +1,5 @@
 Name: LoginForm
+Id: g=2c05c813e3a0aef0d0e18c5aefa0916a
 Type: FolderType
 Children:
 - Name: LoginForm
@@ -7,142 +8,173 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: Panel
+    Id: g=1da2d3173dd2a63c44ec2a323fcec100
     Type: NodePointer
     DataType: NodeId
     Children:
     - Name: Kind
+      Id: g=da96484a8968ffe819d5a37ccbe9c982
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
     - Name: ConditionalConverter1
+      Id: g=5d30717993d7e7dec8695db0b898e746
       Type: ConditionalConverter
       Children:
       - Name: Condition
+        Id: g=302637007f32fe07a5d353262f39f677
         Type: BaseDataVariableType
         DataType: Boolean
         ReferenceType: HasSource
         Children:
         - Name: DynamicLink
+          Id: g=bef2a7a9e7102e123dc39aa397c7c23d
           Type: DynamicLink
           DataType: NodePath
           Value: "{Session}/LoggedIn"
       - Name: TrueValue
+        Id: g=6a5ffb45972c5c75f74119ce97ea6804
         Type: BaseDataVariableType
         DataType: NodeId
         ReferenceType: HasParameter
         ModellingRule: Optional
         Value: "/Objects/webinar_audit/UI/LoginForm/LoginFormComponents/Logout"
       - Name: FalseValue
+        Id: g=c1baa25631046c044bd0e0c1481d0fd5
         Type: BaseDataVariableType
         DataType: NodeId
         ReferenceType: HasParameter
         Value: "/Objects/webinar_audit/UI/LoginForm/LoginFormComponents/Login"
         Children:
         - Name: KeyValueConverter1
+          Id: g=aced9a98a71b1a3b9b4774838b92af6e
           Type: ValueMapConverter
           Children:
           - Name: Source
+            Id: g=337f4aa028635be37ca7800ed185cc84
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
+              Id: g=c3232256fb789d680d4019b772701f52
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/webinar_audit/Authentication/AuthenticationMode"
           - Name: ns=2;Pairs
+            Id: g=c1ae497ba6d14acf1429de9ab3dfc71f
             Type: BaseObjectType
             ModellingRule: None
             Children:
             - Name: Pair
+              Id: g=dea52c0d9594ed93073f37655e701fbd
               Type: ValueMapPair
               ModellingRule: None
               Children:
               - Name: Key
+                Id: g=564d213af70aae53314741b24fdf326f
                 Type: BaseDataVariableType
                 DataType: AuthenticationMode
                 ModellingRule: None
               - Name: Value
+                Id: g=51ae2841080c1b363c621e042cb28a86
                 Type: BaseDataVariableType
                 DataType: NodeId
                 ModellingRule: None
                 Value: "/Objects/webinar_audit/UI/LoginForm/LoginFormComponents/Login"
             - Name: Pair1
+              Id: g=721cddf30344481f797cd819784f5f55
               Type: ValueMapPair
               ModellingRule: None
               Children:
               - Name: Key
+                Id: g=736b4093752707f8fa2ffe2db9ee7f28
                 Type: BaseDataVariableType
                 DataType: AuthenticationMode
                 ModellingRule: None
                 Value: 1
               - Name: Value
+                Id: g=ce0aa3cc230c3b7c928a0ecb1f039623
                 Type: BaseDataVariableType
                 DataType: NodeId
                 ModellingRule: None
                 Value: "/Objects/webinar_audit/UI/LoginForm/LoginFormComponents/Login"
             - Name: Pair2
+              Id: g=55a10dddc2969606cd74caa91c917983
               Type: ValueMapPair
               ModellingRule: None
               Children:
               - Name: Key
+                Id: g=0205604fad7485d363b9a4952ae2742d
                 Type: BaseDataVariableType
                 DataType: AuthenticationMode
                 ModellingRule: None
                 Value: 2
               - Name: Value
+                Id: g=f7203e2ab5adc53fa9aebdc46c5c1a67
                 Type: BaseDataVariableType
                 DataType: NodeId
                 ModellingRule: None
                 Value: "/Objects/webinar_audit/UI/LoginForm/LoginFormComponents/Login"
             - Name: Pair3
+              Id: g=50233534d06e357feb2cbacbd5478b49
               Type: ValueMapPair
               ModellingRule: None
               Children:
               - Name: Key
+                Id: g=b314bc35bd861741d9242cf4b88e06f2
                 Type: BaseDataVariableType
                 DataType: AuthenticationMode
                 ModellingRule: None
                 Value: 3
               - Name: Value
+                Id: g=0ff67287f9854d489789a66d832ec1b0
                 Type: BaseDataVariableType
                 DataType: NodeId
                 ModellingRule: None
                 Value: "/Objects/webinar_audit/UI/LoginForm/LoginFormComponents/Login"
             - Name: Pair4
+              Id: g=87ba4c38ecc55cf6689a3a1354dff7e2
               Type: ValueMapPair
               ModellingRule: None
               Children:
               - Name: Key
+                Id: g=a605cfe2abc3bfc697597af185606ee2
                 Type: BaseDataVariableType
                 DataType: AuthenticationMode
                 ModellingRule: None
                 Value: 4
               - Name: Value
+                Id: g=8f0cce74719a23a10cf7e49b79158f58
                 Type: BaseDataVariableType
                 DataType: NodeId
                 ModellingRule: None
                 Value: "/Objects/webinar_audit/UI/LoginForm/LoginFormComponents/Login"
             - Name: Pair5
+              Id: g=2ac960f5cb8c14eace1dc24e69b1156a
               Type: ValueMapPair
               ModellingRule: None
               Children:
               - Name: Key
+                Id: g=d8dd3cc85dddaeddbe41468eb4001a1b
                 Type: BaseDataVariableType
                 DataType: AuthenticationMode
                 ModellingRule: None
                 Value: 5
               - Name: Value
+                Id: g=33d425fe9f182b91de7b2e217ec5cc71
                 Type: BaseDataVariableType
                 DataType: NodeId
                 ModellingRule: None
                 Value: "/Objects/webinar_audit/UI/LoginForm/LoginFormComponents/OAuth2Login"
   - Name: CurrentPanel
+    Id: g=7a1a05b923ff1cba8d2ee91616355de2
     Type: NodePointer
     DataType: NodeId
     AccessLevel: Read
     Children:
     - Name: Kind
+      Id: g=31aa99c02bd91e543b37598f8d5a015b
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
@@ -150,35 +182,42 @@ Children:
     Target: ns=3;i=478
     Direction: Forward
   - Name: Width
+    Id: g=2d0b64016237d6a97237c7cca411bcec
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 300.0
   - Name: Height
+    Id: g=76f5394204370cbc8d88d998dd1640b6
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 300.0
   - Name: Users
+    Id: g=849de583b548b9b4cf6b8517b26018a7
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/webinar_audit/Security/Users"
     Children:
     - Name: Kind
+      Id: g=7c6f9347e663e4ae6aef32c9129e51c6
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
   - Name: PanelAliasNode
+    Id: g=39de315e5e381593cf0833429d3be93b
     Type: BaseDataVariableType
     DataType: NodeId
     ValueRank: ScalarOrOneDimension
     Children:
     - Name: DynamicLink
+      Id: g=a8ffbf26ede4dfc90153e4110ad15c48
       Type: DynamicLink
       DataType: NodePath
       Value: "../Users@NodeId"
 - File: LoginFormComponents/LoginFormComponents.yaml
 - Name: ns=4;LibraryReference
+  Id: g=6d1885e23037d73ba186ac2a8c5067c8
   Type: ObjectLibraryReference
   DataType: ObjectLibraryReferenceDataType
   Value: 
@@ -200,72 +239,88 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: Width
+    Id: g=98550a9dc10d70ed4259617ab928af35
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 300.0
   - Name: Height
+    Id: g=5eefd9964646f6d0ecec9ea783391aab
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 300.0
   - Name: CornerRadius
+    Id: g=149cbc8534cd8d5a5385cc7d2dc335a1
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 5.0
   - Name: BorderThickness
+    Id: g=add597c8c776bf525ff0d9914c0ec6ab
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 1.0
   - Name: LoginForm1
+    Id: g=d6171463b67dd5f779a167d15d8766a7
     Type: LoginForm
     Children:
     - Name: Panel
+      Id: g=61096445b7162258fbc42c782d3a3aa8
       Type: NodePointer
       DataType: NodeId
       Children:
       - Name: Kind
+        Id: g=cd051467835b264749402e6af9a46949
         Type: PropertyType
         DataType: NodeId
         Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: ConditionalConverter1
+        Id: g=57c37533c9465ed0f44019c44ad4253d
         Type: ConditionalConverter
         Children:
         - Name: Condition
+          Id: g=8405ddc6ed6cd359c6c88307c1957dbc
           Type: BaseDataVariableType
           DataType: Boolean
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
+            Id: g=5c111e5b9a4969eeae98aa7b6c54ddf2
             Type: DynamicLink
             DataType: NodePath
             Value: "{Session}/LoggedIn"
         - Name: FalseValue
+          Id: g=76266f55b1ef3417a0db33959d322437
           Type: BaseDataVariableType
           DataType: NodeId
           ReferenceType: HasParameter
           Value: "/Objects/webinar_audit/UI/LoginForm/LoginFormComponents/Login"
           Children:
           - Name: KeyValueConverter1
+            Id: g=f7806d31b58644ce843d6281196b0d2b
             Type: ValueMapConverter
             Children:
             - Name: Source
+              Id: g=e14f5722c5811bcc532099f10275579c
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
+                Id: g=b5c5d0e72fa4f0d96d787a7707567b7e
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/webinar_audit/Authentication/AuthenticationMode"
     - Name: CurrentPanel
+      Id: g=25b7fadd0f384e5c6f01f37b7113d5c9
       Type: NodePointer
       DataType: NodeId
       AccessLevel: Read
       Children:
       - Name: Kind
+        Id: g=970e0c41ecb5c17e05c16d5342b9b692
         Type: PropertyType
         DataType: NodeId
         Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
@@ -273,29 +328,35 @@ Children:
       Target: ns=3;i=478
       Direction: Forward
     - Name: Users
+      Id: g=59f105d5adba49989212589548c97db9
       Type: NodePointer
       DataType: NodeId
       Value: "/Objects/webinar_audit/Security/Users"
       Children:
       - Name: Kind
+        Id: g=7ce315fbc893d09bd11cd22886b046c6
         Type: PropertyType
         DataType: NodeId
         Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
     - Name: PanelAliasNode
+      Id: g=5ccf47a4691c6d2c37ea8810d7f36d75
       Type: BaseDataVariableType
       DataType: NodeId
       ValueRank: ScalarOrOneDimension
       Children:
       - Name: DynamicLink
+        Id: g=cc8eeaeba7e0262b24795c3a4f70a19e
         Type: DynamicLink
         DataType: NodePath
         Value: "../Users@NodeId"
     - Name: HorizontalAlignment
+      Id: g=d12ea7e66169b5084013a39d4c64c1df
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: VerticalAlignment
+      Id: g=99d21854523bf73f737f56ab8fb8129d
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional

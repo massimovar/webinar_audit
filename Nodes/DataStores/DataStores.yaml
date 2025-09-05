@@ -1,4 +1,5 @@
 Name: DataStores
+Id: g=d0ca6dc08c432a456af43f9e492c805d
 Type: DataStoresCategoryFolder
 Children:
 - Name: EmbeddedDatabase1
@@ -6,9 +7,11 @@ Children:
   Type: SQLiteStore
   Children:
   - Name: Tables
+    Id: g=b2e8530b30b5578dd3547c29f6d4f591
     Type: BaseObjectType
     Children:
     - Name: MethodsEventLogger
+      Id: g=2b1924345d3ab60b615b928c12a7c439
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -24,43 +27,56 @@ Children:
         Target: ns=9;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=8ef35734e7c9fb6291dfe914a13bb5c5
         Type: BaseObjectType
         Children:
         - Name: Time
+          Id: g=82dfd9c60ca377f48dac4ea9988f251e
           Type: StoreColumn
           DataType: UtcTime
         - Name: ClientUserId
+          Id: g=72c9568e05f81779cfbf63db1e369208
           Type: StoreColumn
           DataType: String
         - Name: MethodId
+          Id: g=5e0eb2ab4339b9be43ff3cc114845e63
           Type: StoreColumn
           DataType: NodeId
         - Name: LocalTime
+          Id: g=0a98fef17ffc328bf374922cd521dc70
           Type: StoreColumn
           DataType: TimeZoneDataType
         - Name: ActionTimeStamp
+          Id: g=dedd5e5117f2bf068eb3344f3e7cd936
           Type: StoreColumn
           DataType: UtcTime
         - Name: SourceNodeName
+          Id: g=89b959eccc6846cacc011f5919a89cbd
           Type: StoreColumn
           DataType: String
         - Name: EventTypeName
+          Id: g=7bab4dd1216fbcdfdfcbe1df217563aa
           Type: StoreColumn
           DataType: String
         - Name: MethodName
+          Id: g=ef3808f6dbc55e40c1ef02f71aef0c20
           Type: StoreColumn
           DataType: String
         - Name: LocalTimeStamp
+          Id: g=d666fc0c2962fcbb59ebd40a51412228
           Type: StoreColumn
           DataType: UtcTime
         - Name: SourceNode
+          Id: g=badd87d5533cd8888488f29c731077f9
           Type: StoreColumn
           DataType: NodeId
       - Name: RecordLimit
+        Id: g=60aaeb296469c28b7b3b58d72ece1136
         Type: BaseDataVariableType
         DataType: UInt32
         Value: 100000
     - Name: RicettaMacchina
+      Id: g=74901e519af3fd973a4af1cb94d079d9
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -76,21 +92,27 @@ Children:
         Target: ns=9;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=890e81c88b6bf3d495d4d1b15a02fd73
         Type: BaseObjectType
         Children:
         - Name: Name
+          Id: g=b760331072c8d83cab1fd6b8987407cb
           Type: StoreColumn
           DataType: String
         - Name: /VarRicetta1
+          Id: g=448232143d7d7f669f08ac914f3d5767
           Type: StoreColumn
           DataType: Int32
         - Name: /VarRicetta2
+          Id: g=a5ece6e710fbd339e4caca2c68bd3b62
           Type: StoreColumn
           DataType: String
         - Name: /VarRicetta3
+          Id: g=618640b9ad03b36b7347751a4e7d2c45
           Type: StoreColumn
           DataType: Boolean
     - Name: AuditRecipeActivated
+      Id: g=141dd5f1c16ca2f4ca34a45f7c7c247a
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -106,37 +128,48 @@ Children:
         Target: ns=9;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=3fde23214eff07332ed042d4cef778cc
         Type: BaseObjectType
         Children:
         - Name: EventType
+          Id: g=edc7b07ea25e0ad3ec382117c6c8f07f
           Type: StoreColumn
           DataType: String
         - Name: SourceNode
+          Id: g=ffac2c330706b7e6203f0c98e88e59b7
           Type: StoreColumn
           DataType: String
         - Name: ClientUserId
+          Id: g=a85fd259d89db4f311a950270bcb2580
           Type: StoreColumn
           DataType: String
         - Name: 'Status_en-US'
+          Id: g=2c0f6b056828d249f4b73c46b37406e1
           Type: StoreColumn
           DataType: String
         - Name: MethodName
+          Id: g=ac54116093d053b06b3585f67cc6a76d
           Type: StoreColumn
           DataType: String
         - Name: DestinationNode
+          Id: g=58650d7502ff163dbed02bda6e39e278
           Type: StoreColumn
           DataType: String
         - Name: RecipeName
+          Id: g=877128d7ac4e35504f7004faab700568
           Type: StoreColumn
           DataType: String
         - Name: LocalTime
+          Id: g=c5bdd55e8a8c1a71178e8a3a33f81bc8
           Type: StoreColumn
           DataType: DateTime
       - Name: RecordLimit
+        Id: g=c1f276039b9ba0212c96983a51c94c2f
         Type: BaseDataVariableType
         DataType: UInt32
         Value: 10000
     - Name: AuditRecipeAllMethods
+      Id: g=85f1d5bcba3a42aeeeaa860fab3a0751
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -152,28 +185,36 @@ Children:
         Target: ns=9;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=8b69a9170cd56979f715d04a840a91ab
         Type: BaseObjectType
         Children:
         - Name: SourceNode
+          Id: g=ef107ebbd8f21b66e523dcb329d2466c
           Type: StoreColumn
           DataType: String
         - Name: Time
+          Id: g=420c9829a00496c7aeaa3f03e9c54530
           Type: StoreColumn
           DataType: UtcTime
         - Name: ClientUserId
+          Id: g=f4e84a2cf146aaece0559a1f5014193c
           Type: StoreColumn
           DataType: String
         - Name: MethodName
+          Id: g=d2450387cdef45615a8f385cea830370
           Type: StoreColumn
           DataType: String
         - Name: RecipeName
+          Id: g=14c1eaf1a3fa01b1240ec7762e55e67f
           Type: StoreColumn
           DataType: String
       - Name: RecordLimit
+        Id: g=ff556a96e2dd0b64584147bbc75e9cf9
         Type: BaseDataVariableType
         DataType: UInt32
         Value: 10000
     - Name: EventLoggerVariables
+      Id: g=fdc7370df666a782a9088c3975dfb804
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -189,24 +230,39 @@ Children:
         Target: ns=9;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=a72c20a3ed851a1dfbf701888bdac389
         Type: BaseObjectType
         Children:
         - Name: LocalTime
+          Id: g=05c711e70e5cde99f72c2aa494b79b03
           Type: StoreColumn
           DataType: TimeZoneDataType
         - Name: SourceNode
+          Id: g=80e2b8898ab2cd5399064b8968a536d5
           Type: StoreColumn
           DataType: String
         - Name: Time
+          Id: g=bf9dc2cd661919a59defc1b31c8ebd63
           Type: StoreColumn
           DataType: UtcTime
         - Name: NewValue
+          Id: g=754810a1ca2b3c08079f01889c0715dd
           Type: StoreColumn
           DataType: Int32
         - Name: OldValue
+          Id: g=7230c45a4b88200fd6a761f9b070939a
           Type: StoreColumn
           DataType: Int32
+        - Name: SourceName
+          Id: g=e06a6e0510b76d07832c4552a9b9abf4
+          Type: StoreColumn
+          DataType: String
+        - Name: ClientUserId
+          Id: g=a2b9f72db038703ab3a5a6ebf5113728
+          Type: StoreColumn
+          DataType: String
     - Name: SigningEventLogger
+      Id: g=dc8a04370cf7d6d74440982c72ce4f53
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -222,33 +278,47 @@ Children:
         Target: ns=9;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=1139da9aa784aec365efa2b2087425ca
         Type: BaseObjectType
         Children:
         - Name: ActionTimeStamp
+          Id: g=a5f3332905dad62061b427e53feb780e
           Type: StoreColumn
           DataType: UtcTime
         - Name: SourceName
+          Id: g=11480b9a61baeea12c114f23f9515775
           Type: StoreColumn
           DataType: String
         - Name: OldValue
+          Id: g=d046477ed3d8a861ef04ff5e3c5515e4
           Type: StoreColumn
           DataType: String
         - Name: NewValue
+          Id: g=5c7849bceb841ecb39a1d10c78b90e62
           Type: StoreColumn
           DataType: String
         - Name: WorkflowType
+          Id: g=988c2c4a599254f5dd19f974fdcbd209
           Type: StoreColumn
           DataType: WorkflowType
         - Name: SignResult
+          Id: g=35a5fbab2cd06f919b1387773401578a
           Type: StoreColumn
           DataType: SignResult
         - Name: ClientUserId
+          Id: g=59354c42265bbaef0f96a41d5c7e410d
           Type: StoreColumn
           DataType: String
         - Name: ClientUserNote
+          Id: g=b94b81c3962a9f7127e3966a01dab1ca
           Type: StoreColumn
           DataType: String
         - Name: SecondClientUserNote
+          Id: g=883ce63110bd6b993dc12a4418f4246b
+          Type: StoreColumn
+          DataType: String
+        - Name: SourceNode
+          Id: g=986df119f140ab241f2201ab64c0b4dc
           Type: StoreColumn
           DataType: String
   - Class: Reference
@@ -258,20 +328,24 @@ Children:
     Target: ns=10;i=33
     Direction: Forward
   - Name: MaxColumnNameLength
+    Id: g=5f597430c4066091de17418d2b91b91a
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
   - Name: MaxColumnCount
+    Id: g=3804f89c86e788e24527f2dcee94bd7f
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
   - Name: DataTypeCompatibilityMap
+    Id: g=d26eddc37e85f3ea68369705a316076d
     Type: BaseDataVariableType
     DataType: NodeId
     AccessLevel: Read
     ValueRank: OneOrMoreDimensions
     ArrayDimensions: [0,0]
   - Name: Status
+    Id: g=9765e31fe40bd9ccdc8f46362c4bb8e9
     Type: PropertyType
     DataType: StoreStatus
     AccessLevel: Read
@@ -310,6 +384,7 @@ Children:
     Target: ns=9;i=59
     Direction: Forward
   - Name: Filename
+    Id: g=f8fe81cd12d10f59572078fff98d9913
     Type: BaseDataVariableType
     DataType: String
     Value: "DB_Progetto"

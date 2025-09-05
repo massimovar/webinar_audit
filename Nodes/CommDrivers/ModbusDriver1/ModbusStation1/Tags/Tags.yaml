@@ -1,6 +1,8 @@
 Name: Tags
+Id: g=9ab1bf05bddb203cc7861a85e23a5b86
 Type: FolderType
 Children:
 - Name: ModbusTag1
+  Id: g=fcafda354e3ddaa82570accbbab40206
   Type: ModbusTag
   DataType: Int16

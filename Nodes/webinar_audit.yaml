@@ -1,54 +1,68 @@
 Name: webinar_audit
+Id: g=e5c3f12a59d063695e26813ee31d74cb
 Type: ProjectFolder
 Children:
 - Name: Localization
+  Id: g=cca9e43655b27e89d62447ee41b69a14
   Type: PropertyGroup
   Children:
   - Name: Locales
+    Id: g=3bbcd2702f40f7316df4351a338c0cf8
     Type: BaseDataVariableType
     DataType: LocaleId
     ValueRank: OneDimension
     ArrayDimensions: [0]
     Value: ["en-US"]
   - Name: LocaleFallbackList
+    Id: g=2f385f4d9eea40ef7ad3bd31487cb904
     Type: BaseDataVariableType
     DataType: LocaleId
     ValueRank: OneDimension
     ArrayDimensions: [0]
     Value: ["en-US"]
 - Name: Authentication
+  Id: g=f6bc2fea7faad8034a0b89cf459741ab
   Type: PropertyGroup
   Children:
   - Name: DefaultUserFolder
+    Id: g=2c04fa0c997c81ca30630b78844cf471
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/webinar_audit/Security/Users"
     Children:
     - Name: Kind
+      Id: g=92557f82918503c4bbff12c9dc07740a
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
   - Name: AuthenticationMode
+    Id: g=63cd8576a9aa087d04d83e041a80429a
     Type: BaseDataVariableType
     DataType: AuthenticationMode
 - Name: PasswordPolicy
+  Id: g=8557314c7247369c821f44dd8afd6e6f
   Type: PasswordPolicy
   Children:
   - Name: MaximumPasswordAge
+    Id: g=f84c5566fe24e4f06be4ead894b06df1
     Type: BaseDataVariableType
     DataType: UInt16
   - Name: EnforcePasswordHistory
+    Id: g=de1297013bb6476ca6f4b811e081cdd1
     Type: BaseDataVariableType
     DataType: Byte
     Value: 1
   - Name: MinimumPasswordAge
+    Id: g=8b8182254c0ecc0ca15b9a7cb49d2f34
     Type: BaseDataVariableType
     DataType: UInt16
   - Name: MinimumPasswordLength
+    Id: g=024b467709c9d48a1632c9e1832bd05a
     Type: BaseDataVariableType
     DataType: Byte
     Value: 3
 - Name: AlarmConfiguration
+  Id: g=1279aaedadb9a39976a21c726c86ca66
   Type: PropertyGroup
 - File: UI/UI.yaml
 - File: Model/Model.yaml
@@ -67,11 +81,13 @@ Children:
 - File: Translations/Translations.yaml
 - File: Retentivity/Retentivity.yaml
 - Name: RicettaMacchina
+  Id: g=b43a479c0515b06c7d621daa9109b584
   Type: Alias
   DataType: NodeId
   Value: "/Objects/webinar_audit/Recipes/RicettaMacchina/EditModel"
   Children:
   - Name: Kind
+    Id: g=a12ba331119410578b8fb090ac61640f
     Type: PropertyType
     DataType: NodeId
     Value: "/Objects/webinar_audit/Recipes/RicettaMacchina/EditModel"

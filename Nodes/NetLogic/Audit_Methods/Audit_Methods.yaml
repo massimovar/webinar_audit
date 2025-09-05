@@ -1,4 +1,5 @@
 Name: Audit Methods
+Id: g=f7a0d551fd940d8abecda13c9dea2590
 Type: FolderType
 Children:
 - Name: RuntimeNetLogic1
@@ -7,5 +8,7 @@ Children:
   Children:
   - Class: Method
     Name: MyMethod
+    Id: g=8519dc9ad50cbce0fa63b037ced0b250
 - Name: MethodsObserver
+  Id: g=b0d9aa4cd056da03627d373f56214f9c
   Type: NetLogic

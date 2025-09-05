@@ -9,6 +9,7 @@ using FTOptix.Recipe;
 using FTOptix.CommunicationDriver;
 using FTOptix.Modbus;
 using FTOptix.AuditSigning;
+using FTOptix.OPCUAServer;
 #endregion
 
 public class MethodsObserver : BaseNetLogic
