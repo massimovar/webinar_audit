@@ -3935,23 +3935,177 @@ Children:
     - Name: WorkflowType
       Id: g=0b466fc91719e679ecafa0d5ddc36d8f
       Type: EventFieldToLog
-      DataType: WorkflowType
+      DataType: String
+      Value: "0"
       Children:
-      - Name: DynamicLink
-        Id: g=59e209e1863d7270a706aa3bfcf2639d
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/WorkflowType"
+      - Name: KeyValueConverter1
+        Id: g=28f5c305032d07af9ea1676940f3c02f
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Id: g=4cd44dea7059ffa941785989009f30f1
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=5f3faf501ed9918514ca0ea68de3bce0
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../EventArguments/WorkflowType"
+        - Name: ns=2;Pairs
+          Id: g=392363f085a4f8405cec9fcaf2c6feff
+          Type: BaseObjectType
+          Children:
+          - Name: Pair
+            Id: g=3e72a0d469668f7cde84dcce44c31b3c
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=10ea3218ad0bcf97c9096723af84970b
+              Type: BaseDataVariableType
+              DataType: WorkflowType
+            - Name: Value
+              Id: g=6fe099df46fdd4d33efb9dd2ad67f9a8
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Operation confirmed"
+          - Name: Pair1
+            Id: g=919efab61eac43a3a02393eeb26b64e0
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=9e596b6f91b0a41d03a92d8c5b848f6b
+              Type: BaseDataVariableType
+              DataType: WorkflowType
+              Value: 1
+            - Name: Value
+              Id: g=5b49e9cf46050d32dd46bcef0913ff8b
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Operation signed"
+          - Name: Pair2
+            Id: g=c6b0527bc3d31b0736a7ec6ec9d2b9ea
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=fb1401f8fe64d7cceff7c2de0b1943c1
+              Type: BaseDataVariableType
+              DataType: WorkflowType
+              Value: 2
+            - Name: Value
+              Id: g=659c91998245712e7daaac79e9511874
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Operation double signed"
     - Name: SignResult
       Id: g=3a669a454539e2f61b0d06b1d0efadd9
       Type: EventFieldToLog
-      DataType: SignResult
+      DataType: String
+      Value: "0"
       Children:
-      - Name: DynamicLink
-        Id: g=29c9d7010b16d7c5d1107875cf851f95
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/SignResult"
+      - Name: KeyValueConverter1
+        Id: g=de12d65aef8f22fa96e5fea5161a9c1d
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Id: g=7b3a68be93367ead63102300079f7fa2
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=ed87de9e89d0f6d796f9eaa082d65fa5
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../EventArguments/SignResult"
+        - Name: ns=2;Pairs
+          Id: g=11c758b84d3ae4f7e80083b96081eae0
+          Type: BaseObjectType
+          Children:
+          - Name: Pair
+            Id: g=db982d0544bbc4f4df9501f4835adc91
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=c1f063cd625a87465f99cafc64a7410f
+              Type: BaseDataVariableType
+              DataType: SignResult
+            - Name: Value
+              Id: g=6a7aad3675fd39dab70f46758c37497e
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Succeded"
+          - Name: Pair1
+            Id: g=259237aca0b7ebdb08fd8e4e577a4945
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=f3bf128ac4c031196a4e0ebe6b449a34
+              Type: BaseDataVariableType
+              DataType: SignResult
+              Value: 1
+            - Name: Value
+              Id: g=08261d4fcf47295218c5112863f12c5d
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Canceled"
+          - Name: Pair2
+            Id: g=7037a7ea959252b1644a67c2ff05e029
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=3db8a146bfce3a5eef6ec36d62c3d0af
+              Type: BaseDataVariableType
+              DataType: SignResult
+              Value: 2
+            - Name: Value
+              Id: g=1907c3f2b59b97e0afd014a197c8721a
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "First user login failed"
+          - Name: Pair3
+            Id: g=a4ca8a0aed1316473c860a74fd998887
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=567ac735499ea7189a055947587b3e32
+              Type: BaseDataVariableType
+              DataType: SignResult
+              Value: 3
+            - Name: Value
+              Id: g=cbe6cf2f35e37dd60ada6e3bcd052360
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Second user login failed"
+          - Name: Pair4
+            Id: g=ece3277551f848d1d434954391104948
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=cea705ce865beeaac3e8732f418ee13b
+              Type: BaseDataVariableType
+              DataType: SignResult
+              Value: 4
+            - Name: Value
+              Id: g=e7d35eaf86af4036c9cf9d16d4a20bcd
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "First user not authorized"
+          - Name: Pair5
+            Id: g=7a70012682010a935731971cdd5524e1
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=a379e67b9109838fa51c08a21bb1ec54
+              Type: BaseDataVariableType
+              DataType: SignResult
+              Value: 5
+            - Name: Value
+              Id: g=4849c14d63e3a904c9fb1ec0bad22c14
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Second user not authorized"
     - Name: ClientUserId
       Id: g=f75bb58b38f90aa135ffe9861f501fb0
       Type: EventFieldToLog

@@ -138,16 +138,6 @@ Children:
     Id: g=737f74c50bf3b19120d8643e75a6b8c8
     Type: BaseObjectType
     Children:
-    - Name: LocalTime
-      Id: g=3605d138554b5b0afeeaebc7df447d5f
-      Type: EventFieldToLog
-      DataType: TimeZoneDataType
-      Children:
-      - Name: DynamicLink
-        Id: g=9631496be03445ecef26f73df8a842f5
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/LocalTime"
     - Name: SourceNode
       Id: g=c9a18b037736cc01079deff4015c237b
       Type: EventFieldToLog
@@ -163,11 +153,38 @@ Children:
       Type: EventFieldToLog
       DataType: UtcTime
       Children:
-      - Name: DynamicLink
-        Id: g=a1f2c0c9abc70fce09b487862aa7460a
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/Time"
+      - Name: ExpressionEvaluator1
+        Id: g=f46e371dbfbe12f38aff69e99a1cd6de
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Id: g=29e3cc19d77b648f7225525531eff1a4
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          Value: "{0}+{1}"
+        - Name: ns=2;Source0
+          Id: g=eaa919fd38fa73226065db97960e5e45
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=36fb28cd7b6490964651391054c8db22
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../EventArguments/Time"
+        - Name: ns=2;Source1
+          Id: g=195618558027581b1841b85826f36dea
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=c5670f3148aef461552d47b5217e180a
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../EventArguments/LocalTime"
     - Name: NewValue
       Id: g=fd278e51fdb280069f6778df605769be
       Type: EventFieldToLog

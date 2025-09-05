@@ -233,10 +233,6 @@ Children:
         Id: g=a72c20a3ed851a1dfbf701888bdac389
         Type: BaseObjectType
         Children:
-        - Name: LocalTime
-          Id: g=05c711e70e5cde99f72c2aa494b79b03
-          Type: StoreColumn
-          DataType: TimeZoneDataType
         - Name: SourceNode
           Id: g=80e2b8898ab2cd5399064b8968a536d5
           Type: StoreColumn
@@ -259,66 +255,6 @@ Children:
           DataType: String
         - Name: ClientUserId
           Id: g=a2b9f72db038703ab3a5a6ebf5113728
-          Type: StoreColumn
-          DataType: String
-    - Name: SigningEventLogger
-      Id: g=dc8a04370cf7d6d74440982c72ce4f53
-      Type: SQLiteStoreTable
-      Children:
-      - Class: Reference
-        Target: ns=9;i=12
-        Direction: Forward
-      - Class: Reference
-        Target: ns=9;i=15
-        Direction: Forward
-      - Class: Reference
-        Target: ns=9;i=21
-        Direction: Forward
-      - Class: Reference
-        Target: ns=9;i=20
-        Direction: Forward
-      - Name: Columns
-        Id: g=1139da9aa784aec365efa2b2087425ca
-        Type: BaseObjectType
-        Children:
-        - Name: ActionTimeStamp
-          Id: g=a5f3332905dad62061b427e53feb780e
-          Type: StoreColumn
-          DataType: UtcTime
-        - Name: SourceName
-          Id: g=11480b9a61baeea12c114f23f9515775
-          Type: StoreColumn
-          DataType: String
-        - Name: OldValue
-          Id: g=d046477ed3d8a861ef04ff5e3c5515e4
-          Type: StoreColumn
-          DataType: String
-        - Name: NewValue
-          Id: g=5c7849bceb841ecb39a1d10c78b90e62
-          Type: StoreColumn
-          DataType: String
-        - Name: WorkflowType
-          Id: g=988c2c4a599254f5dd19f974fdcbd209
-          Type: StoreColumn
-          DataType: WorkflowType
-        - Name: SignResult
-          Id: g=35a5fbab2cd06f919b1387773401578a
-          Type: StoreColumn
-          DataType: SignResult
-        - Name: ClientUserId
-          Id: g=59354c42265bbaef0f96a41d5c7e410d
-          Type: StoreColumn
-          DataType: String
-        - Name: ClientUserNote
-          Id: g=b94b81c3962a9f7127e3966a01dab1ca
-          Type: StoreColumn
-          DataType: String
-        - Name: SecondClientUserNote
-          Id: g=883ce63110bd6b993dc12a4418f4246b
-          Type: StoreColumn
-          DataType: String
-        - Name: SourceNode
-          Id: g=986df119f140ab241f2201ab64c0b4dc
           Type: StoreColumn
           DataType: String
   - Class: Reference
