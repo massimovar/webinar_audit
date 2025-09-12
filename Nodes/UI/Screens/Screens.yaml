@@ -2174,7 +2174,7 @@ Children:
             Id: g=c89d8db23458de662e89a1c9ec13350a
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"ClientUserId"}
+            Value: {"LocaleId":"en-US","Text":"User"}
           - Name: Width
             Id: g=b908680309808362fd06d0cede81f0c5
             Type: BaseDataVariableType
@@ -2220,7 +2220,7 @@ Children:
             Id: g=1bbe8f05198cbc2222ebdfe1fd7f137b
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"SourceNodeName"}
+            Value: {"LocaleId":"en-US","Text":"Source"}
           - Name: Width
             Id: g=4349d58f0b4f6238de28dd5172adc1d0
             Type: BaseDataVariableType
@@ -2266,7 +2266,7 @@ Children:
             Id: g=38568b174672da327072850ac82e7f02
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"MethodName"}
+            Value: {"LocaleId":"en-US","Text":"Method"}
           - Name: Width
             Id: g=52b38a353cf20622ea4aae3812d31335
             Type: BaseDataVariableType

@@ -51,7 +51,6 @@ Children:
         Id: g=63b2e2ca4dc931d42bd8072fea6f6dab
         Type: PropertyType
         DataType: Boolean
-        Value: true
   - Name: EventFieldPaths
     Id: g=8c4e54ce794b0d5985d99551b993da42
     Type: BaseObjectType
@@ -76,11 +75,6 @@ Children:
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:LocalTime"
-    - Name: ActionTimeStamp
-      Id: g=c32196a8825284d1e8e18ced9438ef6c
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/0:ActionTimeStamp"
     - Name: SourceNode
       Id: g=525b39f0e013d12aa21f174281bb162c
       Type: EventFieldPath
@@ -110,10 +104,6 @@ Children:
       Id: g=ba827d874c408066be614a194f1fe94f
       Type: BaseDataVariableType
       DataType: TimeZoneDataType
-    - Name: ActionTimeStamp
-      Id: g=2f3769a80c33b65de67ebdecb48d1cb7
-      Type: BaseDataVariableType
-      DataType: UtcTime
     - Name: SourceNode
       Id: g=cfa0702bd45ffdaa1e9bab807b8d1e92
       Type: BaseDataVariableType
@@ -162,16 +152,6 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/LocalTime"
-    - Name: ActionTimeStamp
-      Id: g=479a299d288e7b1cb99727a0fc396082
-      Type: EventFieldToLog
-      DataType: UtcTime
-      Children:
-      - Name: DynamicLink
-        Id: g=1c17b8aaced1848b40f8ffd34139b37c
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/ActionTimeStamp"
     - Name: SourceNodeName
       Id: g=a532548e27a3e4b4357485bfaa298723
       Type: EventFieldToLog
