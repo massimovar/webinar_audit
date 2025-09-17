@@ -209,50 +209,6 @@ Children:
         Type: BaseDataVariableType
         DataType: UInt32
         Value: 10000
-    - Name: EventLoggerVariables
-      Id: g=fdc7370df666a782a9088c3975dfb804
-      Type: SQLiteStoreTable
-      Children:
-      - Class: Reference
-        Target: ns=9;i=12
-        Direction: Forward
-      - Class: Reference
-        Target: ns=9;i=15
-        Direction: Forward
-      - Class: Reference
-        Target: ns=9;i=21
-        Direction: Forward
-      - Class: Reference
-        Target: ns=9;i=20
-        Direction: Forward
-      - Name: Columns
-        Id: g=a72c20a3ed851a1dfbf701888bdac389
-        Type: BaseObjectType
-        Children:
-        - Name: SourceNode
-          Id: g=80e2b8898ab2cd5399064b8968a536d5
-          Type: StoreColumn
-          DataType: String
-        - Name: Time
-          Id: g=bf9dc2cd661919a59defc1b31c8ebd63
-          Type: StoreColumn
-          DataType: UtcTime
-        - Name: NewValue
-          Id: g=754810a1ca2b3c08079f01889c0715dd
-          Type: StoreColumn
-          DataType: Int32
-        - Name: OldValue
-          Id: g=7230c45a4b88200fd6a761f9b070939a
-          Type: StoreColumn
-          DataType: Int32
-        - Name: SourceName
-          Id: g=e06a6e0510b76d07832c4552a9b9abf4
-          Type: StoreColumn
-          DataType: String
-        - Name: ClientUserId
-          Id: g=a2b9f72db038703ab3a5a6ebf5113728
-          Type: StoreColumn
-          DataType: String
     - Name: SigningEventLogger
       Id: g=d3fb2e9653d441559eef76d28206211c
       Type: SQLiteStoreTable
@@ -313,6 +269,54 @@ Children:
           Id: g=d96e5d3400a5f37ef4995e12b732adaf
           Type: StoreColumn
           DataType: String
+    - Name: EventLoggerVariables
+      Id: g=60fdf2341b96d982edac279d2193a020
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=9;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=20
+        Direction: Forward
+      - Name: Columns
+        Id: g=d7e289f8c49e97bf86acccd77bca2491
+        Type: BaseObjectType
+        Children:
+        - Name: Time
+          Id: g=56e8194716a9048ea4ad813e47d15cc0
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: NewValue
+          Id: g=25ac8f8bc1e2c051d6c3c037144595a2
+          Type: StoreColumn
+          DataType: Int32
+        - Name: OldValue
+          Id: g=43d5f958591d179a60ebb17e208e6fc2
+          Type: StoreColumn
+          DataType: Int32
+        - Name: ClientUserId
+          Id: g=c057b7120f844114a1615a28ce84bad2
+          Type: StoreColumn
+          DataType: String
+        - Name: SourceNode
+          Id: g=09628e57fea1f7c4be048ceaabea8746
+          Type: StoreColumn
+          DataType: String
+        - Name: Description
+          Id: g=99b773588406d4eb6641dbfe7a663821
+          Type: StoreColumn
+          DataType: String
+        - Name: SourceNodeID
+          Id: g=0294b61507ac04cd20b3f0024a01acfb
+          Type: StoreColumn
+          DataType: NodeId
   - Class: Reference
     Target: ns=10;i=30
     Direction: Forward
