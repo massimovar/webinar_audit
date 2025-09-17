@@ -801,37 +801,6 @@ Children:
               Description: {"NamespaceIndex":9,"TextId":"QueryResultSetDescription"}
               ValueRank: OneOrMoreDimensions
               ArrayDimensions: [0,0]
-        - Name: MethodContainer2
-          Id: g=f34228d8656bcdeac56212fbfbd1e7c2
-          Type: BaseObjectType
-          Children:
-          - Name: ns=2;ObjectPointer
-            Id: g=13a0905d4d07cf1ca8241ba35654eecb
-            Type: NodePointer
-            DataType: NodeId
-            Children:
-            - Name: Kind
-              Id: g=30a1404033b7f7c2f997082de71461d2
-              Type: PropertyType
-              DataType: NodeId
-              Value: "/Types/ObjectTypes/BaseObjectType"
-            - Name: DynamicLink
-              Id: g=f40bf97c6b9e2a521bb79319145fefb0
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../../../../DataGrid1@NodeId"
-              Children:
-              - Name: Mode
-                Id: g=b872da73baabc025742410c7317232f3
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
-          - Name: ns=2;Method
-            Id: g=d60b3851589ac124d841dc0c2a86b3d8
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "Refresh"
       - Name: EventArguments
         Id: g=b1ef29e3f50b8e8250708e6a1366462b
         Type: MouseClickEvent
@@ -998,37 +967,6 @@ Children:
               Description: {"NamespaceIndex":9,"TextId":"QueryResultSetDescription"}
               ValueRank: OneOrMoreDimensions
               ArrayDimensions: [0,0]
-        - Name: MethodContainer2
-          Id: g=5cb1c1203ce30fba638f44e7426d60e3
-          Type: BaseObjectType
-          Children:
-          - Name: ns=2;ObjectPointer
-            Id: g=dba364430647a73fad933b03dfb28842
-            Type: NodePointer
-            DataType: NodeId
-            Children:
-            - Name: Kind
-              Id: g=700dd087c08a6f140bfc39f44c138021
-              Type: PropertyType
-              DataType: NodeId
-              Value: "/Types/ObjectTypes/BaseObjectType"
-            - Name: DynamicLink
-              Id: g=4778a288aeceb427150b5880ac1ec419
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../../../../DataGrid1@NodeId"
-              Children:
-              - Name: Mode
-                Id: g=04469c19a9e0b8b7ed2d80744d385b28
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
-          - Name: ns=2;Method
-            Id: g=738ab4bfdc1f4a138005f9e7330465ec
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "Refresh"
       - Name: EventArguments
         Id: g=4e185868469d39c621ca747f53540cbb
         Type: MouseClickEvent
