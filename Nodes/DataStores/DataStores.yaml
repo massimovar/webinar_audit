@@ -257,6 +257,66 @@ Children:
           Id: g=a2b9f72db038703ab3a5a6ebf5113728
           Type: StoreColumn
           DataType: String
+    - Name: SigningEventLogger
+      Id: g=d3fb2e9653d441559eef76d28206211c
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=9;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=20
+        Direction: Forward
+      - Name: Columns
+        Id: g=64a9538cc6b2aad3d5d3601c6d6991c2
+        Type: BaseObjectType
+        Children:
+        - Name: ActionTimeStamp
+          Id: g=77d0729302e42dfb3833b412bd32e922
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: SourceName
+          Id: g=2e751f83fcbe3d04ee3a103050d96311
+          Type: StoreColumn
+          DataType: String
+        - Name: OldValue
+          Id: g=3fb8616ff2c2a586f85b713787498778
+          Type: StoreColumn
+          DataType: String
+        - Name: NewValue
+          Id: g=cc0f46fa91f106585dd188a3a5871a5c
+          Type: StoreColumn
+          DataType: String
+        - Name: WorkflowType
+          Id: g=0dece142d3979f52c7e91203522a08e6
+          Type: StoreColumn
+          DataType: String
+        - Name: SignResult
+          Id: g=2b44e712d711bbd87c88e01b717ef6b8
+          Type: StoreColumn
+          DataType: String
+        - Name: ClientUserId
+          Id: g=f9350aad5bf4721e20b88f46b6ed914f
+          Type: StoreColumn
+          DataType: String
+        - Name: ClientUserNote
+          Id: g=f3f40229ae2247d53254b9f135910348
+          Type: StoreColumn
+          DataType: String
+        - Name: SecondClientUserNote
+          Id: g=96db5eccbcf92d9b1182836e2c89a252
+          Type: StoreColumn
+          DataType: String
+        - Name: SourceNode
+          Id: g=d96e5d3400a5f37ef4995e12b732adaf
+          Type: StoreColumn
+          DataType: String
   - Class: Reference
     Target: ns=10;i=30
     Direction: Forward

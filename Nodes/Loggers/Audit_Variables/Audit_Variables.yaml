@@ -214,7 +214,7 @@ Children:
         Id: g=23b46c69a084c084dba1135450b50afa
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../EventArguments/SourceName"
+        Value: "../../EventArguments/SourceName@BrowseName"
     - Name: ClientUserId
       Id: g=9f82d5c0cf930ea22d5065964b1c1792
       Type: EventFieldToLog
