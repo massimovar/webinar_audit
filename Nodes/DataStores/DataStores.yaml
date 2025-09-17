@@ -46,10 +46,6 @@ Children:
           Id: g=0a98fef17ffc328bf374922cd521dc70
           Type: StoreColumn
           DataType: TimeZoneDataType
-        - Name: ActionTimeStamp
-          Id: g=dedd5e5117f2bf068eb3344f3e7cd936
-          Type: StoreColumn
-          DataType: UtcTime
         - Name: SourceNodeName
           Id: g=89b959eccc6846cacc011f5919a89cbd
           Type: StoreColumn
