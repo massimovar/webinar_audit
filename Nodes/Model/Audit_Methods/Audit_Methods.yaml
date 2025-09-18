@@ -1,7 +1,9 @@
 Name: Audit Methods
+Id: g=6a0186da6b3d813b86c2279002f28b90
 Type: FolderType
 Children:
 - Name: VariableIN
+  Id: g=fe86cddc83d25155043d4b8dd48b8153
   Type: BaseDataVariableType
   DataType: Int32
 - Name: VariableOUT
@@ -13,23 +15,28 @@ Children:
   Type: MethodInvocation
   Children:
   - Name: ObjectPointer
+    Id: g=dd0521e7ab38e9391df9aa4825fac3e1
     Type: NodePointer
     DataType: NodeId
     Children:
     - Name: Kind
+      Id: g=770efdb81d28c8e145cf72d800609180
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType"
     - Name: DynamicLink
+      Id: g=a62f78dbfbe4d6d2578d9ea318cc7d24
       Type: DynamicLink
       DataType: NodePath
       Value: "../../../../../Commands/VariableCommands@NodeId"
       Children:
       - Name: Mode
+        Id: g=1e31963c1999a11185b7075913e2755f
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: Method
+    Id: g=971bf04c09053a3e636ffdd8e0030491
     Type: BaseDataVariableType
     DataType: String
     Value: "Set"
@@ -37,23 +44,28 @@ Children:
     Target: ns=2;i=98
     Direction: Forward
   - Name: InputArguments
+    Id: g=9453784bad369ec723ae0b6289639c4a
     Type: BaseObjectType
     Children:
     - Name: VariableToModify
+      Id: g=897bd492198da6a968f9e9c6a26f174b
       Type: BaseDataVariableType
       DataType: VariablePointer
       Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
       Value: "/Objects/webinar_audit/Model/Audit Methods/VariableOUT"
     - Name: Value
+      Id: g=f9479cffd3332dffb29c400b924fe7c1
       Type: BaseDataVariableType
       DataType: Int32
       Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
       Children:
       - Name: DynamicLink
+        Id: g=a8732f79eb343bb6e844f994600247be
         Type: DynamicLink
         DataType: NodePath
         Value: "../../../VariableIN"
     - Name: ArrayIndex
+      Id: g=9fdc074e186fba0014dbd760a13407e0
       Type: BaseDataVariableType
       DataType: UInt32
       Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}

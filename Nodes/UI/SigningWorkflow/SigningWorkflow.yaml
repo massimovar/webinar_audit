@@ -1,0 +1,4165 @@
+Name: SigningWorkflow
+Id: g=2b9cb9da7582f9b618913de42657a59d
+Type: FolderType
+Children:
+- Name: AuditDialogBox
+  Id: g=26f221199dc242d3c4fc679e939e7327
+  Supertype: Dialog
+  ReferenceType: HasComponent
+  Children:
+  - Class: Reference
+    Target: ns=3;i=519
+    Direction: Forward
+  - Name: Width
+    Id: g=489024f562801e85e6cc56a4ec1b9566
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 505.0
+  - Name: Height
+    Id: g=afcbd2a165b0fdc9d86176db102ea5ac
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: AuditPanelLoader
+    Id: g=b5cb24baf3f03771e36213eb0d99a2a7
+    Type: PanelLoader
+    Children:
+    - Name: Panel
+      Id: g=855c93f9df27c88081428460a5c2e601
+      Type: NodePointer
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Id: g=27624df2bfb27ae8a391febd808ac350
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: ConditionalConverter1
+        Id: g=fa79824d02110366ce54468f7e45170c
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Id: g=4947f65c36d5dd50a2156f8f76e1acb9
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=9e1248f3ba64370c9d947a57c6c4107e
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/SigningControllerContext/WorkflowInProgress"
+        - Name: TrueValue
+          Id: g=efab879d6c395f57248e63acba6fc50b
+          Type: BaseDataVariableType
+          DataType: NodeId
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "/Objects/webinar_audit/UI/SigningWorkflow/WorkflowInProgressPanel"
+        - Name: FalseValue
+          Id: g=97afac5760c5d27aaa5b71182f80984d
+          Type: BaseDataVariableType
+          DataType: NodeId
+          ReferenceType: HasParameter
+          Children:
+          - Name: KeyValueConverter1
+            Id: g=46dee13ce71afe382acd0884ec943d79
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Id: g=4309de835aa5041521b86761fe80d4d1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=0f455acfaab40f981a71368c3953aafd
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Session}/SigningControllerContext/WorkflowType"
+            - Name: ns=2;Pairs
+              Id: g=5a03569ebdc8a6eff45a1c30f92e2998
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Id: g=246e9142e18484a5249b557fbc0cbb8f
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=f127824e65e7e43aa94655fff186822a
+                  Type: BaseDataVariableType
+                  DataType: WorkflowType
+                - Name: Value
+                  Id: g=281f0b501c55db1e4d845dd00cf7f61c
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=4483fc735fad9808e2dd43b3ad53edfa
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/webinar_audit/UI/SigningWorkflow/ConfirmWorkflowPanel"
+                    Children:
+                    - Name: Mode
+                      Id: g=fbbb19a0353738dcbcf4357189ae01d7
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+              - Name: Pair1
+                Id: g=6f467366fa9da449f1aed0fe1db699ba
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=1635675e7753c7b4b1fc6da24cceb95a
+                  Type: BaseDataVariableType
+                  DataType: WorkflowType
+                  Value: 1
+                - Name: Value
+                  Id: g=c28d13a6de91ef0044cb52393c4a91d1
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=2ed1904577d90dceb8b61ff0575bdc50
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/webinar_audit/UI/SigningWorkflow/SignWorkflowPanel"
+                    Children:
+                    - Name: Mode
+                      Id: g=d357f4ce4ec4d27ec0fc45918db126dc
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+              - Name: Pair2
+                Id: g=416928f1e44bde0652d0971fc9ace5cc
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=047674f54937aab3790a1ba85cd4f97a
+                  Type: BaseDataVariableType
+                  DataType: WorkflowType
+                  Value: 2
+                - Name: Value
+                  Id: g=5de9c0c212656f2cfd8241c9f2233b22
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=24dcb99e71be427043f697466526b242
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/webinar_audit/UI/SigningWorkflow/DoubleSignWorkflowPanel"
+                    Children:
+                    - Name: Mode
+                      Id: g=4d26f7ca33b811cc96eebdd8e184c638
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+    - Name: CurrentPanel
+      Id: g=d38e9a8c37addd11c01e0fb8797c0cfe
+      Type: NodePointer
+      DataType: NodeId
+      AccessLevel: Read
+      Children:
+      - Name: Kind
+        Id: g=a486fd75938669f7d9dc494cb27eeee1
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+    - Class: Reference
+      Target: ns=3;i=478
+      Direction: Forward
+    - Name: Width
+      Id: g=b97f8ea730c86fdfc6e04c1d25d89bb2
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 505.0
+    - Name: Height
+      Id: g=b92f6e539d458d812261d5e8c6d1b36c
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: PanelAliasNode
+      Id: g=8bd348400c65c1b9bb1827c07779ac2c
+      Type: BaseDataVariableType
+      DataType: NodeId
+      ValueRank: ScalarOrOneDimension
+      Children:
+      - Name: DynamicLink
+        Id: g=10a70312a0cf33c744cee2a48d239e72
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../..@NodeId"
+  - Name: SigningController
+    Id: g=b39bc593b53a652eb9a720c379ae3309
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=a9d94b92c54dc78b773391dd88d98128
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/SigningController"
+  - Name: AuditDialog
+    Id: g=472ca9b7babf74a6b6999127c96b7e66
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=60dfe77cf8247c08eb1e94494044499a
+      Type: PropertyType
+      DataType: NodeId
+    - Name: DynamicLink
+      Id: g=45ab70e7bcd7163bc3ccb25620852723
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "..@NodeId"
+      Children:
+      - Name: Mode
+        Id: g=e40c228c9b1e694ff20018253c938ede
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Users
+    Id: g=ae1b85d40dc09763aa3c93399b94ebd1
+    Type: Alias
+    DataType: NodeId
+    Value: "/Objects/webinar_audit/Security/Users"
+    Children:
+    - Name: Kind
+      Id: g=34c0f3e59bc73cf4c2f49421d414ff37
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/FolderType/CategoryFolder/UsersCategoryFolder"
+- Name: ConfirmWorkflowPanel
+  Id: g=30221b5fae81111f5c1f63984869a65b
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=29325de23865dffde9a4f7de20db0f45
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 500.0
+  - Name: Height
+    Id: g=a4e0836073f5ccde15b240e7e45c6434
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Rectangle
+    Id: g=998b9876231b689aac29ac829277fc87
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Id: g=c841026b8f78f0ff32a98045026d3892
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 500.0
+    - Name: Height
+      Id: g=1e097eccb594f67938706bc6863aa2de
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: HorizontalAlignment
+      Id: g=85e2c851c1a4b451057e7e05ea9bab8a
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=ca59eb5cbc1edf7fe74be7ca93d36a75
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+  - Name: Note
+    Id: g=c31e751aefe1d8eb958f0b9a27be01fe
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=22f5568f0325bd31aab5725fd855fd3a
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Width
+      Id: g=d9ff2da4d0ad65c99bbf247fd09a0e78
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: LeftMargin
+      Id: g=ba1067c2ac421bfe095be0a80a896279
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 250.0
+    - Name: TopMargin
+      Id: g=8ea4a4ce5a444cb2647f465ad9ad9215
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 140.0
+  - Name: Confirm
+    Id: g=b335b2b5e26079470be59b54b7cc3725
+    Type: Button
+    Children:
+    - Name: Text
+      Id: g=67d0c63dd1e69e984f25ddaee46b19a4
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Confirm"}
+    - Name: TopMargin
+      Id: g=1f855294904a49d16bb2b4b9b07a3c13
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 220.0
+    - Name: BackgroundColor
+      Id: g=4c1fdb1cab6034c93060d35ad4433bb2
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#a6ddff"
+    - Name: MouseClickEventHandler1
+      Id: g=328b5adcbba128a34df62d4f0c810684
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=1d6eeb13d1c804c07270949c6c2d74f2
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Id: g=7b3fedc57610e58346d956429c002234
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=9dc11bb0c6530872710c447490b8823f
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=a841f8365cbd5aac88c14c4d4a47c07e
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"80558ed4bc32dedaf254ed3d590d1d70","Namespace":7}
+            Children:
+            - Name: Kind
+              Id: g=4ab91773d62f49f812e775c19428767b
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=fe8f37993c2aea4440f316820e453985
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{SigningController}@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=80e62b9f6bd88df92e681904bc9b450d
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=979282e9dbddb8e3a8495fed1aca6d3c
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Confirm"
+          - Name: InputArguments
+            Id: g=6e995aaa0c77137dc4b3cb226d116a68
+            Type: BaseObjectType
+            Children:
+            - Name: Note
+              Id: g=0d54c7410ee4b94a97c1e4e29fbb581d
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Id: g=d3ade1e4615ed447195b6fd05e1bc04c
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Note/Text"
+                Children:
+                - Name: Mode
+                  Id: g=2f7ffa64bf222ccf06244811fa55847a
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+          - Name: OutputArguments
+            Id: g=65e4abad2a6275ba0d0a25890163f5d0
+            Type: BaseObjectType
+            Children:
+            - Name: SignResult
+              Id: g=985e6691949873ac3928f0ab2b80dc02
+              Type: BaseDataVariableType
+              DataType: Int32
+              Description: {"NamespaceIndex":29,"TextId":"SignResultDescription"}
+        - Name: MethodContainer2
+          Id: g=089d2495944d5dc34aede99d25463b7c
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=148d03b5b6d727a312a49736fe1edbd7
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=051f633d3e7d6912003d0db3577b8d94
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=2b954e7c6eb6416b84a43df73cc1fef6
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{AuditDialog}@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=0d7306cbd7d26f68f6f509b68567063e
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=82a85da8966e6499791387d0dede8bd8
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Close"
+      - Name: EventArguments
+        Id: g=6cbf587d09809302b03db310989b666d
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Id: g=df864f4f7327b981a9d7d2e7d7fcab41
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=249a5d8f8d1c4722defb0aaa67d51ab5
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=e6f6a082daf5f2a3bbe102caa538c263
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=e262d67eb503fb0e4a65ea3a60bb43b6
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=ed487fa40f1bb178bb015d04137bd54e
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=570bd91912c63d11249ef31ef9592bb3
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=02aa6913041f2fae6d29edffdca8928c
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=76f69a733467d38356c6365c5b3877d8
+          Type: PropertyType
+          DataType: UInt16
+    - Name: HorizontalAlignment
+      Id: g=18a314a0cce2ed866bea5c52650fab54
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: LeftMargin
+      Id: g=b7b7966ea54fd1e4f02700248e5a4ab5
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: -142.0
+    - Name: RightMargin
+      Id: g=42bf8af234ba8d926c3a026e9b832503
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+  - Name: Cancel
+    Id: g=2060bf9cc74f659bb16c9198333d13b2
+    Type: Button
+    Children:
+    - Name: Text
+      Id: g=af24413cfd133551cae81b0ad0981288
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Cancel"}
+    - Name: LeftMargin
+      Id: g=734ec8e21f9c68fcc941022c4c4821c2
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 276.0
+    - Name: TopMargin
+      Id: g=0c5718fd5e1721db3744a9023da0c98d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 220.0
+    - Name: MouseClickEventHandler1
+      Id: g=e5ca808db363cabd82a7c569d423c6c9
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=a71b06d149b501abfb003864efa3e921
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Id: g=732bdadd6b7572aa1c094dd370c86c74
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=90a63bda52c7b4e66ff7eae1412b4c34
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=0ab12f389892dfc2aa1c6351c8209543
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"80558ed4bc32dedaf254ed3d590d1d70","Namespace":7}
+            Children:
+            - Name: Kind
+              Id: g=af6efa1e44654e592b48235263b68097
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=b63dc999b730b541f150a9e342cbef75
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{SigningController}@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=6d0bb8b772fe8b65e611840b01d83bef
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=2ff5f69852c69611fb950042c9911881
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Cancel"
+        - Name: MethodContainer2
+          Id: g=23af1064b95a3009c984788f88ffcd33
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=57f9cdeca77bbabc4111886fac51ebf9
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=8367e7075ef1ea7437383f2ad307cfec
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=c705e5d9b84af0c0af61b08a63db9c7f
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{AuditDialog}@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=9e7e6e8407308132f6269106932692d0
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=70e2de56cc6cef50ec4525ec31bb19ec
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Close"
+      - Name: EventArguments
+        Id: g=a2b21da6fc603ef782f4c2e0d9b68ec9
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Id: g=2f5c2891ebbe6b02f87c103c11003a3b
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=17013179a642565feec0cbaf8e528245
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=32c3867904d885fff73ee6ab182c48f3
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=f7b1579bb90ee61c6de2f8eea24275bf
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=20dccb4cc67b7613428aedfd2e433c7e
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=af48c57871f377846b98a954a5c4b676
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=856dda2e8b480920a1689da0172c7b56
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=058290fa976be2b7e3fbccf5228fb408
+          Type: PropertyType
+          DataType: UInt16
+  - Name: NoteLabel
+    Id: g=a5b6b8928b9458458829417cab1879b9
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=d56fc5d2e2b73b93ec1dd187b7961988
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Note:"}
+    - Name: LeftMargin
+      Id: g=60d6da5d775aedecc7326527ad611789
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 170.0
+    - Name: TopMargin
+      Id: g=b47ba709be5b77ecdf30ee59e4352b05
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 145.0
+  - Name: Title
+    Id: g=b0d87e0dfed03ab8de648cac886b9638
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=83b64b5cafbe7156c96ae581c013986f
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Id: g=3e82c767a3ea84ff9bbbb88f741472b0
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=1799253f5c80cc78c060d2252798b921
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"NamespaceIndex":7,"TextId":"RequestConfirmOperation"}
+        - Name: ns=12;Source0
+          Id: g=595c49834e7d38f9cf2f3fe31ada1531
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=94fc617111337864af7496003f465a09
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/SigningControllerContext/NodeId@BrowseName"
+        - Name: ns=12;Source1
+          Id: g=08843e86ddc40c228b06d9e4d1f34549
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=533b6fd74b7c8539280cb3c7595eb162
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../FormattedOldValue"
+        - Name: ns=12;Source2
+          Id: g=3abb8741a20c89af822ba25c06a15755
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=bab8e91882893f30ab416fb32e8d2842
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../FormattedNewValue"
+    - Name: HorizontalAlignment
+      Id: g=a565037aa222267a08c09263186dd55b
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Id: g=643ded1330fffd850e9b0a9c21296341
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+    - Name: TopMargin
+      Id: g=b3e74d4940beeea7019080edf5312c37
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: Width
+      Id: g=a608cd23116fa545893e34ea01b1c84a
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 481.0
+    - Name: Height
+      Id: g=be3a32695c8d685e61509584effb1eec
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: TextHorizontalAlignment
+      Id: g=d36360ee486b541961a6b0bcb154eeaa
+      Type: BaseVariableType
+      DataType: TextHorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: TextVerticalAlignment
+      Id: g=2f7757323f3d61f7cef8943198e4e36c
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: WordWrap
+      Id: g=9037443d460d5138502c8a88b2df49bf
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+  - Name: LeftMargin
+    Id: g=8dee7c253b7b7dab1408500c92e1b7d3
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: TopMargin
+    Id: g=e6a3f4de1abc243ec782edc897be4cca
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: HorizontalAlignment
+    Id: g=c9187a0506a5acb6d56034cab8eb3522
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Id: g=6cfa829cdd890b8c48c4012a97eaca7a
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: FormattedOldValue
+    Id: g=86c75875a7e63d5f79f5da499d523e5c
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: StringFormatter1
+      Id: g=56c49134fb0dc22f3cbdeb2600b97fa3
+      Type: StringFormatter
+      Children:
+      - Name: Format
+        Id: g=cc043a4ec18c972edd3500ee0066ca8b
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ReferenceType: HasParameter
+        Value: {"LocaleId":"en-US","Text":"{0}"}
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=d1a7067c9bb0213f10fb8119386eef7a
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=c2e39d588e5f90ae636c578aaff107f3
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "IF({0} == {1}, \"{0:g}\", \"{0}\")"
+          - Name: ns=2;Source0
+            Id: g=639c67bd611d71f58a4a15ae7c05d6c9
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=70a980317b9c605e6e25afe5ff0d242a
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/SigningControllerContext/OldValue@ActualDataType"
+          - Name: ns=2;Source1
+            Id: g=3aa970f29de4b477525a6999a048a178
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=3abc534324e4d7035d5b79dc99ee24d0
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Types/DataTypes/BaseDataType/DateTime"
+      - Name: ns=2;Source0
+        Id: g=57c5a408be230111502605b393501dfe
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=a4ae5ce06a2c9887b05e3001353d1793
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/SigningControllerContext/OldValue@Value"
+          Children:
+          - Name: Mode
+            Id: g=5966b0d4c11310dbcab4e8ab87823b49
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Mode
+        Id: g=5a424e0aaf99909e8a048f809b6ac8ad
+        Type: PropertyType
+        DataType: DynamicLinkMode
+        ReferenceType: HasComponent
+        ModellingRule: Optional
+        Value: 2
+  - Name: FormattedNewValue
+    Id: g=4d5cd18863ea751bcbf77c03553211b2
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: StringFormatter1
+      Id: g=3aaea894287c0a3d8b73733b4d2794f5
+      Type: StringFormatter
+      Children:
+      - Name: Format
+        Id: g=3c77aece4c4dd3ab1c83171de1fd313f
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ReferenceType: HasParameter
+        Value: {"LocaleId":"en-US","Text":"{0}"}
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=619d091890dc92cdc74319db8e1cb74a
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=fbd523dd25a704bab744611dc54bdd5a
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "IF({0} == {1}, \"{0:g}\", \"{0}\")"
+          - Name: ns=2;Source0
+            Id: g=e63403bb7f4f3f9b2a6e74900be3f5af
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=54c593d4610feb69034fb1848489ac21
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/SigningControllerContext/NewValue@ActualDataType"
+          - Name: ns=2;Source1
+            Id: g=848fa71ad2579341d521730418114a3d
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=8ffc0bd54873a739e4c56597e720637c
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Types/DataTypes/BaseDataType/DateTime"
+      - Name: ns=2;Source0
+        Id: g=22615d167f9a6296509e3fe3adbf1183
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=d74c95afcd8e0a202385c0142a11eec3
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/SigningControllerContext/NewValue@Value"
+          Children:
+          - Name: Mode
+            Id: g=5c3e1676de86332de6632207b5f91e51
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Mode
+        Id: g=88237b3be1a0ba435f43b6ae6f2ad1fc
+        Type: PropertyType
+        DataType: DynamicLinkMode
+        ReferenceType: HasComponent
+        ModellingRule: Optional
+        Value: 2
+- Name: SignWorkflowPanel
+  Id: g=75af5a66346b7424d70436b89008a733
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=84ed509a0049ab9b1cf42f9e96f1651f
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 500.0
+  - Name: Height
+    Id: g=53abaefcc3f78dddc7e07c0ea2918bab
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Rectangle
+    Id: g=94b0bc65c6b1da6b5ae5ee6d92573c2e
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Id: g=dd8cb564181495228b2a524a8ec19a9b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 500.0
+    - Name: Height
+      Id: g=cf2c94f32ceb5b031560e14a90e6b624
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: LeftMargin
+      Id: g=1c9b34bf9297b843deac0e1f6a72664e
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: TopMargin
+      Id: g=3e9810b78f049a765a01cee4060fd0c6
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: HorizontalAlignment
+      Id: g=b67c486d223feb5b12aa7b92ea70e2a2
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=40b1723681284b0817060430bb46d852
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+  - Name: Note
+    Id: g=79ce66353421c29c3ed566da84a5929f
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=b78b2aeb77c56163645e32cc63c0ccd1
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Width
+      Id: g=9579b957cb78c2f128e65d8d1650152b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: LeftMargin
+      Id: g=0081a7eea82ae91c1bc24875f52cacaf
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 250.0
+    - Name: TopMargin
+      Id: g=49670e3ba53e7f32317c58e47547d361
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 145.0
+  - Name: Confirm
+    Id: g=8b0c466e83c94c25baf117457a042ffb
+    Type: Button
+    Children:
+    - Name: Text
+      Id: g=b656e7fd06027b686620181834f627d1
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Confirm"}
+    - Name: LeftMargin
+      Id: g=0fae753a36ff090e8124414a79de169b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 160.0
+    - Name: TopMargin
+      Id: g=f028aaefbdd332c265db465c781717ce
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 225.0
+    - Name: BackgroundColor
+      Id: g=6e2811d5f4c3c1b88d38405243a032ee
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#a6ddff"
+    - Name: MouseClickEventHandler1
+      Id: g=5463e752527e69cd26cb7a346fa57d48
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=842ed2b6d9c83b9335251cc45db40b6e
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Id: g=38818bcba81161df8a4bbc17fa304db0
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=a3cc65c9f99178964b1aa5320c5ab72e
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=07ed8915104335ae9b7927a8f3934cf4
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"80558ed4bc32dedaf254ed3d590d1d70","Namespace":7}
+            Children:
+            - Name: Kind
+              Id: g=6a80677aeee3a946c7ba4863a75d9c13
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=672ce9e14c246e960cc8534b9e887199
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{SigningController}@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=c78e496598a4ead6d5a0196f0eacb2ff
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=9b8cd3ab7c7dddf4d0efcfb7938419e6
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Sign"
+          - Name: InputArguments
+            Id: g=91342da40106b1e3279f3db0b181d7ee
+            Type: BaseObjectType
+            Children:
+            - Name: Username
+              Id: g=d10f2ca09dc5238d9f75219a61bccae2
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Id: g=a1e614a870de6b950ec0268f3cfb2f4d
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Username/Text"
+                Children:
+                - Name: Mode
+                  Id: g=5d42aa2c1c58902402cdbc73dbe84820
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: Password
+              Id: g=f510f6e003caeccdc58b3aac148cafe5
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Id: g=bfc6f26c37c5fd0591742239659e89cb
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Password/Text"
+                Children:
+                - Name: Mode
+                  Id: g=00ddf395beeb2a2ad66758338db29e2c
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: Note
+              Id: g=aaa35763aeadfc500fe93a142e2e340a
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Id: g=1631a9691d5112abde678de83e3ed7ce
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Note/Text"
+                Children:
+                - Name: Mode
+                  Id: g=6819ab87f547f930f0e06252e7e1f2e9
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+          - Name: OutputArguments
+            Id: g=4ce640accfd13b92d56128240885bd64
+            Type: BaseObjectType
+            Children:
+            - Name: SignResult
+              Id: g=6356a0ff4b904ba80d159a4941fdd067
+              Type: BaseDataVariableType
+              DataType: Int32
+              Description: {"NamespaceIndex":29,"TextId":"SignResultDescription"}
+        - Name: MethodContainer2
+          Id: g=2fd2d82bc748dda5275f1ca160ce85ef
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=07378a1aea342aaf8fd47b27af2eabc7
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=84e16e398f8a079dca0375b3f293a662
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=355934c59aa068128118ca327c6abf59
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../SignWorkflowHandler@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=cd2e9fafe0f9debc5902b515442cc2b1
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=aafb71d5ccbc567c401ecdc6b5675a6a
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "CheckResult"
+          - Name: InputArguments
+            Id: g=2fefade6942c073837c813bd4869a375
+            Type: BaseObjectType
+            Children:
+            - Name: SignResult
+              Id: g=2dfa2487d8fc29294f7e91dd35752db2
+              Type: BaseDataVariableType
+              DataType: Int32
+              Children:
+              - Name: DynamicLink
+                Id: g=a16c359be4fa9f120cae53a87a836bdd
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../MethodContainer1/OutputArguments/SignResult"
+                Children:
+                - Name: Mode
+                  Id: g=abd9b36c5b90ae917ea212c2a9c055ad
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+      - Name: EventArguments
+        Id: g=405248f2a6ba062a58d3eedbd33b92f7
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Id: g=dadc0925a06fc4f6ef2befa95e83de4e
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=2b9dbb632d4c03c7a5b9c1925fcec614
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=21dd01bef153c16b7351de281f18ea7a
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=a7f0c14add0ffd8bb30189106f87faab
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=4ead913a99b529c6b1c232e7ed4de124
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=59cc8ca4e0239cf942900b10d92e9d94
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=b32cd80ea894578deaab102802745046
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=abfe3c119d7c1340f445f10d107c577d
+          Type: PropertyType
+          DataType: UInt16
+  - Name: Cancel
+    Id: g=7e26a86c9e9a1b33c21ca714ae2df7dc
+    Type: Button
+    Children:
+    - Name: Text
+      Id: g=212391c27c66b4df65beac705b0e0645
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Cancel"}
+    - Name: LeftMargin
+      Id: g=44934c070da14b5382806233d8a67b1e
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 280.0
+    - Name: TopMargin
+      Id: g=964706c85d7b9f69da33ea60c300d48a
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 225.0
+    - Name: MouseClickEventHandler1
+      Id: g=586596c845f695b82b0821e9e5e29177
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=3352130f1d60f5121930a98039e93c8d
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Id: g=eda0a612a51cce1966291b685643223c
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=baba0109339492e4767b629d8349ce27
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=6fcf1a01311e19a6561bd470fcb852ac
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"80558ed4bc32dedaf254ed3d590d1d70","Namespace":7}
+            Children:
+            - Name: Kind
+              Id: g=5a997c80fd2d73f109bc022e90a7e466
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=fd770e0de21a14de2fbb842a740853ce
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{SigningController}@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=856f6a1e7f721c651874d1b4de9a054f
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=dd65ac3a755d4f555056394b9f3c66d2
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Cancel"
+        - Name: MethodContainer2
+          Id: g=87eb0f660a021b0ff2310aa491db7f4d
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=47a748faeff5b98c8b619d423b8be680
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=6eb6be4236f3760abb5f911aa5b52022
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=d636e85779b27f77de13bf197fc3e80f
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{AuditDialog}@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=44b0e60a076e2ddefa437661e7a0f18d
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=8d02f837cd4b01dd5f38a68b31bbdf4f
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Close"
+      - Name: EventArguments
+        Id: g=4a78b2f114875d90a3b49fc52e16958d
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Id: g=ec352e2f629e38bd3b22f11830ad1e82
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=d7f64bd1c82bd58bbe7072d5465951e6
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=66cbfc7e58e1fc9555afe1082ffd39d0
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=2ae7e17c75a2912cd184fe382e1d9513
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=6ef6fbd0900e666093c0424cd2e540ed
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=a7a7d2494584147e868be9594b808921
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=104f02451ae080e781c855561dde73d6
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=8631be5ad5b849c8669a979c393556ca
+          Type: PropertyType
+          DataType: UInt16
+  - Name: NoteLabel
+    Id: g=5288d98344c5d78b56cc889d00948040
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=74f068d4e8692cf4fcf0214c9aa50f3b
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Note:"}
+    - Name: LeftMargin
+      Id: g=4ddf42c3439f36170f0dbe93ae4db125
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 170.0
+    - Name: TopMargin
+      Id: g=0433a4093c521efc886facedbf4d7851
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 150.0
+  - Name: Password
+    Id: g=6165eb1b8a5a11b21e48278ce814b5f5
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=739918d89b97d828e3e769f90ed4dbae
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Width
+      Id: g=e9b3a539e782b599781cf4eb7a123b94
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: LeftMargin
+      Id: g=b3367eaf7fd62153375aceb9bb84f217
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 250.0
+    - Name: TopMargin
+      Id: g=a0d95b11e39534918d515f40a93d4ef5
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 105.0
+    - Name: ContentType
+      Id: g=1fdd2373da2965dc79f43a758b48e0b7
+      Type: BaseVariableType
+      DataType: InputTypeEnum
+      ModellingRule: Optional
+      Value: 1
+  - Name: PasswordLabel
+    Id: g=3ff43e10696f14223e6fd1bda989f241
+    Type: Label
+    Children:
+    - Name: LeftMargin
+      Id: g=642e9dbed53cfe8cea33c4480a145fda
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 170.0
+    - Name: TopMargin
+      Id: g=076c057e8b3bd9cba4dbedc2b490fc82
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: Text
+      Id: g=45f94bd75fc195d50eaa4738d69b919b
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Password:"}
+  - Name: Title
+    Id: g=c535e7c945c9917446cacee71833bb5b
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=f18ab3f7de1fe11532113f9d86375df7
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Id: g=bccbdc126708ab3d6dd61373b43826ec
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=7b10a9d6c25e0e359a5899ead22ae6f1
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"NamespaceIndex":7,"TextId":"RequestSignOperation"}
+        - Name: ns=12;Source0
+          Id: g=496a89c467ce542327a618c53293816d
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=0d8bc19e4aaf701fd5cc3bef03a8540c
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/SigningControllerContext/NodeId@BrowseName"
+        - Name: ns=12;Source1
+          Id: g=1c63408ddc06d17b57a6ae4cb41dcd02
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=d62f19ab233f2de0df1e9167654a4e20
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../FormattedOldValue"
+        - Name: ns=12;Source2
+          Id: g=c07f4cfe003ce4035b413769b36ebd6a
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=455d8f1e7f0c73f9fa28d508078dde48
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../FormattedNewValue"
+    - Name: HorizontalAlignment
+      Id: g=d0171d23bb0bf47ed8c9c2f11c74d919
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Id: g=2d882a6ca98f0ec348accca2bb1f7d8d
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+    - Name: TopMargin
+      Id: g=afc77b0626885a36ef882a61c1a68033
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: Width
+      Id: g=7d5716be8eeb327125042f832aba4f36
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 481.0
+    - Name: Height
+      Id: g=16dc151482ccaf400c822f4e9ea3dce5
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: TextHorizontalAlignment
+      Id: g=0a690e82e8115d8e66952f251cc9b68b
+      Type: BaseVariableType
+      DataType: TextHorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: TextVerticalAlignment
+      Id: g=a547ce6de39aaaba4edf045e4b19bbe7
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: WordWrap
+      Id: g=e3f61eaa05aca6ff4ab51c07cec76d51
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+  - Name: UserLabel
+    Id: g=430862a01e23a86c5e50f2e4e1e93ad4
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=2ad5670b557952c2b679aba1b76b58d8
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"User:"}
+    - Name: LeftMargin
+      Id: g=291a3cd6e29433389a770f26e3e06716
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 170.0
+    - Name: TopMargin
+      Id: g=70b8d1e8867ac6d7dcbaa6966cc57e17
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 75.0
+  - Name: SignWorkflowHandler
+    Id: g=0b26268463ec8e7a7bd0f827057fa447
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: CheckResult
+      Id: g=e566e92bf089f0a56f20f8122f16da23
+      Children:
+      - Name: ns=0;InputArguments
+        Id: g=0f27e3e6ddeed4da8ca5b7bb634e50df
+        Type: BaseVariableType
+        DataType: Argument
+        ReferenceType: HasProperty
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"signResult","DataType":{"Id":3,"Namespace":29},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Name: FirstLoginFailedMessage
+      Id: g=3c2dbba40a0fdd80a19f1de46ba2b218
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":7,"TextId":"SigningWorkflowFirstLoginFailed"}
+    - Name: SecondLoginFailedMessage
+      Id: g=ec9d57844e948d3a8c962ee512e9a7f7
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":7,"TextId":"SigningWorkflowSecondLoginFailed"}
+    - Name: FirstLoginUnauthorized
+      Id: g=9578befdf9e5da4bd3f44c4c44e93a90
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":7,"TextId":"SigningWorkflowFirstLoginUnauthorized"}
+    - Name: SecondLoginUnauthorized
+      Id: g=39ad1d2a1ecef8ff2e616d621abe98bf
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":7,"TextId":"SigningWorkflowSecondLoginUnauthorized"}
+  - Name: Username
+    Id: g=f9410d39e0e715da5f08ca978f8f1b80
+    Type: ComboBox
+    Children:
+    - Name: Text
+      Id: g=b200edb7ed8070ca497631c7f384402a
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Model
+      Id: g=e57ac2db8fa1a463bf57a00d849c35b1
+      Type: NodePointer
+      DataType: NodeId
+      Children:
+      - Name: ItemKind
+        Id: g=aebde362edc48d8b515d6da87d4954fc
+        Type: PropertyType
+        DataType: NodeId
+      - Name: Kind
+        Id: g=2debc4ce258846ac5e74ada1a4339f1f
+        Type: PropertyType
+        DataType: NodeId
+      - Name: DynamicLink
+        Id: g=6dfa8878c170fd48cf6218ccc237018c
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{Users}@NodeId"
+    - Name: SelectedValue
+      Id: g=05b7b50b277d65d171f5ddf8382f811d
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+    - Name: SelectedItem
+      Id: g=7831c302504b124fceb6bc0d34729d09
+      Type: NodePointer
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Id: g=a197a079449f8cbae727e7852987d494
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+    - Name: UISelectedItem
+      Id: g=63ef6a205da7f3ed1291d052cb7d6bcd
+      Type: BaseDataVariableType
+      DataType: NodeId
+      AccessLevel: Read
+    - Name: UISelectedValue
+      Id: g=3452374dadea21034a83772c0a38132a
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      AccessLevel: Read
+    - Class: Reference
+      Target: ns=3;i=480
+      Direction: Forward
+    - Name: Width
+      Id: g=f813070e2d8b56515eed1c5829e7fad2
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: Item
+      Id: g=7010e277bc4838b93f76f00c3827d410
+      Type: Alias
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Id: g=bd1f1f65f72d1c05a52b600ae743e5c7
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+    - Name: LeftMargin
+      Id: g=43a719153cfb4c22fe8eeede1eae8f3a
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 250.0
+    - Name: TopMargin
+      Id: g=508ea92e0934a8194045df793d8313c7
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 65.0
+    - Name: HorizontalAlignment
+      Id: g=508af34d50b12f6d41e41feab2a58ad6
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+    - Name: VerticalAlignment
+      Id: g=f43d700ee80cb06035b7584c0be6f658
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+    - Name: BottomMargin
+      Id: g=2dea768535c25dee0866c7997b249638
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: Mode
+      Id: g=9e9ed3b1388945dd29450e6db9c2d224
+      Type: BaseVariableType
+      DataType: ComboBoxModeEnum
+      ModellingRule: Optional
+      Value: 2
+  - Name: LeftMargin
+    Id: g=e2dc7c6663e9b033e79d4cfc43f0bea5
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: TopMargin
+    Id: g=aa86e94eccd9faa87485a5396ce0de3d
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: HorizontalAlignment
+    Id: g=b469a93df7b9b11d34fa920f052a3337
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Id: g=4417a170e8f248a2def9f5d5f89d29b8
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: FormattedOldValue
+    Id: g=b7c35af38666745bed2a54d6e3095a2d
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: StringFormatter1
+      Id: g=224c2c10ee250326064d5d7885a36d86
+      Type: StringFormatter
+      Children:
+      - Name: Format
+        Id: g=47c03d294d2db49f9943d14c1d791404
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ReferenceType: HasParameter
+        Value: {"LocaleId":"en-US","Text":"{0}"}
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=4fb6e9c63a855fb7185229fa57e64784
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=2e00ea04bc5ab63c720e66065bde58ba
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "IF({0} == {1}, \"{0:g}\", \"{0}\")"
+          - Name: ns=2;Source0
+            Id: g=3a9bf1a839303ebfb33a1985b3d96880
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=ecef295fd9b7e25161c7aba81b573aea
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/SigningControllerContext/OldValue@ActualDataType"
+          - Name: ns=2;Source1
+            Id: g=b1a540988742464136260696269b4fc2
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=ed92495cf4ecdc13ac595b54d35b12c2
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Types/DataTypes/BaseDataType/DateTime"
+      - Name: ns=2;Source0
+        Id: g=838209cbee15381ee661655cc98b9ac4
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=dc4d4da5fde5b9fe3288fd173d050b31
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/SigningControllerContext/OldValue@Value"
+          Children:
+          - Name: Mode
+            Id: g=62bbf1c8df05c8c39ea6d59cca6a100f
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Mode
+        Id: g=9743b65ab3404ec0e4c6028ab5bbf03d
+        Type: PropertyType
+        DataType: DynamicLinkMode
+        ReferenceType: HasComponent
+        ModellingRule: Optional
+        Value: 2
+  - Name: FormattedNewValue
+    Id: g=03a0efe519abd975b0ac8ff55d6e0d8e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: StringFormatter1
+      Id: g=594ccd300727d68c60b17b26277fb005
+      Type: StringFormatter
+      Children:
+      - Name: Format
+        Id: g=e083e80bdeb9db588ae392043aed7b61
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ReferenceType: HasParameter
+        Value: {"LocaleId":"en-US","Text":"{0}"}
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=cffb20dc6fdbb283c9432a9672497b91
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=f172ec3d169eb7b9637dcfa0b9f518ef
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "IF({0} == {1}, \"{0:g}\", \"{0}\")"
+          - Name: ns=2;Source0
+            Id: g=41284654007d1fd333c23c9d1b74ef84
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=354d8d659f93f7a5101428a81df46376
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/SigningControllerContext/NewValue@ActualDataType"
+          - Name: ns=2;Source1
+            Id: g=90c030ec840a80f43029f73c0d03b27e
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=6692bf110cb1f969ca68384ec85f320d
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Types/DataTypes/BaseDataType/DateTime"
+      - Name: ns=2;Source0
+        Id: g=4141f2c2ca4cf4222cd337f10d514d7d
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=026d3b0a6c05df413648f853b7cd9ed2
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/SigningControllerContext/NewValue@Value"
+          Children:
+          - Name: Mode
+            Id: g=2a2dc9598aa5064ec7df2bfd85e07e66
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Mode
+        Id: g=2dc6f35f570d893ed3ea764c39f42fb1
+        Type: PropertyType
+        DataType: DynamicLinkMode
+        ReferenceType: HasComponent
+        ModellingRule: Optional
+        Value: 2
+- Name: DoubleSignWorkflowPanel
+  Id: g=7304b9dd4115f22754533f88c4f03d94
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=adbc4531a204338da6d8a5bfcf3c46f1
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 500.0
+  - Name: Height
+    Id: g=3a150631f742de4487b66a4d7b5d769f
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Rectangle
+    Id: g=e2eadb13d3a5a9398188fef5912ab042
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Id: g=68a0d98cf89b82c032f443ec78253e19
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 500.0
+    - Name: Height
+      Id: g=be8603f089c9090a11f19005dc91306c
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: LeftMargin
+      Id: g=9b46f10c0450b7439489a61216b050cf
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: TopMargin
+      Id: g=937769e03da3d9856de6ecf9bb70e649
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: HorizontalAlignment
+      Id: g=be2f265d64cf5dc9e9adeb17dc214f85
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=2b57da3278facbcfc67dfe41b09308ca
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+  - Name: FirstUserNote
+    Id: g=24ecca8742e550bb6c3b4ef42bdabe64
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=3d8b7c117afe171aebeb47ccdf7dc74f
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Width
+      Id: g=0a6675434a4d76e92ace486bd6f44777
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: LeftMargin
+      Id: g=b9a0950f6597a4133c20c37ce9121d71
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 118.0
+    - Name: TopMargin
+      Id: g=69e116e567a45554c7eb5f3104a69755
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 166.0
+  - Name: Confirm
+    Id: g=aaf17e8a89d7a6252e90d9a02c102612
+    Type: Button
+    Children:
+    - Name: Text
+      Id: g=8201486a0ad363a6bf931b853d15288f
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Confirm"}
+    - Name: LeftMargin
+      Id: g=3cd2cd7e290a2a15229e6b463c291ee0
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 150.0
+    - Name: TopMargin
+      Id: g=fd819b7abda569d04f8319ceab982e58
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 248.0
+    - Name: BackgroundColor
+      Id: g=5dffc272873f0bb5ec918112e772f423
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#a6ddff"
+    - Name: MouseClickEventHandler1
+      Id: g=34a23858ac4c0c1a9a21593395e2a55f
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=ede52bf752d0ff8144cd40975d1c74f7
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Id: g=405ebcbb8cfd8386116c73250afcde87
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=ef0aa6dad613d17a2d5b257d9c3d9103
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=9de569bc5c526ccf835e13e01b49ed21
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"80558ed4bc32dedaf254ed3d590d1d70","Namespace":7}
+            Children:
+            - Name: Kind
+              Id: g=9a9507a6a992f11e5c3876ece3476f8a
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=20690b76de571bb0968f9e515d5a5361
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{SigningController}@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=3fb25ebc4c63a7adc252a5d2ee331c9b
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=70777f465489fd2ed2ad19370a12e344
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "DoubleSign"
+          - Name: InputArguments
+            Id: g=6db90e1d548e7cf9ee7fbb0ceb33981b
+            Type: BaseObjectType
+            Children:
+            - Name: FirstUsername
+              Id: g=aef5d647b6652764218d70011be07098
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Id: g=25d9da8c96cc726dfb311a814f669219
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../FirstUserName/Text"
+                Children:
+                - Name: Mode
+                  Id: g=8aff3f4f66811e279ac056b7ec19816e
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: FirstUserPassword
+              Id: g=979c6e41d132e05924c5896219292d39
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Id: g=139705b1a4bab42f9ac60a69c968f187
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../FirstUserPassword/Text"
+                Children:
+                - Name: Mode
+                  Id: g=9b179a7d1303142d8c31720bdb175f89
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: FirstUserNote
+              Id: g=0d3f73a3ec56368a233123a4a3f735cc
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Id: g=6190f202f50366596b40530a5765380f
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../FirstUserNote/Text"
+                Children:
+                - Name: Mode
+                  Id: g=5d6efe60695c16356bc333389a1f17a7
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: SecondUser
+              Id: g=6e59bb2f53dbab5b3c6eec7646dbd353
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Id: g=f0d7739cfd253925801bdf7ad4ade4c1
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../SecondUserName/Text"
+                Children:
+                - Name: Mode
+                  Id: g=877ad09cb7b00de08d9970443a9fb39d
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: SecondUserPassword
+              Id: g=010ff23030946a64c92e242fc32e51df
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Id: g=3f050a2978e7b4deb2c2b53402167b10
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../SecondUserPassword/Text"
+                Children:
+                - Name: Mode
+                  Id: g=4b139d68760f0adde9a6bc39644ee743
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: SecondUserNote
+              Id: g=2f962d37bbc57bb862904d3289199417
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Id: g=45721f48419afd9b4a43a75197f23590
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../SecondNote/Text"
+                Children:
+                - Name: Mode
+                  Id: g=ba24cbaa33e3bcec284affef8d317867
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+          - Name: OutputArguments
+            Id: g=6827d0eb92f98eaced5a4462002c2375
+            Type: BaseObjectType
+            Children:
+            - Name: SignResult
+              Id: g=a96869aad3d271860b09d72afd1fb1f9
+              Type: BaseDataVariableType
+              DataType: Int32
+              Description: {"NamespaceIndex":29,"TextId":"SignResultDescription"}
+        - Name: MethodContainer2
+          Id: g=178c547ba3473171da77eaf5c16ec8fb
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=0ce08dbf138a8fe035fffd8943ecfb35
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=73fbce815e2b95775d05dcdcf0d5b653
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=faabd90dc41f8a7a5ca23d7a54a7e5e2
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../DoubleSignWorkflowHandler@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=ea16ad724a68471283f6ec4f81ba957b
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=b018c01a3c7658db0a252ae92d6e7631
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "CheckResult"
+          - Name: InputArguments
+            Id: g=4b92853614535458c4cc525ce35dcba0
+            Type: BaseObjectType
+            Children:
+            - Name: SignResult
+              Id: g=06ee7c39127ca94f438bb25be6d7dabc
+              Type: BaseDataVariableType
+              DataType: Int32
+              Children:
+              - Name: DynamicLink
+                Id: g=fee12fc39e75d0f25b2784097377d9ff
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../MethodContainer1/OutputArguments/SignResult"
+                Children:
+                - Name: Mode
+                  Id: g=067d807f576921e829cfc64e53393d12
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+      - Name: EventArguments
+        Id: g=4f241ac1731b71e6c0a78d1bf752f450
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Id: g=f4e9acb25168ea95a90b853a2e81af95
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=65379e2cbdeaa60fb4cc49fc16f27092
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=2de06d0098171a05b04cf96e4a1be653
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=5aaa68cff59821d6cc141960eef91571
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=8514f6326fc0acf2613efc633698a495
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=7efce08c04327f14c314daff093a802c
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=8a2ded60962f45dcd6927b2a8346cf50
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=c656e27fdaa1aa2e19942dd0082cac03
+          Type: PropertyType
+          DataType: UInt16
+  - Name: Cancel
+    Id: g=11c6c48ce9baa08835b9374ac5ca85d3
+    Type: Button
+    Children:
+    - Name: Text
+      Id: g=8667d20cdd1471929ed7697f121adc74
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Cancel"}
+    - Name: LeftMargin
+      Id: g=437abddf9f3b2f3f7bd15dd95ea8a71d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 270.0
+    - Name: TopMargin
+      Id: g=c9ad909b3f64ebf7ae878f8d2dc8d104
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 248.0
+    - Name: MouseClickEventHandler1
+      Id: g=9e107edac072c571c9029d5808c5f4cc
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=fe58fe741484b8de62ea5270487dd0ca
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Id: g=e293fd49990122f8fbd14a4b79a2963b
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=7522262278294cf12a73cee474c6d09c
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=96df5c3dad103e37f7ef7186e3aaec01
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"80558ed4bc32dedaf254ed3d590d1d70","Namespace":7}
+            Children:
+            - Name: Kind
+              Id: g=54fcf08631810916d82ec6ed9292061d
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=a291e1343c689f1fddc001dcb21d48cb
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{SigningController}@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=935db2cfbd02cea006c4006ecd267b9e
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=d2747579577b2f6ceb74fa493390f28c
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Cancel"
+        - Name: MethodContainer2
+          Id: g=209522fb9e930dd4ad52702d4f51aeff
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=6f37ea63bfd41c3199dcc05ff71538a5
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=e662148c378c3fae26e4fe5d8e92faad
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=1403a1d77b7a0aeb1b808863c3b4c0f3
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{AuditDialog}@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=61c530cf29a421362170770799558ab5
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=e626486deff7b672a8215110a801f2a7
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Close"
+      - Name: EventArguments
+        Id: g=3e1899fe49a8924b6d7cde195714e28c
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Id: g=35879ce8a6fbe47178cbfb9062e082ba
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=1a86412feb3f07f7874fc632d43719cd
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=7ab92e0addef3a82f00979e411c8c223
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=df832713bc306ebe72de5f5b255ea862
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=a3d27a2d65293cf908457ecb992b7d2e
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=c40575b7310d88113ab365d1ecf1a1c2
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=dd413316fbc83390796dee36419f3537
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=2c857a2b1469fc55d7c5d9c9234494af
+          Type: PropertyType
+          DataType: UInt16
+  - Name: NoteLabel
+    Id: g=e06ac845952a73df3dc41af7bcc3fe49
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=bcb70fdf7f795f5ce21b4d3ed3b0edf7
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Note:"}
+    - Name: LeftMargin
+      Id: g=bee02ec60e0e916fad7e67011e462aac
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 29.0
+    - Name: TopMargin
+      Id: g=7d722bb748133b4f51facfbe147b48ae
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 170.0
+  - Name: FirstUserPassword
+    Id: g=fcdcedb6d3b804a4c5b6524de8e4888b
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=e56361b3fdfa3e4f0076f87c63588e2a
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Width
+      Id: g=a8f8d6f743ddb3c46b9db7ed1341fb6d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: LeftMargin
+      Id: g=ee7965c221eb0a3bf61056312ab0e25f
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 118.0
+    - Name: TopMargin
+      Id: g=154199bc07d6eb822d4e8ee96c69e2da
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 126.0
+    - Name: ContentType
+      Id: g=bba6d996c79ca54e0227d53a79a9294e
+      Type: BaseVariableType
+      DataType: InputTypeEnum
+      ModellingRule: Optional
+      Value: 1
+  - Name: PasswordLabel
+    Id: g=839819e581deacb8f5433654c017e62e
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=fd7015358b34885d39a529345c6f7f83
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Password:"}
+    - Name: LeftMargin
+      Id: g=d1044701f06b7e6bbe0168b9d5eaf59e
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 29.0
+    - Name: TopMargin
+      Id: g=7cf8189548b8ca9101b2d5c1626cc75d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 130.0
+  - Name: LeftMargin
+    Id: g=0e7a407284c01662e35506dc1d620ccd
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: TopMargin
+    Id: g=0f8a66e7747c0976dc8b083892e0c4e5
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: SecondUserPassword
+    Id: g=b5aa4da79ba26cb847374a55caee06d1
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=335abfd251e336929df52f1af8f6743b
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Width
+      Id: g=98982bb6d63c33da6c1f90d2c2584e7c
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: LeftMargin
+      Id: g=27f634f5033a4c81f64fb77d01f5e5c7
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 360.0
+    - Name: TopMargin
+      Id: g=2756a5bece470a1511b6804ef9e169e3
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 123.0
+    - Name: ContentType
+      Id: g=8f59a7a7b1191e8ea67c56113e3c75d5
+      Type: BaseVariableType
+      DataType: InputTypeEnum
+      ModellingRule: Optional
+      Value: 1
+  - Name: SecondUserPasswordLabel
+    Id: g=9beb2d9959c6f5c361e2ff0b86556591
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=6a53b32aab6c03472438822d73e5c2b2
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"SecondPassword:"}
+    - Name: LeftMargin
+      Id: g=cc7aff27ee14aa2ef21c54aadb04579b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 250.0
+    - Name: TopMargin
+      Id: g=493e765cfe4fc39eb739609f79886dd4
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 125.0
+  - Name: SecondUserLabel
+    Id: g=614c925058f91941b5dcc22885f45d3d
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=c836c363ba60c144e48977bbfc80415e
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"SecondUser:"}
+    - Name: LeftMargin
+      Id: g=2f35948d95d868d321edd9ab6a2f7b79
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 250.0
+    - Name: TopMargin
+      Id: g=fe2d5299c7f131a8d8a1a0056ad1326f
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 85.0
+  - Name: Title
+    Id: g=c61130989fc1b2eaa22af38758b94a8b
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=b4fd563d2dfbd155f7bf1b507fd7248e
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Id: g=a49a39849d906cfec685fb08022cda28
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=b1b4aafe29af52f7743cee22db0dd4e6
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"NamespaceIndex":7,"TextId":"RequestDoubleSignOperation"}
+        - Name: ns=12;Source0
+          Id: g=98e1466391110fafbdb1aad0d5169e79
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=11d3e8909194a4962264090d3c5fc86d
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/SigningControllerContext/NodeId@BrowseName"
+        - Name: ns=12;Source1
+          Id: g=9afb6896ffd529b17b7abbf1304fa57b
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=9d3b9021345b9791cf2af3b9e2085a3c
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../FormattedOldValue"
+        - Name: ns=12;Source2
+          Id: g=b7dee4d56c8d2691e3b5452c79713723
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=b4d54ba714b2f3e8c0df8830c222fe2c
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../FormattedNewValue"
+    - Name: HorizontalAlignment
+      Id: g=53ff292a438bd83f39fb8f77386c7f9a
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Id: g=7ca4bc6aee5e9a197e5316df26364ec6
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+    - Name: TopMargin
+      Id: g=3c43bb1f78eadcea645e45ed0930b772
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: Width
+      Id: g=01365e4e4875064fa5bfc34bfa9a0067
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 481.0
+    - Name: Height
+      Id: g=e6d1f8426019bb7509aa840d81f0e03d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: TextHorizontalAlignment
+      Id: g=3febe349452067dd281274bcf2651171
+      Type: BaseVariableType
+      DataType: TextHorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: TextVerticalAlignment
+      Id: g=d3f902c39fa5e2e6b61aa84bf6c12db0
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: WordWrap
+      Id: g=75609ea8a20bce8bab686389fd756b89
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+  - Name: FirstUserLabel
+    Id: g=7ef66e537788e52f6b7ce314532b098c
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=740e5fe4fd9c19cfd7d8203828d435b1
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"User:"}
+    - Name: LeftMargin
+      Id: g=5e9ec317c72cc18b00b67faaab9d9460
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: TopMargin
+      Id: g=44d655da86ca4249858de0172b9b2e8e
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 90.0
+  - Name: SecondUserName
+    Id: g=e8427abf36af35d90d0a4ab28298ca1e
+    Type: ComboBox
+    Children:
+    - Name: Text
+      Id: g=35505739c7e33c0fd53e694f1e3a4853
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Model
+      Id: g=fbb9624868d99e6df097217b71a6f2aa
+      Type: NodePointer
+      DataType: NodeId
+      Children:
+      - Name: ItemKind
+        Id: g=766f673406599624984918da69c98a62
+        Type: PropertyType
+        DataType: NodeId
+      - Name: Kind
+        Id: g=f17972132d4b13ab1710e56a8ba05ef7
+        Type: PropertyType
+        DataType: NodeId
+      - Name: DynamicLink
+        Id: g=9db8bec9bfe091689191c98692d91baf
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{Users}@NodeId"
+    - Name: SelectedValue
+      Id: g=a6a1924993cbb8537bc4918f97b0090e
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+    - Name: SelectedItem
+      Id: g=5c61df28fe431bc0f34883058b038441
+      Type: NodePointer
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Id: g=366a2145e9ff43559b33ed493f492bf3
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+    - Name: UISelectedItem
+      Id: g=0ea182dd6e3b8764f96ed8bd6313a8c5
+      Type: BaseDataVariableType
+      DataType: NodeId
+      AccessLevel: Read
+    - Name: UISelectedValue
+      Id: g=e4b894b9a8d28a4de17edb451bea37cb
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      AccessLevel: Read
+    - Class: Reference
+      Target: ns=3;i=480
+      Direction: Forward
+    - Name: Width
+      Id: g=d65a69a609df854e6ac6a9605be95731
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: Item
+      Id: g=bfe4d9a13b5b45e004458d7fba0c5121
+      Type: Alias
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Id: g=ac99ad293629696e641a21c31ed14d9a
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+    - Name: LeftMargin
+      Id: g=931991a42e8df3fba7a77fa0d88a1134
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 360.0
+    - Name: TopMargin
+      Id: g=33ed25f5ffd7bbe8a33388ec8b9581e2
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 86.0
+    - Name: Mode
+      Id: g=55f975239b703e424a8f43b63eb881b1
+      Type: BaseVariableType
+      DataType: ComboBoxModeEnum
+      ModellingRule: Optional
+      Value: 2
+  - Name: SecondNoteLabel
+    Id: g=a086c9f2482adf550ca2ec410a2dfcae
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=5921a3ebc70a482ea0aae7b2c2ec834b
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"SecondNote:"}
+    - Name: LeftMargin
+      Id: g=1043589c75cb4678724b653288d2b6e4
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 250.0
+    - Name: TopMargin
+      Id: g=6c7e6f5462a2a5a0c3c20e1d491fc13a
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 170.0
+  - Name: SecondNote
+    Id: g=fe840a7b7a98a7510498a9390caf51c9
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=481101867a0a280c0d12f7a73fde2864
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Width
+      Id: g=df3cdbe849ff2c8002953cb6e0eff22f
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: LeftMargin
+      Id: g=2a51be172102fbf1ab2e34d7450ba1e6
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 360.0
+    - Name: TopMargin
+      Id: g=9a124af88a6e99537eda9ea8fe2a993d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 166.0
+  - Name: DoubleSignWorkflowHandler
+    Id: g=c1a641369affcb008eba282206c0ee1c
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: CheckResult
+      Id: g=7d1b322a48dc7c708c8777716a7227a8
+      Children:
+      - Name: ns=0;InputArguments
+        Id: g=d631f833de1978b6241aad0252278913
+        Type: BaseVariableType
+        DataType: Argument
+        ReferenceType: HasProperty
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"signResult","DataType":{"Id":3,"Namespace":29},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Name: FirstLoginFailedMessage
+      Id: g=95b3eaead2e53309ffb0750059657bae
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":7,"TextId":"SigningWorkflowFirstLoginFailed"}
+    - Name: SecondLoginFailedMessage
+      Id: g=57a98ce2580c5c295298e058d1a01d5c
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":7,"TextId":"SigningWorkflowSecondLoginFailed"}
+    - Name: FirstLoginUnauthorized
+      Id: g=3f93d1ddc0fe2c6976aa99af4047f79f
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":7,"TextId":"SigningWorkflowFirstLoginUnauthorized"}
+    - Name: SecondLoginUnauthorized
+      Id: g=59632e956e9d09b2bb726f5a82483cc4
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":7,"TextId":"SigningWorkflowSecondLoginUnauthorized"}
+    - Name: SecondUserMustBeDifferentFromFirstUser
+      Id: g=20aa9eeb6c0e971f3ba498329e5ebece
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":7,"TextId":"SigningWorkflowSecondUserMustBeDifferentFromFirstUser"}
+  - Name: FirstUserName
+    Id: g=0da06f32573e0063ee9affb5333ca2a3
+    Type: ComboBox
+    Children:
+    - Name: Text
+      Id: g=12db4dcad06adb23b5afb522f2cba175
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Model
+      Id: g=07b81f26d79b6f175d96ed36aee8e140
+      Type: NodePointer
+      DataType: NodeId
+      Children:
+      - Name: ItemKind
+        Id: g=7020f0b59e5abf699b368a1e240ad3a2
+        Type: PropertyType
+        DataType: NodeId
+      - Name: Kind
+        Id: g=5bec8b8f54aba785101a62117cb01645
+        Type: PropertyType
+        DataType: NodeId
+      - Name: DynamicLink
+        Id: g=4d67074ee7d7ca1d00116d9b30d767d4
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{Users}@NodeId"
+    - Name: SelectedValue
+      Id: g=0377cf6d89b6f7b0f5b1f6c33e191875
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+    - Name: SelectedItem
+      Id: g=f97194bae96c72e2013294353d587686
+      Type: NodePointer
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Id: g=e764bff420785f9142371944c8d9debb
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+    - Name: UISelectedItem
+      Id: g=1fdea9965793bcc4f7561886d15c2c19
+      Type: BaseDataVariableType
+      DataType: NodeId
+      AccessLevel: Read
+    - Name: UISelectedValue
+      Id: g=d96db30f54d326732ea13fd24bd83263
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      AccessLevel: Read
+    - Class: Reference
+      Target: ns=3;i=480
+      Direction: Forward
+    - Name: Width
+      Id: g=71ae1d68ceae9e6f5eb4c2d6ecba67e5
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: Item
+      Id: g=590778f5a406714bc18c21dff31bb162
+      Type: Alias
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Id: g=9039ca081109bd35024112ed66b2c166
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+    - Name: LeftMargin
+      Id: g=745a62417c807cc42edaf6edce350d2c
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 118.0
+    - Name: TopMargin
+      Id: g=43af4c8dc4d5a2afbd04e770b723dad7
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 86.0
+    - Name: Mode
+      Id: g=765eea37b04221032dae05e7b3e4f7a6
+      Type: BaseVariableType
+      DataType: ComboBoxModeEnum
+      ModellingRule: Optional
+      Value: 2
+  - Name: HorizontalAlignment
+    Id: g=fe98ee2746a4e659e8a7e143a60d86da
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Id: g=909d4d5470e50ac41a41a1d1bba610c1
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: FormattedOldValue
+    Id: g=660b17952edca6e83dba33ed6428d536
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: StringFormatter1
+      Id: g=8d6ec5fe9651099425951c6b3202036a
+      Type: StringFormatter
+      Children:
+      - Name: Format
+        Id: g=463753589005749590b66b61bd1aaf41
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ReferenceType: HasParameter
+        Value: {"LocaleId":"en-US","Text":"{0}"}
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=9cfda8b41b2aadea4e2016a3ba25644a
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=d535134ac1f91c0e9c65c0e6621ea410
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "IF({0} == {1}, \"{0:g}\", \"{0}\")"
+          - Name: ns=2;Source0
+            Id: g=a96063503b9368bd7bce7832a27f07f8
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=ee6b43fca0bfec24a704473b4af90c44
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/SigningControllerContext/OldValue@ActualDataType"
+          - Name: ns=2;Source1
+            Id: g=6c799905d85a60c3ae487e68343a043a
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=6aacde5ae9288313d003f672880686be
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Types/DataTypes/BaseDataType/DateTime"
+      - Name: ns=2;Source0
+        Id: g=fbb18c1318578aea02c922c796ecf9d1
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=3322f37ead4b0634cac702b54ad2f670
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/SigningControllerContext/OldValue@Value"
+          Children:
+          - Name: Mode
+            Id: g=497fe9d0cb6a2fdf59ca90492bb9c163
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Mode
+        Id: g=872076520cfdb865d3daeef40c613236
+        Type: PropertyType
+        DataType: DynamicLinkMode
+        ReferenceType: HasComponent
+        ModellingRule: Optional
+        Value: 2
+  - Name: FormattedNewValue
+    Id: g=f5f7215f11ae1ffb3a3a0b23dd272725
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: StringFormatter1
+      Id: g=6bbe8ffd6d495eb509140ba743fb672d
+      Type: StringFormatter
+      Children:
+      - Name: Format
+        Id: g=d9712ffbe0b58cc97033bbeb5c673a5c
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ReferenceType: HasParameter
+        Value: {"LocaleId":"en-US","Text":"{0}"}
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=68a397375f02bc6a6b1745c0ec92fa1e
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=e323ace515e891bf993ac29e3527519f
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "IF({0} == {1}, \"{0:g}\", \"{0}\")"
+          - Name: ns=2;Source0
+            Id: g=a424c70f522313a07358a5615da48fb9
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=d8cea254197d688fdb8b6fbd77b26f4a
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/SigningControllerContext/NewValue@ActualDataType"
+          - Name: ns=2;Source1
+            Id: g=4369b7bba2d50aa250d861013a47897c
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=4a9eebde794e773bb297394802f521ce
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Types/DataTypes/BaseDataType/DateTime"
+      - Name: ns=2;Source0
+        Id: g=4561f397848e1a5b633ebe1ef8e0bf45
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=8c07bd925f4342bf9389d1fc179834db
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/SigningControllerContext/NewValue@Value"
+          Children:
+          - Name: Mode
+            Id: g=9a3c6838281bf4ae5ed4d4ac169fb40f
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Mode
+        Id: g=5e7448d8b4fe6c0e094e7470877d62dd
+        Type: PropertyType
+        DataType: DynamicLinkMode
+        ReferenceType: HasComponent
+        ModellingRule: Optional
+        Value: 2
+- Name: WorkflowInProgressPanel
+  Id: g=c484272d1d6604045b1fffaed93883c0
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=3c755b50cba9b07bd3d1a4f60a87b115
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 500.0
+  - Name: Height
+    Id: g=6d6ddabacd4c70a62d6169a3a216a683
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Rectangle
+    Id: g=311039724b75cf779b112f6697e410d4
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Id: g=8611021649b20b5ddfab9c35144c805b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 500.0
+    - Name: Height
+      Id: g=ad3ab2e6a870234c3f29da2c26045868
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: HorizontalAlignment
+      Id: g=b655b6ad5fc60190a33bb2be0d2005d2
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=d2be8098fa1f093e5b3c099f3f525da3
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+  - Name: LeftMargin
+    Id: g=7810ee0ecdff1a1fda6963b210c1a051
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: TopMargin
+    Id: g=f06ce5a9ec7708f3a9b93325de705238
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: Image
+    Id: g=4641fffebfab93e8e62d664258c0a087
+    Type: Image
+    Children:
+    - Name: Path
+      Id: g=6b0882727172904e44c42b01ce238758
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=7;%PROJECTDIR%/error.png"
+    - Name: Width
+      Id: g=4f7b160480d77f901c92047bc27ba1cf
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Id: g=35b72986960932435dcf227ab9c74d1c
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Id: g=d9ee3617619cb0e5b129a1f2aba00bed
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 90.0
+    - Name: TopMargin
+      Id: g=6e5387daf3da9b69abedc38c1753f946
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 130.0
+    - Name: Opacity
+      Id: g=26d1aa41f3010d44f02fa9403da5e96e
+      Type: BaseVariableType
+      DataType: Float
+      ModellingRule: Optional
+      Value: 100.0
+  - Name: Message
+    Id: g=ff7f916aca14848729bf1e782be1da9f
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=4ac9baf8f62ada62d5d23d9a1fcab628
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"AnotherUserIsSigningThisVariable"}
+    - Name: LeftMargin
+      Id: g=1f0ce63674daad2f4888eb0ebe7903f7
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 165.0
+    - Name: TopMargin
+      Id: g=333596810f8b6116bec80d914cc2460b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 130.0
+    - Name: Width
+      Id: g=83654e25d981269f8cf530331e6fcb97
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 315.0
+    - Name: Height
+      Id: g=619ce4cd7bba258ea6e2f32bd595a9a3
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: TextVerticalAlignment
+      Id: g=0f2404e71c41167be842c47979f61efe
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: WordWrap
+      Id: g=91592d6abd3dd04844799adb437977d7
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+  - Name: Ok
+    Id: g=ec5fa5868a5b851ae3ab78ada005430c
+    Type: Button
+    Children:
+    - Name: Text
+      Id: g=bac9caabc9e1dd8da95363cfe4100680
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Ok"}
+    - Name: TopMargin
+      Id: g=a3f6f5cf1a64cdbe2c93158501c3c4a4
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 210.0
+    - Name: HorizontalAlignment
+      Id: g=8e7869b147740e3d93ec449b7d1d6bd4
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: MouseClickEventHandler1
+      Id: g=e6dbb5c478e8809b7d51dffcbc0a2e28
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=25e2a3f2518178b806236b6f81e34f4f
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Id: g=c50570fc5bd70947ffe27bc2bf626b9c
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=c4854e95a313f78fa526aae78146f3c0
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=3bf3d7bb06f5d3415cf26a3069122564
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=89fa14271298c133a58114110b691d67
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=a238681935367f44c74101ba1c542464
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{AuditDialog}@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=ee4e0a0f10c7380ab59275b41bcb8ab1
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=b49ecfe1944af22f3ae7d9d7ec11beeb
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Close"
+      - Name: EventArguments
+        Id: g=bb81c556b72dfb7b63cce5862f09d986
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Id: g=09924ba133837d698a9f36d0862fd938
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=a15b4cb9bdc3b628f3ee4dc4c4a243aa
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=746875d424ee2b8f779f347967d9b46f
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=836352088560695bf6c39261b23e5b26
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=29872705feda6da97533936305036ccd
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=9cda1ac74dda78e1a259f01de10b0e61
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=4d5d25a827c5751b463f30444dcad14f
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=b6f42fe1e2f2ed64ced90e63cbc954cb
+          Type: PropertyType
+          DataType: UInt16
+  - Name: HorizontalAlignment
+    Id: g=0cdac6a410024757bb02972dc7179c4f
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Id: g=606edd932ca3bbd26da0927b564df516
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 3
+- Name: WorkflowFailDialog
+  Id: g=1cff25d0dc4011d236f9dc31bda73133
+  Supertype: Dialog
+  ReferenceType: HasComponent
+  Children:
+  - Class: Reference
+    Target: ns=3;i=519
+    Direction: Forward
+  - Name: Width
+    Id: g=5c02dbff3f7354042c3a7c82da300399
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Height
+    Id: g=8434825bb16b7bae21162e36728052d5
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 190.0
+  - Name: Rectangle
+    Id: g=cc3bf33f99a0bc48516093d803d1cd72
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Id: g=9057d86da7f55792a6b939b06c636baf
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: Height
+      Id: g=d1e6ca943da55a688e27415beff93adb
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 190.0
+    - Name: LeftMargin
+      Id: g=30710d2c141606051eea534228026a8e
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: TopMargin
+      Id: g=f3b10df9355ec5303a1fa7d48833f58a
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: HorizontalAlignment
+      Id: g=202aace9ed4edccfb5275e81355f8d94
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=4a806e57425f1a11cdfc7d190f6917fd
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+  - Name: Button
+    Id: g=17856dbf8b11edd6257ef7745e73d5a8
+    Type: Button
+    Children:
+    - Name: Text
+      Id: g=eb85f322dfec2136546f79a8d816efa5
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":7,"TextId":"Ok"}
+    - Name: LeftMargin
+      Id: g=9a312975c9080bba6290c381a69579b0
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 135.0
+    - Name: TopMargin
+      Id: g=85d3a626c241327477a4413805d6b626
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 120.0
+    - Name: MouseClickEventHandler1
+      Id: g=bc71901698556f8f116126f480d7a3d6
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=d3a041b0263eea7a8ea428ef200f2456
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Id: g=de1d5a35f82b724f56283b0610f40e13
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=7f622089052fbcdd062c62d03d9577de
+          Type: BaseObjectType
+          Children:
+          - Name: ns=12;ObjectPointer
+            Id: g=bbf95566d15ef5f43198eb791a4d3626
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=190f407fa39ef4e0597872c7abe3161e
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=3abab0a6adfbb87f402b8290c96ec9fc
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../..@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=a7bab65d399e84a10f1080e9d532dc9f
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=12;Method
+            Id: g=dcbbb8b76e3577173dcf507898a253d1
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Close"
+      - Name: EventArguments
+        Id: g=2598e01203bd772724c61a9bf5733682
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Id: g=dda2f9631e2ae25f5a422e72d3763ac8
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=d90a88f1ebe5ecfee78c2bba0acb7cac
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=24b7a11046ed98a4da05f338c65a6ea1
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=e7c53b7873dc8513228c23cf5507e9f7
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=ade99320e06666c551e4135874a51f28
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=d06aac72ebe088d0246fb09d74c712bc
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=cddcf062b289f11314bfcc515bf00031
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=331d320525268c84bf6980f7119bdc5c
+          Type: PropertyType
+          DataType: UInt16
+  - Name: User
+    Id: g=78fc478664d9f2b95876b2566dffc290
+    Type: Label
+    Children:
+    - Name: LeftMargin
+      Id: g=609530d345c784c2df9b18844c5a6993
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: TopMargin
+      Id: g=0c9df489ddf1e2058615174f6418cfc2
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: HorizontalAlignment
+      Id: g=5c9c3312a7c987b60550c6ea61624d2f
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: Width
+      Id: g=ade5b11c31698e7770e9e7aa37ed63e5
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 260.0
+    - Name: Height
+      Id: g=17771dc2ff20b47bf3cad42eeadd8ebe
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: TextHorizontalAlignment
+      Id: g=01c5453c0158eeba15b129768133a0c2
+      Type: BaseVariableType
+      DataType: TextHorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: TextVerticalAlignment
+      Id: g=19a743ccbcd7b06e0d8a411d3fed3026
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: WordWrap
+      Id: g=080be4b09e2f81fcb4957e31327a35cb
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+- Name: SigningController
+  Id: g=6f7ae694e7864ca0167825040e112ca2
+  Type: SigningController
+  Children:
+  - Name: UsersAllowedToSign
+    Id: g=3badc1549e5d8edd548b48ddb6f36328
+    Type: BaseObjectType
+  - Name: GroupsAllowedToSign
+    Id: g=099be34bdf3cfecaeb2e35ff8220bd78
+    Type: BaseObjectType
+    Children:
+    - Name: GroupAllowedToSign1
+      Id: g=b6451ca8ca5dd51aabf33ce6211afad0
+      Type: GroupInfo
+      Children:
+      - Name: Group
+        Id: g=e9d448ea0be882ee277680ff376da973
+        Type: NodePointer
+        DataType: NodeId
+        Value: "/Objects/webinar_audit/Security/Groups/Operator"
+        Children:
+        - Name: Kind
+          Id: g=30f8ca7e3a881fb6944cce1b203e3502
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/ObjectTypes/BaseObjectType/GroupType"
+  - Name: UsersAllowedToDoubleSign
+    Id: g=f6246bd5bc2e2e1dd60e95a763bf8e4d
+    Type: BaseObjectType
+  - Name: GroupsAllowedToDoubleSign
+    Id: g=8d858173da80016a3782dd7a629d1ddd
+    Type: BaseObjectType
+    Children:
+    - Name: GroupAllowedToDoubleSign1
+      Id: g=ceb62b665bf71cf8018c687d7cb39c37
+      Type: GroupInfo
+      Children:
+      - Name: Group
+        Id: g=0de4aae8ed16d8f3dd8b13e96735c0ee
+        Type: NodePointer
+        DataType: NodeId
+        Value: "/Objects/webinar_audit/Security/Groups/Maintenance"
+        Children:
+        - Name: Kind
+          Id: g=c4078c876739a49aa7004dcf28e86644
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/ObjectTypes/BaseObjectType/GroupType"
+  - Class: Reference
+    Target: ns=29;i=41
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=47
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=50
+    Direction: Forward
+  - Name: WorkflowStartedEventHandler
+    Id: g=03a24ecae5a1888b0f9e823269951c9c
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Id: g=cbb49bf787a087703310845bb26d4a07
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/WorkflowStartedEvent"
+    - Name: MethodsToCall
+      Id: g=44d8c6641b2c1a5f3a6b3bbc20b88d33
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer
+        Id: g=021335bad72a7a315b76a7f4c612d8ad
+        Type: BaseObjectType
+        Children:
+        - Name: ns=12;ObjectPointer
+          Id: g=1622be0c1ef3d401ed684b53bf255f83
+          Type: NodePointer
+          DataType: NodeId
+          Children:
+          - Name: Kind
+            Id: g=c2be841993a139487963d81fd956e7c9
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: DynamicLink
+            Id: g=fe700e7e92aee24332d2597f210d67e0
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../Commands/UICommands@NodeId"
+            Children:
+            - Name: Mode
+              Id: g=6e0877415f05444d93e47dbbad8d69b2
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+        - Name: ns=12;Method
+          Id: g=c1de98e22d7c33c44590019863aac3bf
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "OpenDialog"
+        - Name: InputArguments
+          Id: g=cc8e2c325e6ba3618f439561922001c6
+          Type: BaseObjectType
+          Children:
+          - Name: Dialog
+            Id: g=114dd6deaeb2999672c9434f70567a3a
+            Type: BaseDataVariableType
+            DataType: NodeId
+            Description: {"NamespaceIndex":7,"TextId":"OpenDialogDialogDescription"}
+            Value: "/Objects/webinar_audit/UI/SigningWorkflow/AuditDialogBox"
+          - Name: AliasNode
+            Id: g=cfad8d828b2fd44224d10b8b28a52dfb
+            Type: BaseDataVariableType
+            DataType: NodeId
+            Description: {"NamespaceIndex":7,"TextId":"OpenDialogAliasNodeDescription"}
+            ValueRank: ScalarOrOneDimension
+            Value: "/Objects/webinar_audit/UI/SigningWorkflow/SigningController"
+          - Name: Item
+            Id: g=8d0eaec11b6b2ebf81fccaf6321c8d11
+            Type: BaseDataVariableType
+            DataType: NodeId
+            Description: {"NamespaceIndex":7,"TextId":"OpenDialogItemDescription"}
+            Children:
+            - Name: DynamicLink
+              Id: g=74bea03370ea4f6d7890d8a1765bb64c
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../EventArguments/SessionId/Window@Pointer"
+              Children:
+              - Name: Mode
+                Id: g=019f9e8103d9a53576dd15619e3b7006
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                Value: 2
+        - Name: OutputArguments
+          Id: g=487c53f4caed47f238f9d077aabc126b
+          Type: BaseObjectType
+          Children:
+          - Name: DialogNodeId
+            Id: g=f279d81e254a292cfb3e1924f0e3339c
+            Type: BaseDataVariableType
+            DataType: NodeId
+            Description: {"NamespaceIndex":7,"TextId":"OpenDialogDialogNodeIdDescription"}
+    - Name: EventArguments
+      Id: g=f0dd50c7171c553c9f61147dae3bda48
+      Type: WorkflowStartedEvent
+      Children:
+      - Name: NodeId
+        Id: g=6dcdcdf05279d41820be04f5105c6fe3
+        Type: PropertyType
+        DataType: NodeId
+      - Name: WorkflowType
+        Id: g=7fc9d9b7d8a2e50dedb1386d583ae90d
+        Type: PropertyType
+        DataType: WorkflowType
+      - Name: SessionId
+        Id: g=0baef1258290aca2ef9603fd5f28b771
+        Type: PropertyType
+        DataType: NodeId
+      - Name: EventId
+        Id: g=44228f34d8ad7ffba04c660178d54bff
+        Type: PropertyType
+        DataType: ByteString
+      - Name: EventType
+        Id: g=30a6db7e67c46f7b7365a7ced258bc51
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceNode
+        Id: g=2821a037ba418af7d21b411b9776d137
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceName
+        Id: g=1a2def243048686b4bd908a51787c47d
+        Type: PropertyType
+        DataType: String
+      - Name: Time
+        Id: g=c315b137dc9e4bbda9b3b29a98c3134f
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: ReceiveTime
+        Id: g=20c1f1841f43efd0ff2ba94cb14fde5d
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: Message
+        Id: g=79e4a46dc124366674bafb0b690547ea
+        Type: PropertyType
+        DataType: LocalizedText
+      - Name: Severity
+        Id: g=1272d9719a7db35d3d564e8568ca429f
+        Type: PropertyType
+        DataType: UInt16
+  - Name: DefaultWorkflowType
+    Id: g=171e95280518272ed9da660fdc1083fb
+    Type: PropertyType
+    DataType: WorkflowType
+- Name: SigningEventLogger
+  Id: g=39ad45990745e2499246530e99a4b288
+  Type: EventLogger
+  Children:
+  - Name: Enabled
+    Id: g=5b748765df0ec3061ecf2e3ce9fbcfe4
+    Type: PropertyType
+    DataType: Boolean
+    Value: true
+  - Name: Store
+    Id: g=8e06a842f8d4206a108f78aedc13370c
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/webinar_audit/DataStores/EmbeddedDatabase1"
+    Children:
+    - Name: Kind
+      Id: g=60a008efeb4f5f78ad1d634cff43b0a4
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Name: EventConfigurations
+    Id: g=10f8b073e1e22393fb9b249296254aa3
+    Type: BaseObjectType
+    Children:
+    - Name: EventConfiguration1
+      Id: g=303a1b97ad089a046c561f009aa859df
+      Type: EventConfiguration
+      Children:
+      - Name: EventType
+        Id: g=f497fcb96bf427d5bb621ea8f6ead6d4
+        Type: NodePointer
+        DataType: NodeId
+        ReferenceType: HasProperty
+        Value: "/Types/EventTypes/BaseEventType/AuditEventType/AuditSigningWorkflowEvent/AuditSigningWorkflowCompletedEvent"
+        Children:
+        - Name: Kind
+          Id: g=0d1abedce899e9490f0a0dd13dc84b1b
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType"
+    - Name: EventConfiguration2
+      Id: g=17dc181ac6b03d46ab6862e7692199e4
+      Type: EventConfiguration
+      Children:
+      - Name: EventType
+        Id: g=74f7b21a9e42c77a6176b856eb2934ac
+        Type: NodePointer
+        DataType: NodeId
+        ReferenceType: HasProperty
+        Value: "/Types/EventTypes/BaseEventType/AuditEventType/AuditSigningWorkflowEvent/AuditSigningWorkflowStartedEvent"
+        Children:
+        - Name: Kind
+          Id: g=3b88514b2fda1567f3c670e4bc836af7
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType"
+  - Name: EventFieldPaths
+    Id: g=e50af67a2c5b695104594d1ba763689c
+    Type: BaseObjectType
+    Children:
+    - Name: ActionTimeStamp
+      Id: g=54305aeed9bdffdaad733bddba1be20f
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/0:ActionTimeStamp"
+    - Name: NewValue
+      Id: g=c94b4dec770ff5115728afb75a59a6b4
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/0:NewValue"
+    - Name: OldValue
+      Id: g=8ad3a6b308f06d883f5b7245b11b661f
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/0:OldValue"
+    - Name: ClientUserNote
+      Id: g=4f56ab442f9438c565fdd780d74237de
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/29:ClientUserNote"
+    - Name: SignResult
+      Id: g=b2c86efd4f052470a4725e7759d282df
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/29:SignResult"
+    - Name: WorkflowType
+      Id: g=4f8874d00ed8d37fedc2bf80eafbe270
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/29:WorkflowType"
+    - Name: SourceName
+      Id: g=7ec52f070e92136f45bf66750a52d425
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/0:SourceName"
+    - Name: SecondClientUserNote
+      Id: g=eb17d19327536f763c540c3b7bfa4d52
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/29:SecondClientUserNote"
+    - Name: ClientUserId
+      Id: g=6ae179803250a9da6b2a504f04518128
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/0:ClientUserId"
+    - Name: SourceNode
+      Id: g=fce373e3bbe859456acfbde673fe795e
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/0:SourceNode"
+  - Name: EventArguments
+    Id: g=b0c5c30fde0074b16acd890bf4d99d73
+    Type: BaseObjectType
+    Children:
+    - Name: EventTypeId
+      Id: g=b6b4851f099ec0fa2cb5c803944f75ff
+      Type: BaseDataVariableType
+      DataType: NodeId
+    - Name: ActionTimeStamp
+      Id: g=b3c83886b2544a9301114e90e21731f0
+      Type: BaseDataVariableType
+      DataType: UtcTime
+    - Name: NewValue
+      Id: g=4e36f22610d843696e86f7bc36c625bf
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+    - Name: OldValue
+      Id: g=f4fadad3e2857b4df97777764548d51a
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+    - Name: ClientUserNote
+      Id: g=82e900f12c945291d3c03a4104b116b3
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SignResult
+      Id: g=79882d688f00e593b4aa646cc27c56b9
+      Type: BaseDataVariableType
+      DataType: SignResult
+    - Name: WorkflowType
+      Id: g=4f445e03b67bcf3c96bac92a384d162a
+      Type: BaseDataVariableType
+      DataType: WorkflowType
+    - Name: SourceName
+      Id: g=0e4921e531bf27377f57d51419db1cfc
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SecondClientUserNote
+      Id: g=213afd0e51da0a1acc0a3b2fe8d4c389
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: ClientUserId
+      Id: g=41ed655c06b19ee74e15924b8bb92fde
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SourceNode
+      Id: g=ddee7608e71ee82aa5d8e37a8eb4b245
+      Type: BaseDataVariableType
+      DataType: NodeId
+  - Name: EventFieldsToLog
+    Id: g=4bd966d45219420cc9e059f5ca87e951
+    Type: BaseObjectType
+    Children:
+    - Name: ActionTimeStamp
+      Id: g=f2fd15cd2c74d0c07d8430a8d02e5981
+      Type: EventFieldToLog
+      DataType: UtcTime
+      Children:
+      - Name: DynamicLink
+        Id: g=604de46e99fe7c838c3849428f9959e2
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/ActionTimeStamp"
+    - Name: SourceName
+      Id: g=40cf484cea391fdf7542b70931ac6b20
+      Type: EventFieldToLog
+      DataType: String
+      Children:
+      - Name: DynamicLink
+        Id: g=d2d55f6b619ed2bfe97057cffa18c396
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/SourceName"
+    - Name: OldValue
+      Id: g=c4873741ed0274ebf46fb28b70703bbd
+      Type: EventFieldToLog
+      DataType: String
+      Children:
+      - Name: DynamicLink
+        Id: g=56f2395ba1a9c03a8c7e1202bdfcada2
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/OldValue"
+    - Name: NewValue
+      Id: g=25f1ef965804d9ad1952a75b83f3bcd7
+      Type: EventFieldToLog
+      DataType: String
+      Children:
+      - Name: DynamicLink
+        Id: g=64e6bce7372f8ac0a32815c85a3a2ca8
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/NewValue"
+    - Name: WorkflowType
+      Id: g=0b466fc91719e679ecafa0d5ddc36d8f
+      Type: EventFieldToLog
+      DataType: String
+      Value: "0"
+      Children:
+      - Name: KeyValueConverter1
+        Id: g=28f5c305032d07af9ea1676940f3c02f
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Id: g=4cd44dea7059ffa941785989009f30f1
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=5f3faf501ed9918514ca0ea68de3bce0
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../EventArguments/WorkflowType"
+        - Name: ns=2;Pairs
+          Id: g=392363f085a4f8405cec9fcaf2c6feff
+          Type: BaseObjectType
+          Children:
+          - Name: Pair
+            Id: g=3e72a0d469668f7cde84dcce44c31b3c
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=10ea3218ad0bcf97c9096723af84970b
+              Type: BaseDataVariableType
+              DataType: WorkflowType
+            - Name: Value
+              Id: g=6fe099df46fdd4d33efb9dd2ad67f9a8
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Operation confirmed"
+          - Name: Pair1
+            Id: g=919efab61eac43a3a02393eeb26b64e0
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=9e596b6f91b0a41d03a92d8c5b848f6b
+              Type: BaseDataVariableType
+              DataType: WorkflowType
+              Value: 1
+            - Name: Value
+              Id: g=5b49e9cf46050d32dd46bcef0913ff8b
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Operation signed"
+          - Name: Pair2
+            Id: g=c6b0527bc3d31b0736a7ec6ec9d2b9ea
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=fb1401f8fe64d7cceff7c2de0b1943c1
+              Type: BaseDataVariableType
+              DataType: WorkflowType
+              Value: 2
+            - Name: Value
+              Id: g=659c91998245712e7daaac79e9511874
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Operation double signed"
+    - Name: SignResult
+      Id: g=3a669a454539e2f61b0d06b1d0efadd9
+      Type: EventFieldToLog
+      DataType: String
+      Value: "0"
+      Children:
+      - Name: KeyValueConverter1
+        Id: g=de12d65aef8f22fa96e5fea5161a9c1d
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Id: g=7b3a68be93367ead63102300079f7fa2
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=ed87de9e89d0f6d796f9eaa082d65fa5
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../EventArguments/SignResult"
+        - Name: ns=2;Pairs
+          Id: g=11c758b84d3ae4f7e80083b96081eae0
+          Type: BaseObjectType
+          Children:
+          - Name: Pair
+            Id: g=db982d0544bbc4f4df9501f4835adc91
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=c1f063cd625a87465f99cafc64a7410f
+              Type: BaseDataVariableType
+              DataType: SignResult
+            - Name: Value
+              Id: g=6a7aad3675fd39dab70f46758c37497e
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Succeded"
+          - Name: Pair1
+            Id: g=259237aca0b7ebdb08fd8e4e577a4945
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=f3bf128ac4c031196a4e0ebe6b449a34
+              Type: BaseDataVariableType
+              DataType: SignResult
+              Value: 1
+            - Name: Value
+              Id: g=08261d4fcf47295218c5112863f12c5d
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Canceled"
+          - Name: Pair2
+            Id: g=7037a7ea959252b1644a67c2ff05e029
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=3db8a146bfce3a5eef6ec36d62c3d0af
+              Type: BaseDataVariableType
+              DataType: SignResult
+              Value: 2
+            - Name: Value
+              Id: g=1907c3f2b59b97e0afd014a197c8721a
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "First user login failed"
+          - Name: Pair3
+            Id: g=a4ca8a0aed1316473c860a74fd998887
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=567ac735499ea7189a055947587b3e32
+              Type: BaseDataVariableType
+              DataType: SignResult
+              Value: 3
+            - Name: Value
+              Id: g=cbe6cf2f35e37dd60ada6e3bcd052360
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Second user login failed"
+          - Name: Pair4
+            Id: g=ece3277551f848d1d434954391104948
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=cea705ce865beeaac3e8732f418ee13b
+              Type: BaseDataVariableType
+              DataType: SignResult
+              Value: 4
+            - Name: Value
+              Id: g=e7d35eaf86af4036c9cf9d16d4a20bcd
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "First user not authorized"
+          - Name: Pair5
+            Id: g=7a70012682010a935731971cdd5524e1
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=a379e67b9109838fa51c08a21bb1ec54
+              Type: BaseDataVariableType
+              DataType: SignResult
+              Value: 5
+            - Name: Value
+              Id: g=4849c14d63e3a904c9fb1ec0bad22c14
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Second user not authorized"
+    - Name: ClientUserId
+      Id: g=f75bb58b38f90aa135ffe9861f501fb0
+      Type: EventFieldToLog
+      DataType: String
+      Children:
+      - Name: DynamicLink
+        Id: g=1bf2528e40e744529179ae7707ff219f
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/ClientUserId"
+    - Name: ClientUserNote
+      Id: g=391ad8593fa618c466eaa95a0ad2e088
+      Type: EventFieldToLog
+      DataType: String
+      Children:
+      - Name: DynamicLink
+        Id: g=471fe79b29d674873fdb4793c0003d2a
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/ClientUserNote"
+    - Name: SecondClientUserNote
+      Id: g=7016b90e4a34d3ade133a8f6924271a7
+      Type: EventFieldToLog
+      DataType: String
+      Children:
+      - Name: DynamicLink
+        Id: g=9000092f7f5498bc52579955300924d4
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/SecondClientUserNote"
+    - Name: SourceNode
+      Id: g=8c647ff90a7aef41f10b1f307611e841
+      Type: EventFieldToLog
+      DataType: String
+      Children:
+      - Name: DynamicLink
+        Id: g=01c1c7cb09094592ba49993e41a29a89
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/SourceNode@BrowseName"
+- Name: ns=4;LibraryReference
+  Id: g=b895e998f68cec9138980470c765ce1f
+  Type: ObjectLibraryReference
+  DataType: ObjectLibraryReferenceDataType
+  Value: 
+   {
+    "TypeId": {
+     "Id": 72,
+     "Namespace": 4
+    },
+    "Body": {
+     "libraryGuid": "7402740dce8643d69ca9ee0cf46be879",
+     "objectGuid": "efc758a9b1f5ac6dae576db34dc83e0e",
+     "objectVersion": 1,
+     "highestIgnoredVersion": 0
+    }
+   }

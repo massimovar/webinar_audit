@@ -1,7 +1,9 @@
 Name: Translations
+Id: g=5a2973536e32541e7ff0c48c198442be
 Type: TranslationsCategoryFolder
 Children:
 - Name: LocalizationDictionary1
+  Id: g=b9f5ab52c5ca4a002f6a7c5875842221
   Type: LocalizationDictionary
   DataType: String
   ValueRank: OneOrMoreDimensions
@@ -9,7 +11,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [75,2],
+    "Dimensions": [91,2],
     "Body": [
      "","en-US",
      "Failed","Failed",
@@ -85,6 +87,22 @@ Children:
      "PasswordAlreadyUsed","Password already used in the past",
      "PasswordTooShort","Password too short",
      "UnsupportedOperation","Unsupported operation",
-     "ChangesAppliedSuccessfully","Changes applied successfully"
+     "ChangesAppliedSuccessfully","Changes applied successfully",
+     "SigningWorkflowSecondLoginFailed","Login failed for second user",
+     "RequestConfirmOperation","Request confirm operation for changing {0} from {1} to {2}",
+     "RequestDoubleSignOperation","Request double sign operation for changing {0} from {1} to {2}",
+     "Ok","Ok",
+     "SigningWorkflowFirstLoginFailed","Login failed for first user",
+     "Note:","Note:",
+     "Password:","Password:",
+     "SigningWorkflowFirstLoginUnauthorized","First user is not authorized",
+     "User:","User:",
+     "SigningWorkflowSecondLoginUnauthorized","Second user is not authorized",
+     "SecondPassword:","Second Password:",
+     "SecondUser:","Second User:",
+     "SecondNote:","Second Note:",
+     "SigningWorkflowSecondUserMustBeDifferentFromFirstUser","Second user must be different from first user",
+     "AnotherUserIsSigningThisVariable","Another user is signing this variable",
+     "RequestSignOperation","Request sign operation for changing {0} from {1} to {2}"
     ]
    }

@@ -5,3 +5,9 @@ Children:
 - Name: Group1
   Id: g=0b25b66653aee0812d4c28fed2c032f4
   Type: GroupType
+- Name: Operator
+  Id: g=6b5c66f00a762e9cf7d93d6959775b76
+  Type: GroupType
+- Name: Maintenance
+  Id: g=bd570e5b96ffc4d291917db5b712db23
+  Type: GroupType

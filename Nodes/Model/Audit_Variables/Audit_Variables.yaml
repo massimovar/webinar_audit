@@ -3,14 +3,81 @@ Id: g=25c3ed8dee7ed9d961cca0a23f373003
 Type: FolderType
 Children:
 - Name: Variable1
+  Id: g=58327bf7efb0b4fbb4ca54dbc8b5f607
   Type: BaseDataVariableType
   DataType: Int32
+  Description: {"LocaleId":"en-US","Text":"Tank 1"}
+  Children:
+  - Name: DynamicLink
+    Id: g=4d0ec6c5d474205b5177b4737991cbf9
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1"
+    Children:
+    - Name: Mode
+      Id: g=cafdc456f425024ae33f45f63eeb7edf
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: Variable2
+  Id: g=53b9dcf4f31d7bed218e6a9113a53783
   Type: BaseDataVariableType
   DataType: Int32
+  Children:
+  - Name: AuditSigning Signature
+    Id: g=87137be1873467dfd95af3ce6ad67307
+    Type: AuditInfo
+    ReferenceType: NonHierarchicalOwning
+    Children:
+    - Name: Users
+      Id: g=12a0de616c36829e1ee229bc5f1d758a
+      Type: BaseObjectType
+    - Name: Groups
+      Id: g=5b55cef800d30ea234dbd9bc5d80fefa
+      Type: BaseObjectType
+    - Name: WorkflowType
+      Id: g=9ccbcf49604d867ae1d48824270041b3
+      Type: PropertyType
+      DataType: WorkflowType
 - Name: Variable3
+  Id: g=86caad30808cec304decbe6c8794c07c
   Type: BaseDataVariableType
   DataType: Int32
+  Children:
+  - Name: AuditSigning Signature
+    Id: g=1e22058a888482f12ded464aeecf4f0c
+    Type: AuditInfo
+    ReferenceType: NonHierarchicalOwning
+    Children:
+    - Name: Users
+      Id: g=380a4eb9352b3e5eb4cf7701c2e26470
+      Type: BaseObjectType
+    - Name: Groups
+      Id: g=1faf55ebefcd2ed67e790fcfb1c855fa
+      Type: BaseObjectType
+    - Name: WorkflowType
+      Id: g=1a1783468a6a3dbba356cf7e73ea6a82
+      Type: PropertyType
+      DataType: WorkflowType
+      Value: 1
 - Name: Variable4
+  Id: g=74062e523dcb096b29f0d8ae849f5377
   Type: BaseDataVariableType
   DataType: Int32
+  Children:
+  - Name: AuditSigning Signature
+    Id: g=42c26a7c3bfafc8d5e22dce31fecbe1c
+    Type: AuditInfo
+    ReferenceType: NonHierarchicalOwning
+    Children:
+    - Name: Users
+      Id: g=929cb1fb5793d9a4c881ebea5cebd2ea
+      Type: BaseObjectType
+    - Name: Groups
+      Id: g=882c37f13809482888d6682a924fca1c
+      Type: BaseObjectType
+    - Name: WorkflowType
+      Id: g=879c771ec29f489080d1e9d04651f164
+      Type: PropertyType
+      DataType: WorkflowType
+      Value: 2

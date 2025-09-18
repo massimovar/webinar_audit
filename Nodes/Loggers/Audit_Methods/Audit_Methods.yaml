@@ -1,192 +1,222 @@
 Name: Audit Methods
+Id: g=6935410c13c5ee5bb73617644b043957
 Type: FolderType
 Children:
 - Name: MethodsEventLogger
+  Id: g=17c3435a4aa2f6e55609c2ddc16af5b5
   Type: EventLogger
   Children:
   - Name: Enabled
+    Id: g=3772a11248041c2621025c1ba283486e
     Type: PropertyType
     DataType: Boolean
     Value: true
   - Name: Store
+    Id: g=22fed8ae2d0bb7a2d23845cadf3958f4
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/webinar_audit/DataStores/EmbeddedDatabase1"
     Children:
     - Name: Kind
+      Id: g=f8cae487fdfb0e2938dfe77311d49d2b
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/Store"
   - Name: EventConfigurations
+    Id: g=03af3105b80b88e7022a1c4834d4f8a1
     Type: BaseObjectType
     Children:
     - Name: EventConfiguration1
+      Id: g=5491531bd37333a1c799bcae412b3519
       Type: EventConfiguration
       Children:
       - Name: EventType
+        Id: g=eb4db9c1518bc2808dd9cee4849cc060
         Type: NodePointer
         DataType: NodeId
         ReferenceType: HasProperty
         Value: "/Types/EventTypes/BaseEventType/AuditEventType/AuditUpdateMethodEventType"
         Children:
         - Name: Kind
+          Id: g=ae5ed130bc1e62b9619fb154759909b6
           Type: PropertyType
           DataType: NodeId
           Value: "/Types/EventTypes/BaseEventType"
       - Name: MonitorSubtree
+        Id: g=0f7cbf0b49cd03bc795b1ed6b1a5fefb
         Type: PropertyType
         DataType: Boolean
         Value: true
       - Name: ExcludeNonInteractiveSessions
+        Id: g=63b2e2ca4dc931d42bd8072fea6f6dab
         Type: PropertyType
         DataType: Boolean
-        Value: true
   - Name: EventFieldPaths
+    Id: g=8c4e54ce794b0d5985d99551b993da42
     Type: BaseObjectType
     Children:
     - Name: Time
+      Id: g=a97bb131febe76807e441b18474c6e27
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:Time"
     - Name: ClientUserId
+      Id: g=be03dc957277ccae04c3848c02abbf27
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:ClientUserId"
     - Name: MethodId
+      Id: g=48202f509ef9cfbf5788ec96ec1f3a2f
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:MethodId"
     - Name: LocalTime
+      Id: g=66473bb8b5bf0c4c750e99ac102c6186
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:LocalTime"
-    - Name: ActionTimeStamp
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/0:ActionTimeStamp"
     - Name: SourceNode
+      Id: g=525b39f0e013d12aa21f174281bb162c
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:SourceNode"
   - Name: EventArguments
+    Id: g=799d91e2550d707948885ec49855b3f4
     Type: BaseObjectType
     Children:
     - Name: EventTypeId
+      Id: g=8f29e0f0d5023c6a6e85cb171a66fbb7
       Type: BaseDataVariableType
       DataType: NodeId
     - Name: Time
+      Id: g=44bd303bd7d3bc9f981b2dd5fef48669
       Type: BaseDataVariableType
       DataType: UtcTime
     - Name: ClientUserId
+      Id: g=f95a5b0145ff48f34b22d7a9e43d14dd
       Type: BaseDataVariableType
       DataType: String
     - Name: MethodId
+      Id: g=b95cfd426bf82e116583210e350704f7
       Type: BaseDataVariableType
       DataType: NodeId
     - Name: LocalTime
+      Id: g=ba827d874c408066be614a194f1fe94f
       Type: BaseDataVariableType
       DataType: TimeZoneDataType
-    - Name: ActionTimeStamp
-      Type: BaseDataVariableType
-      DataType: UtcTime
     - Name: SourceNode
+      Id: g=cfa0702bd45ffdaa1e9bab807b8d1e92
       Type: BaseDataVariableType
       DataType: NodeId
   - Name: EventFieldsToLog
+    Id: g=4fc837f588be6174e80d011a255058aa
     Type: BaseObjectType
     Children:
     - Name: Time
+      Id: g=28cd1c89e55f9c84cef56743bc6958f8
       Type: EventFieldToLog
       DataType: UtcTime
       Children:
       - Name: DynamicLink
+        Id: g=df50c48e3c4061d86a8dc6b30eae8c19
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/Time"
     - Name: ClientUserId
+      Id: g=e9e6ed40de60d32a3ea57cb7196c2945
       Type: EventFieldToLog
       DataType: String
       Children:
       - Name: DynamicLink
+        Id: g=f1aa5987eb11e4dc9ee58d282847a1dc
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/ClientUserId"
     - Name: MethodId
+      Id: g=6a36720e10453da8cc29216a0eb703c0
       Type: EventFieldToLog
       DataType: NodeId
       Children:
       - Name: DynamicLink
+        Id: g=ffbe04657530f3609cdca81b8f0bfb57
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/MethodId@Pointer"
     - Name: LocalTime
+      Id: g=16bd7ea9661dc228bcdb2ea74768d0f8
       Type: EventFieldToLog
       DataType: TimeZoneDataType
       Children:
       - Name: DynamicLink
+        Id: g=5ed12f2cf3c76932d611ee2776796391
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/LocalTime"
-    - Name: ActionTimeStamp
-      Type: EventFieldToLog
-      DataType: UtcTime
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/ActionTimeStamp"
     - Name: SourceNodeName
+      Id: g=a532548e27a3e4b4357485bfaa298723
       Type: EventFieldToLog
       DataType: String
       Children:
       - Name: DynamicLink
+        Id: g=a6b33309e69fce22605373730254ba8e
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/SourceNode@BrowseName"
     - Name: MethodName
+      Id: g=27f1f3787f20e6e8a2974170e68e3d9b
       Type: EventFieldToLog
       DataType: String
       Children:
       - Name: DynamicLink
+        Id: g=b2484eafb4b6a2dd1e670f12de32bb1f
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/MethodId@BrowseName"
     - Name: LocalTimeStamp
+      Id: g=17ee9ef17b7b67258dd77995c469c397
       Type: EventFieldToLog
       DataType: UtcTime
       ValueRank: Any
       Children:
       - Name: ExpressionEvaluator1
+        Id: g=40e8f8c08e3a926700a4fc104cb10103
         Type: ExpressionEvaluator
         Children:
         - Name: Expression
+          Id: g=89d317be7dd1c83b7b5bf073c7d68742
           Type: BaseDataVariableType
           DataType: String
           ReferenceType: HasParameter
           Value: "{0} + {1}"
         - Name: ns=2;Source0
+          Id: g=c0f69aa97622630862bcd28549ab5464
           Type: BaseDataVariableType
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
+            Id: g=f61561f0f7ba4c4d7fa2fc5f783499d5
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../Time"
         - Name: ns=2;Source1
+          Id: g=685e0254047bb394e15f2b574cd228bb
           Type: BaseDataVariableType
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
+            Id: g=28130c62adfcb02b99b4a825eaabbc1d
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../LocalTime"
     - Name: SourceNode
+      Id: g=9d7d86f9697978d04931959a30cbe2c0
       Type: EventFieldToLog
       DataType: NodeId
       Children:
       - Name: DynamicLink
+        Id: g=e23222184bff9cb22439dbf7caa06b56
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/SourceNode@Pointer"

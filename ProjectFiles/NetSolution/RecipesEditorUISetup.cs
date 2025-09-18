@@ -11,6 +11,8 @@ using FTOptix.Recipe;
 using FTOptix.UI;
 using UAManagedCore;
 using FTOptix.Modbus;
+using FTOptix.AuditSigning;
+using FTOptix.OPCUAServer;
 using OpcUa = UAManagedCore.OpcUa;
 #endregion
 

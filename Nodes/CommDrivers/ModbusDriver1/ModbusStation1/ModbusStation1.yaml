@@ -1,39 +1,49 @@
 Name: ModbusStation1
+Id: g=f7829c0c51b26f554903b8c3164fa430
 Type: ModbusStation
 Children:
 - Name: MaximumJobSizeInBytes
+  Id: g=584e6d7a73d13f2e5214e65e4c1075dd
   Type: BaseDataVariableType
   DataType: UInt32
   Value: 128
 - Name: MaximumGapInBytes
+  Id: g=7d17de546275806db921e0b6a80b4fbd
   Type: BaseDataVariableType
   DataType: UInt32
   Value: 4
 - Name: UnitIdentifier
+  Id: g=7090f5350a9059b4d8f40f8ecc57d65f
   Type: BaseDataVariableType
   DataType: Byte
   Value: 1
 - Name: WriteMultipleCoils
+  Id: g=ef4e715eb89964a3f0e14a8f8b9f0a12
   Type: BaseDataVariableType
   DataType: Boolean
   Value: true
 - Name: WriteMultipleRegisters
+  Id: g=e9d0d6d62353d501d8a076b83a302d1c
   Type: BaseDataVariableType
   DataType: Boolean
   Value: true
 - Name: IPAddress
+  Id: g=65e7aa75bc3f83f6c51d042de052b999
   Type: BaseDataVariableType
   DataType: String
   Value: "127.0.0.1"
 - Name: Port
+  Id: g=0c6b22209c4ec796cbbb69ab6370de54
   Type: BaseDataVariableType
   DataType: UInt16
   Value: 502
 - Name: Timeout
+  Id: g=760338ecdc19436b95f2e03ff19443dd
   Type: BaseDataVariableType
   DataType: Duration
   Value: "0:00:00:05.0000000"
 - Name: OperationCode
+  Id: g=1de5c04872f6e3595df44fd14ab81bf9
   Type: BaseDataVariableType
   DataType: CommunicationOperationCode
   AccessLevel: Read
@@ -57,6 +67,7 @@ Children:
   Direction: Forward
 - File: Tags/Tags.yaml
 - Name: Types
+  Id: g=b2895d4ce70f9d48a7ff4c45e8038b83
   Type: FolderType
   Children:
   - File: DataTypes/DataTypes.yaml

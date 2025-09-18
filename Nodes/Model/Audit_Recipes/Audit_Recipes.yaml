@@ -3,22 +3,27 @@ Id: g=631c399f5eaca1920a8abc4b16b34fe8
 Type: FolderType
 Children:
 - Name: VarRicetta1
+  Id: g=44d18d1c4ca81bd0ca8214e7d785ed3f
   Type: BaseDataVariableType
   DataType: Int32
   Children:
   - Name: DynamicLink
+    Id: g=89a4bbe535e21af9a41e8400892a4821
     Type: DynamicLink
     DataType: NodePath
     Value: "../../../CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1"
     Children:
     - Name: Mode
+      Id: g=6510f7de4957d81aca68cc71d665fedf
       Type: BaseVariableType
       DataType: DynamicLinkMode
       Value: 2
 - Name: VarRicetta2
+  Id: g=6520b93620aa6a7438b4f528ab60f49c
   Type: BaseDataVariableType
   DataType: String
   Value: "0"
 - Name: VarRicetta3
+  Id: g=a719549a3ae92cb5d3240cf8a2d801f2
   Type: BaseDataVariableType
   DataType: Boolean

@@ -105,16 +105,32 @@ Project:
    Uri: 'urn:FTOptix:Modbus:Net'
    Module: FTOptix.Modbus.Net
    Version: 1.0
+  29:
+   Uri: 'urn:FTOptix:AuditSigning'
+   Module: FTOptix.AuditSigning
+   Version: 2.0
+  30:
+   Uri: 'urn:FTOptix:AuditSigning:Net'
+   Module: FTOptix.AuditSigning.Net
+   Version: 1.1
+  31:
+   Uri: 'urn:FTOptix:OPCUAServer'
+   Module: FTOptix.OPCUAServer
+   Version: 1.2
+  32:
+   Uri: 'urn:FTOptix:OPCUAServer:Net'
+   Module: FTOptix.OPCUAServer.Net
+   Version: 1.2
  Statistics:
-  TotalNodeCount: 3297
-  Objects: 666
-  ObjectTypes: 24
-  Variables: 2588
+  TotalNodeCount: 4396
+  Objects: 874
+  ObjectTypes: 30
+  Variables: 3471
   VariableTypes: 0
   DataTypes: 0
-  Methods: 19
-  References: 88
+  Methods: 21
+  References: 107
   ReferenceTypes: 0
-  Files: 39
+  Files: 40
  Nodes:
  - File: Nodes/webinar_audit.yaml
