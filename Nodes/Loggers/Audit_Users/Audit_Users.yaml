@@ -198,3 +198,56 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/SelectedValue"
+- Name: EventLogger1
+  Id: g=958483433ce62c336b8eef3d2274586c
+  Type: EventLogger
+  Children:
+  - Name: Enabled
+    Id: g=81ef5ce19329ac93da3b6294de658c8f
+    Type: PropertyType
+    DataType: Boolean
+    Value: true
+  - Name: Store
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Name: EventConfigurations
+    Type: BaseObjectType
+    Children:
+    - Name: EventConfiguration1
+      Type: EventConfiguration
+      Children:
+      - Name: EventType
+        Type: NodePointer
+        DataType: NodeId
+        ReferenceType: HasProperty
+        Value: "/Types/EventTypes/BaseEventType/AuditEventType/AuditUpdateMethodEventType"
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType"
+      - Name: EventSource
+        Type: NodePointer
+        DataType: NodeId
+        ReferenceType: HasProperty
+        Value: "/Objects/webinar_audit/Security/Users"
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/ObjectTypes/BaseObjectType"
+  - Name: EventFieldPaths
+    Type: BaseObjectType
+  - Name: EventArguments
+    Type: BaseObjectType
+    Children:
+    - Name: EventTypeId
+      Type: BaseDataVariableType
+      DataType: NodeId
+  - Name: EventFieldsToLog
+    Type: BaseObjectType
