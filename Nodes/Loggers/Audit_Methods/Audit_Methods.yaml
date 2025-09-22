@@ -51,6 +51,7 @@ Children:
         Id: g=63b2e2ca4dc931d42bd8072fea6f6dab
         Type: PropertyType
         DataType: Boolean
+        Value: true
   - Name: EventFieldPaths
     Id: g=8c4e54ce794b0d5985d99551b993da42
     Type: BaseObjectType
