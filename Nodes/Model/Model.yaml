@@ -5,3 +5,7 @@ Children:
 - File: Audit_Methods/Audit_Methods.yaml
 - File: Audit_Recipes/Audit_Recipes.yaml
 - File: Audit_Variables/Audit_Variables.yaml
+- Name: Variable1
+  Id: g=682165e0d7a408e4e7e0d107c3742ccc
+  Type: BaseDataVariableType
+  DataType: Int32

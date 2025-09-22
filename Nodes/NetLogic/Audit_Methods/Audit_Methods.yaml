@@ -9,6 +9,3 @@ Children:
   - Class: Method
     Name: MyMethod
     Id: g=8519dc9ad50cbce0fa63b037ced0b250
-- Name: MethodsObserver
-  Id: g=b0d9aa4cd056da03627d373f56214f9c
-  Type: NetLogic
