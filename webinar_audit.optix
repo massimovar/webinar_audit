@@ -122,15 +122,15 @@ Project:
    Module: FTOptix.OPCUAServer.Net
    Version: 1.2
  Statistics:
-  TotalNodeCount: 4396
-  Objects: 874
-  ObjectTypes: 30
-  Variables: 3471
+  TotalNodeCount: 4202
+  Objects: 835
+  ObjectTypes: 27
+  Variables: 3319
   VariableTypes: 0
   DataTypes: 0
   Methods: 21
-  References: 107
+  References: 102
   ReferenceTypes: 0
-  Files: 40
+  Files: 39
  Nodes:
  - File: Nodes/webinar_audit.yaml

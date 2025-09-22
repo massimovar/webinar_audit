@@ -1521,6 +1521,157 @@ Children:
   Id: g=cc5699d201c2066fd9f2f35c16797b7f
   Supertype: Screen
   ReferenceType: HasComponent
+  Children:
+  - Name: DropdownButton1
+    Id: g=df858b330829f62cc7f053a7d64c3628
+    Type: DropDownButton
+    Children:
+    - Name: Panel
+      Id: g=ae2dac16d6673e8a29ee5255772e1d75
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/webinar_audit/UI/LoginForm/LoginForm"
+      Children:
+      - Name: Kind
+        Id: g=312f7c94924252eb9146db730577c8df
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: LeftMargin
+      Id: g=d6ea5b8bbcd1d01742e422acf5eb8403
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: TopMargin
+      Id: g=629306e4976aad94041300db9909510f
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 120.0
+    - Name: Width
+      Id: g=f52236a2daff74e023e61ba41acfdbff
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Id: g=28d69f00c6fba58c996f481573e6adf4
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 100.0
+    - Name: TextColor
+      Id: g=3f640cdc91e44e1e0f00ac0912179be4
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+    - Name: AnimationType
+      Id: g=5216160abb7f73527e34f5236ffb5427
+      Type: BaseDataVariableType
+      DataType: DropDownButtonAnimationTypeEnum
+      ModellingRule: Optional
+      Value: 1
+    - Name: BackgroundColor
+      Id: g=f65f648aa645d75f2327da79b2bb4e32
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#f0f0f0"
+  - Name: Users1
+    Id: g=368fb2e7e0280609c3840d1bb3a12a55
+    Type: ScaleLayout
+    WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+    Children:
+    - Name: FillColor
+      Id: g=0fb7fc498d5764285f0eed6ca3f71c1d
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#d1d3d4"
+    - Name: Width
+      Id: g=b6d0772e8832ca0674ce43b13ffef43e
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 49.0
+    - Name: Height
+      Id: g=8205f70a8da34f1c1fc6ab4e1e6c8101
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 87.0
+    - Name: Icon_border
+      Id: g=3548bdeeab5964f7610f93bef7603f0c
+      Type: Image
+      Children:
+      - Name: Path
+        Id: g=b38d22e1e5fd1b3c2dd86705a58e3d67
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=7;%PROJECTDIR%/res/UsersIcon_Icon_border.svg"
+      - Name: DynamicColor
+        Id: g=a879977ac7f12ebc4630ecdb963a9ddc
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#d1d3d4"
+        Children:
+        - Name: DynamicLink
+          Id: g=0d0a9bb295d06eb94cf9e5e1ea0d5c19
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../FillColor"
+      - Name: Width
+        Id: g=82efde46f305fafadbf4b6afe134ac51
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 18.0
+      - Name: Height
+        Id: g=ab06ab8b76136911de211929a4b10d07
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 12.375
+    - Name: OriginalWidth
+      Id: g=69fc63fd8ea489fa62f3c3f6c3ce9d8e
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 18.0
+    - Name: OriginalHeight
+      Id: g=0c8edf08f00deb038d2645cd4e8cfdfc
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 12.375
+    - Name: ns=4;LibraryReference
+      Id: g=4d0e93b238099e18caa21f3faf461151
+      Type: ObjectLibraryReference
+      DataType: ObjectLibraryReferenceDataType
+      ModellingRule: None
+      Value: 
+       {
+        "TypeId": {
+         "Id": 72,
+         "Namespace": 4
+        },
+        "Body": {
+         "libraryGuid": "0ca614251918448aa5b9a51295fabd47",
+         "objectGuid": "d1e9914e91f5db097e5b94e3ea74ce25",
+         "objectVersion": 1,
+         "highestIgnoredVersion": 0
+        }
+       }
+    - Name: LeftMargin
+      Id: g=52a1b7579afdb0cb132f1577fa9ec20d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: TopMargin
+      Id: g=98b0fd43755ef7f24ecfe6e6af2d5e5a
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 133.0
 - Name: Methods
   Id: g=1567837eab33f4e135c023614c7be2c9
   Supertype: Screen
@@ -5620,4 +5771,3 @@ Children:
         Type: BaseDataVariableType
         DataType: SortOrderEnum
         Value: 1
-- File: UserManagement/UserManagement.yaml
