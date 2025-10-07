@@ -1,3 +1,52 @@
 Name: Converters
 Id: g=304517d55b5c53846f0a838cdc923423
 Type: ConvertersCategoryFolder
+Children:
+- Name: Audit_result
+  Id: g=32c42c1c3efab214095f55191722aa6c
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Id: g=4bdab7ee7b46768b4f39fb337598a6fc
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=2;Pairs
+    Id: g=e3b115bdb63496b66c192e56a69f0004
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair
+      Id: g=db2e024845214e4e19186bcb43973648
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=7e33fc61d2e4ff815387c0a879456d69
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: None
+      - Name: Value
+        Id: g=861d9d890c565c41889f25195a5617e4
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        ModellingRule: None
+        Value: "ns=7;%PROJECTDIR%/Denied.svg"
+    - Name: Pair1
+      Id: g=939be7f87a4a0de069fc0a0e2e435790
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=08a799145dcfc235540896cfe0102f61
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: None
+        Value: true
+      - Name: Value
+        Id: g=0aa4d0b1f1f481e563ef6325e2b90254
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        ModellingRule: None
+        Value: "ns=7;%PROJECTDIR%/ok-svgrepo-com.svg"

@@ -11,7 +11,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [91,2],
+    "Dimensions": [93,2],
     "Body": [
      "","en-US",
      "Failed","Failed",
@@ -103,6 +103,8 @@ Children:
      "SecondNote:","Second Note:",
      "SigningWorkflowSecondUserMustBeDifferentFromFirstUser","Second user must be different from first user",
      "AnotherUserIsSigningThisVariable","Another user is signing this variable",
-     "RequestSignOperation","Request sign operation for changing {0} from {1} to {2}"
+     "RequestSignOperation","Request sign operation for changing {0} from {1} to {2}",
+     "ConfirmationDialogDisplayName","Confirmation Dialog",
+     "ConfirmFromConfirmationDialog","Confirm"
     ]
    }

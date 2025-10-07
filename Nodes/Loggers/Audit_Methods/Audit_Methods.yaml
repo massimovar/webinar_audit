@@ -15,7 +15,7 @@ Children:
     Id: g=22fed8ae2d0bb7a2d23845cadf3958f4
     Type: NodePointer
     DataType: NodeId
-    Value: "/Objects/webinar_audit/DataStores/EmbeddedDatabase1"
+    Value: {"IdType":2,"Id":"824247c59098ec3deeeae055da925596","Namespace":7}
     Children:
     - Name: Kind
       Id: g=f8cae487fdfb0e2938dfe77311d49d2b

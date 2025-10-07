@@ -2,317 +2,154 @@ Name: Audit Users
 Id: g=d217cea3630741108685b2ae43c7e174
 Type: FolderType
 Children:
-- Name: AuditLogInOut
-  Id: g=d9460e3083b876b71b3a2a39063f7e6f
+- Name: AuditUsers
+  Id: g=c0b7a2a2ddf10371de3c7597cbc98c69
   Type: EventLogger
   Children:
   - Name: Enabled
-    Id: g=e2da45c8d2e7c4feef40bb690018a13b
+    Id: g=80a0359d6ccd1f1e5f752534922968d0
     Type: PropertyType
     DataType: Boolean
     Value: true
   - Name: Store
-    Id: g=08bebe49d4db9063d0e53cc14b993cf6
+    Id: g=4d3633b852e98f065ff090fd40d87dd2
     Type: NodePointer
     DataType: NodeId
-    Value: "/Objects/webinar_audit/DataStores/EmbeddedDatabase1"
+    Value: "/Objects/webinar_audit/DataStores/AuditUSersDB"
     Children:
     - Name: Kind
-      Id: g=cbfcee2b14a0f1f10a2d4457793c5e2f
+      Id: g=ce5d511e684b2cd56e4d7c6f8b393f77
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/Store"
   - Name: EventConfigurations
-    Id: g=c1b414cdda0410e030abd308f77530e3
+    Id: g=ecfde09a713595e1b28deafe3c978298
     Type: BaseObjectType
     Children:
     - Name: EventConfiguration1
-      Id: g=f4bec15bd68a44f7e5a0bb94e149ee4b
+      Id: g=a417f75d75b42fcfd814d6b7633a3cca
       Type: EventConfiguration
       Children:
       - Name: EventType
-        Id: g=a4e8378715362fc1e144f47c065d5d53
+        Id: g=94aa3cc04fa5accb26de709a1bdcf2f3
         Type: NodePointer
         DataType: NodeId
         ReferenceType: HasProperty
         Value: "/Types/EventTypes/BaseEventType/AuditEventType/UserSessionEvent"
         Children:
         - Name: Kind
-          Id: g=5aef7dbba8cc2cd2ab3c680e2cc0e66b
-          Type: PropertyType
-          DataType: NodeId
-          Value: "/Types/EventTypes/BaseEventType"
-    - Name: EventConfiguration2
-      Id: g=fcdb04cbd428dfd262ffe4a42416c25a
-      Type: EventConfiguration
-      Children:
-      - Name: EventType
-        Id: g=a44c5ac894440a0af2caeb78ce5c8649
-        Type: NodePointer
-        DataType: NodeId
-        ReferenceType: HasProperty
-        Value: "/Types/EventTypes/BaseEventType/UserSelectionChanged"
-        Children:
-        - Name: Kind
-          Id: g=2f1d7020efbab1bfc3d939d3229731a8
+          Id: g=f10ae6402c57bfcf3e14f2f397321e62
           Type: PropertyType
           DataType: NodeId
           Value: "/Types/EventTypes/BaseEventType"
   - Name: EventFieldPaths
-    Id: g=2499c1a3f372348b4f2fba886f93b821
+    Id: g=6628624803a84b76bddcf051f0ebbfc6
     Type: BaseObjectType
     Children:
-    - Name: Username
-      Id: g=1702bdac72923b8d740fafc52140410e
+    - Name: LocalTime
+      Id: g=11fb4017efb49df02e26d9004764b299
       Type: EventFieldPath
       DataType: NodePath
-      Value: "/1:Username"
-    - Name: Time
-      Id: g=a807ba05f31e4b36750e9ca54689c45d
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/0:Time"
-    - Name: Message
-      Id: g=4f212bbde0096132ed8b216b5dd26a79
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/0:Message"
-    - Name: Severity
-      Id: g=7d8699f3d04265074a6aef731f7eefd9
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/0:Severity"
+      Value: "/0:LocalTime"
     - Name: SourceName
-      Id: g=617b390fbcf444814c6ef6078a6b4f43
+      Id: g=67bd6c9b7b94c25360818dad2f544bf3
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:SourceName"
-    - Name: ClientUserId
-      Id: g=90d855c32f2641d8dd0bca0de4edf90d
+    - Name: Time
+      Id: g=0aff0da4a0343d3ca5bd82f68e28967e
       Type: EventFieldPath
       DataType: NodePath
-      Value: "/0:ClientUserId"
+      Value: "/0:Time"
     - Name: Status
-      Id: g=0380b817b548f515f412f9975ef9131f
+      Id: g=f01ab301509015fed53f9f2e69e0d0ec
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:Status"
-    - Name: SelectedItem
-      Id: g=e1c52f03d6f8b91c8b00f2845d1f1559
+    - Name: Username
+      Id: g=605ebd82b0d117ece699453b76caeccd
       Type: EventFieldPath
       DataType: NodePath
-      Value: "/3:SelectedItem"
-    - Name: SelectedValue
-      Id: g=741fa1804a1e91d41484dfea5ecca80e
-      Type: EventFieldPath
-      DataType: NodePath
-      Value: "/3:SelectedValue"
+      Value: "/1:Username"
   - Name: EventArguments
-    Id: g=c3897c6943e5b6f162a977e7bca17abc
+    Id: g=1b4a31188122c0de9a713d9ffabc9eaf
     Type: BaseObjectType
     Children:
     - Name: EventTypeId
-      Id: g=a1cae3de413904d4552092a3dfcb5143
+      Id: g=9b692a23139b7bf2c5f63c2390f673ca
       Type: BaseDataVariableType
       DataType: NodeId
-    - Name: Username
-      Id: g=1f21e4d6e1cda296b01963db10a67144
+    - Name: LocalTime
+      Id: g=e9f613a852be7a42c7f1bb79de363de6
+      Type: BaseDataVariableType
+      DataType: TimeZoneDataType
+    - Name: SourceName
+      Id: g=da736f330e4e27aa4f8d2b9fa7df4341
       Type: BaseDataVariableType
       DataType: String
     - Name: Time
-      Id: g=b295c07941dc5add14e36d4d53f62221
+      Id: g=42b1e5e608d55433d1a1261b758521ea
       Type: BaseDataVariableType
       DataType: UtcTime
-    - Name: Message
-      Id: g=ca0e8a4108f9e58ea6fc2ba28168bde1
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-    - Name: Severity
-      Id: g=9d67f90061e7da6121bda3f83ec668d8
-      Type: BaseDataVariableType
-      DataType: UInt16
-    - Name: SourceName
-      Id: g=27bef65e8ee5e5e53379cb8dd2723594
-      Type: BaseDataVariableType
-      DataType: String
-    - Name: ClientUserId
-      Id: g=7048f7cf8bffc73a221f3020f69e6a37
-      Type: BaseDataVariableType
-      DataType: String
     - Name: Status
-      Id: g=83816cf1209e699cba4244c1bba78574
+      Id: g=8aa9255a338d50d03c93f8d96462b724
       Type: BaseDataVariableType
       DataType: Boolean
-    - Name: SelectedItem
-      Id: g=229b45996fa23ab719e9a567c2e10574
+    - Name: Username
+      Id: g=57ee542843b9551da6ef64d279f52471
       Type: BaseDataVariableType
-      DataType: NodeId
-    - Name: SelectedValue
-      Id: g=d15b8fffe4159ddda2a8374cec8f0e16
-      Type: BaseDataVariableType
-      DataType: BaseDataType
+      DataType: String
   - Name: EventFieldsToLog
-    Id: g=924d10c6c358a1700295f1136590e3ff
+    Id: g=5d33e369a0b354ecb8c42198d889fb30
     Type: BaseObjectType
     Children:
-    - Name: Username
-      Id: g=5fe32d0dd35c7849d53333ecd6bf2c83
+    - Name: LocalTime
+      Id: g=3e67577de8a654df6ff7196958954c6b
       Type: EventFieldToLog
-      DataType: String
+      DataType: TimeZoneDataType
       Children:
       - Name: DynamicLink
-        Id: g=bd9fc08994a64de296aab362ede5c227
+        Id: g=8738d265f931cb2ecf74443572f40287
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../EventArguments/Username"
-    - Name: Time
-      Id: g=0434b3eb490496b042cac2ef9b28c34a
-      Type: EventFieldToLog
-      DataType: UtcTime
-      Children:
-      - Name: DynamicLink
-        Id: g=87220dc0111dce9b595e2d764ae3c893
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/Time"
-    - Name: Message
-      Id: g=5f662c5d680d0e1ec8e56825f76b978b
-      Type: EventFieldToLog
-      DataType: LocalizedText
-      Children:
-      - Name: DynamicLink
-        Id: g=70162eb7129c8527c81a27218c0ea6ed
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/Message"
-        Children:
-        - Name: IsPull
-          Id: g=16e7fbfb83035ee8d0bfe76b1978c0ee
-          Type: BaseVariableType
-          DataType: Boolean
-          Value: true
-    - Name: Severity
-      Id: g=cf20b1ba86d425bea30359ed8693c0fb
-      Type: EventFieldToLog
-      DataType: UInt16
-      Children:
-      - Name: DynamicLink
-        Id: g=8a08f9a8466c3e01e0471fe9fb7fdf18
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/Severity"
+        Value: "../../EventArguments/LocalTime"
     - Name: SourceName
-      Id: g=9da3a2ed28a96db660eacedb0ce7c959
+      Id: g=8254ba72d81d353ae22a375517bd1566
       Type: EventFieldToLog
       DataType: String
       Children:
       - Name: DynamicLink
-        Id: g=de5a3e2264f8b4fe5fd37f011f72fb64
+        Id: g=38b1c670cc1a0e0978ad9b79fbcce613
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/SourceName"
-    - Name: ClientUserId
-      Id: g=9c546c6f83260521153f62adb736a1da
+    - Name: Time
+      Id: g=4be7c66a99e690e9c9d77e51e4a73df4
       Type: EventFieldToLog
-      DataType: String
+      DataType: UtcTime
       Children:
       - Name: DynamicLink
-        Id: g=fa1d3db9595e57ace1d2315bf53e1c61
+        Id: g=5f758beb0b208bc1f2f3416d5f77b63f
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../EventArguments/ClientUserId"
+        Value: "../../EventArguments/Time"
     - Name: Status
-      Id: g=ccf4f3645f3b4107bba2fde4c37bc32f
+      Id: g=8cb1fdeb349b607e320475513d677b39
       Type: EventFieldToLog
       DataType: Boolean
       Children:
       - Name: DynamicLink
-        Id: g=f770001301963086d5035c5c6c30e9c5
+        Id: g=09879f7f5ed22de2055de40c0a51dc31
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/Status"
-    - Name: SelectedItem
-      Id: g=6fa43892761840f76a45aab842e3792b
+    - Name: Username
+      Id: g=ccda6ab03c33a55eabcbe92c500cbefa
       Type: EventFieldToLog
-      DataType: NodeId
+      DataType: String
       Children:
       - Name: DynamicLink
-        Id: g=44778961a79133ffe64cf0e0f706b42d
+        Id: g=73ecefa6f93850a5110f8568d35a20b6
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../EventArguments/SelectedItem@Pointer"
-    - Name: SelectedValue
-      Id: g=3b6b71cd96c90c23cbf1df41a218fe2c
-      Type: EventFieldToLog
-      DataType: BaseDataType
-      Children:
-      - Name: DynamicLink
-        Id: g=dd020ac207675dddb5d2ba730a96294d
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/SelectedValue"
-- Name: EventLogger1
-  Id: g=958483433ce62c336b8eef3d2274586c
-  Type: EventLogger
-  Children:
-  - Name: Enabled
-    Id: g=81ef5ce19329ac93da3b6294de658c8f
-    Type: PropertyType
-    DataType: Boolean
-    Value: true
-  - Name: Store
-    Id: g=768a8bd6388f67ea5f59b70288e85e96
-    Type: NodePointer
-    DataType: NodeId
-    Children:
-    - Name: Kind
-      Id: g=60ed813bc651ffc00b29bca284f348f2
-      Type: PropertyType
-      DataType: NodeId
-      Value: "/Types/ObjectTypes/BaseObjectType/Store"
-  - Name: EventConfigurations
-    Id: g=babe59ef3c3759b424f4cc11c74645fb
-    Type: BaseObjectType
-    Children:
-    - Name: EventConfiguration1
-      Id: g=36a88a780c21b0debd846229aad53d34
-      Type: EventConfiguration
-      Children:
-      - Name: EventType
-        Id: g=fe801a9c5f64e5473842ca2ef986bc07
-        Type: NodePointer
-        DataType: NodeId
-        ReferenceType: HasProperty
-        Value: "/Types/EventTypes/BaseEventType/AuditEventType/AuditUpdateMethodEventType"
-        Children:
-        - Name: Kind
-          Id: g=6119369830e0af2672e492bdee724a3a
-          Type: PropertyType
-          DataType: NodeId
-          Value: "/Types/EventTypes/BaseEventType"
-      - Name: EventSource
-        Id: g=0a66426691cf97284725f32c4d03875b
-        Type: NodePointer
-        DataType: NodeId
-        ReferenceType: HasProperty
-        Value: "/Objects/webinar_audit/Security/Users"
-        Children:
-        - Name: Kind
-          Id: g=3c5dbffa809f6ce8ae8675a9ca4d87e3
-          Type: PropertyType
-          DataType: NodeId
-          Value: "/Types/ObjectTypes/BaseObjectType"
-  - Name: EventFieldPaths
-    Id: g=9c9edb5c153ec1292f759e5afa4e4e60
-    Type: BaseObjectType
-  - Name: EventArguments
-    Id: g=e9e130b4d1c92cb00268283fafadce31
-    Type: BaseObjectType
-    Children:
-    - Name: EventTypeId
-      Id: g=498bc435d0c3714eaabe1e86fc07a8a3
-      Type: BaseDataVariableType
-      DataType: NodeId
-  - Name: EventFieldsToLog
-    Id: g=7707d8c38813f7a0cd019b4069e90395
-    Type: BaseObjectType
+        Value: "../../EventArguments/Username"

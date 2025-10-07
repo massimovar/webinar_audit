@@ -16,7 +16,7 @@ Children:
     Id: g=0aa8e9595bb437c4495562515c460c5c
     Type: NodePointer
     DataType: NodeId
-    Value: "/Objects/webinar_audit/DataStores/EmbeddedDatabase1"
+    Value: {"IdType":2,"Id":"824247c59098ec3deeeae055da925596","Namespace":7}
     Children:
     - Name: Kind
       Id: g=e989b5a02e4eb3b07986c20cbcb04882
@@ -316,7 +316,7 @@ Children:
     Id: g=26cac79b6c5aedf25012765b1d1431de
     Type: NodePointer
     DataType: NodeId
-    Value: "/Objects/webinar_audit/DataStores/EmbeddedDatabase1"
+    Value: {"IdType":2,"Id":"824247c59098ec3deeeae055da925596","Namespace":7}
     Children:
     - Name: Kind
       Id: g=7f8457e83a0ee1f00120851cefa6b2af
